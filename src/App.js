@@ -4,7 +4,9 @@ import Test from './Test';
 
 function App() {
   return (
-    <><Test></Test></>
+    <>
+      <Test />
+    </>
   );
 }
 

@@ -1,0 +1,43 @@
+fieldset {
+    border: 1.5px solid #7D839D;
+    border-radius: 0.8rem;
+    width: 25%;
+    margin-top: 15px;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    
+  }
+.invalid{
+ border: 1.5px solid red;
+  }
+.invalidlabel{
+    color:red;
+    
+}
+.invalidtext::placeholder{
+  color: red;
+}
+  
+.allInputs {
+    box-sizing: border-box;
+  padding-left: 5%;
+  padding-bottom: 4%;
+    font-weight: 600;
+    font-size: 100%;
+    line-height: 2;
+    background: #ffff;
+    border: none;
+    outline: 0;
+  }
+  
+  
+  legend {
+    padding: 0.2em 0.5em;
+    color: #55575A;
+    position: relative;
+    margin-left: 1rem;
+width:auto
+
+    
+  }
