@@ -1,0 +1,14 @@
+.FormTitle {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.title {
+  color: var(--main-title-color);
+  font-weight: 600;
+  font-size: 20px;
+  width: 192px;
+  height: 25px;
+  margin-top: 15px;
+}

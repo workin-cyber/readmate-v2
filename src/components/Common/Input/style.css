@@ -1,0 +1,40 @@
+fieldset {
+  border: 1px solid var(--main-title-color);
+  border-radius: 0.8rem;
+  height: 11vh;
+  margin: 0.3rem;
+  margin-top: 1rem;
+}
+
+.allInputs {
+  box-sizing: border-box;
+  width: 85%;
+  height: 4vh;
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 100%;
+  line-height: 2rem;
+  background: #ffff;
+  border: none;
+  outline: 0;
+}
+
+legend {
+  padding: 0.2em 0.5em;
+  color: var(--main-title-color);
+  font-size: 90%;
+  position: relative;
+  margin-left: 1rem;
+  width: fit-content;
+}
+
+.unvalid {
+  border: 1px solid red;
+}
+
+.unvalidLabel {
+  color: red;
+}
+.unvalidPlaceholder::placeholder {
+  color: red;
+}

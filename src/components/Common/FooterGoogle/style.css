@@ -1,0 +1,37 @@
+.footer-google {
+  box-sizing: border-box;
+  height: 96px;
+  background: #7d56a5;
+  border: 1.5px solid #000000;
+  border-radius: 40px 40px 0px 0px;
+  position: fixed;
+  bottom: 0;
+  width: 95%;
+  text-align: center;
+  display: flex;
+}
+.google-button {
+  box-sizing: border-box;
+  margin: auto;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  padding: 16px 25px;
+  /* width: 239.45px; */
+  height: 50px;
+  background: #ea4235;
+  border: 2px solid #252525;
+  box-shadow: 2px 2px 0px #f1c40f;
+  border-radius: 80px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  color: white;
+}
+.google-icon {
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  margin-right: 5px;
+}

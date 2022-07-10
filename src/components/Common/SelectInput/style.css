@@ -1,0 +1,28 @@
+.select-box {
+  box-sizing: border-box;
+  width: 100%;
+  background: #ffff;
+  border: none;
+  outline: 0;
+}
+
+.border {
+  border: 1px solid var(--main-title-color);
+  border-radius: 0.8rem;
+  height: 10vh;
+  margin-top: 1rem;
+}
+
+.option {
+  box-sizing: border-box;
+  position: relative;
+  width: 90%;
+  top: 14%;
+  padding: 1rem;
+  /* color: var(--main-title-color); */
+  background: #ffff;
+  border: none;
+  outline: 0;
+  font-size: 0.9em;
+  line-height: 2rem;
+}
