@@ -1,0 +1,10 @@
+.boolean-button {
+
+  background: #f39c12;
+  border: 2px solid #252525;
+  box-shadow: 2px 2px 0px #d35400;
+  border-radius: 80px;
+  color: white;
+  width: 100px;
+  height: 48px;
+}
