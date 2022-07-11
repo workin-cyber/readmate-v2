@@ -1,0 +1,25 @@
+.RoundedButton {  
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    background: #feefec;
+    border: 1.5px solid #252525;
+    box-shadow: 2px 2px 0px #d35400;
+    border-radius: 50%;
+  }
+  
+  .RoundedButtonPlay {
+    box-sizing: border-box;
+  text-align: center;
+    width: 40px;
+    height: 40px;
+    left: 0px;
+    top: 0px;
+  
+    background: #f39c12;
+    border: 1.5px solid #252525;  
+    box-shadow: 2px 2px 0px #d35400;
+    border-radius: 50%;
+    font-size: large;
+  }
+  

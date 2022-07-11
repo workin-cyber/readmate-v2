@@ -5,10 +5,7 @@ import Test from "./Test";
 
 function App() {
   return (
-    <>
-      <Test />
-      {/* <TestStartFooter /> */}
-    </>
+    <><Test/></>
   );
 }
 
