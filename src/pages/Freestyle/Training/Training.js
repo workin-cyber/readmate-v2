@@ -1,8 +1,8 @@
-import Clock from "../../../../components/Common/Clock";
-import SoundFooter from "../../../../components/Common/SoundFooter"
+import Clock from "../../../components/Common/Clock";
+import SoundFooter from "../../../components/Common/SoundFooter"
 import React, { useContext } from "react";
 import {useEffect, useState, useRef} from "react"
-import Button from "../../../../components/Common/Button";
+import Button from "../../../components/Common/Button";
 // import { dataContext } from "../../../context/context";
 // Creator : Team H - Nurit & Milka & Batia
 function Training() {
@@ -16,7 +16,7 @@ function Training() {
   const [lpm,setLpm] = useState(tr) 
  
   let fileName = pickFile(lpm); 
-  const file = require(`../../../../assets/sounds/wush_mp3/wush_${fileName}_1min.mp3`);
+  const file = require(`../../../assets/sounds/wush_mp3/wush_${fileName}_1min.mp3`);
   const [audio, setAudio] = useState(new Audio(file)); 
   const [playing, setPlaying] = useState(0)
   
@@ -76,7 +76,8 @@ const freeStyleFuncs = {
     <>
     <Clock freeStyle={true} time={180} funcs={freeStyleFuncs}  initRapidValue={lpm} ></Clock>
     {playing ?
-      <SoundFooter song = {file}></SoundFooter> : <Button type={"link"} name={"Done"} path = {"/teamH/graphDashboard"}></Button>}
+          // <SoundFooter song = {file}></SoundFooter> : <Button type={"link"} name={"Done"} path = {"/teamH/graphDashboard"}></Button>}
+      <SoundFooter song = {file}></SoundFooter> : <Button title ="Done"></Button>}
     {/* The soundFooter at this moment is not activated by itself!, require play press  */}
     </>
   );

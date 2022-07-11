@@ -1,9 +1,8 @@
-import styles from './style.module.css'
 import { Link, Route, Routes } from "react-router-dom"
-import Text from "../../../components/common/Text"
-import Underline from '../../../components/common/Underline'
+// import Text from "../../../components/Common/Text"
+// import Underline from '../../../components/Common/Underline'
 import './style.css'
-import Button from '../../../../components/Common/Button'
+import Button from '../../../components/Common/Button'
 
 
 
@@ -11,10 +10,10 @@ let text = "It is a long established fact that a reader will be distracted by th
 
 // Creator : Team h
 function Instructions() {
-    return <div className="instPage">
+    return<div>
         <div className="instruction">Instructions</div>
         <div className="text">{text}</div>
-        <div className="goToTrain"><Button title={"Next"}></Button></div>
+        <Button title={"Next"}></Button>
     </div>
 }
 
