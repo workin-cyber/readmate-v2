@@ -26,3 +26,4 @@ yarn-error.log*
 src/Test.js
 src/TestStartFooter.js
 src/pages/TrainReading
+src/TestExercise.js

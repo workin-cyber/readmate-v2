@@ -1,10 +1,13 @@
+// import TestStartFooter from "./TestStartFooter";
+// import TestExercise from "./TestExercise";
+import "./App.css";
 import Test from "./Test";
-import './App.css';
 
 function App() {
   return (
     <>
       <Test />
+      {/* <TestStartFooter /> */}
     </>
   );
 }
