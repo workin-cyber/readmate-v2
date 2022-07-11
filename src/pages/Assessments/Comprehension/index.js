@@ -1,17 +1,17 @@
 import styles from './style.module.css'
-import TitleRead from '../../../components/common/TitleRead'
-import SubmitBtn from '../../../components/common/SubmitBtn'
+import TitleRead from '../../../components/Common/TitleRead'
 import { useContext, useEffect, useState } from 'react'
 import '../../../components/api/UmooveApi'
 // import { Link } from 'react-router-dom'
 import UmooveApi from '../../../components/api/UmooveApi'
 import examImg from './image/exam.jpg'
 import { useNavigate, useLocation } from 'react-router-dom';
+import Button from "../../../components/Common/Button"
 
 // Creator : Team A - Amos
 // const [pageName, setPageName] = useContext(pageNameContext)
 
-function Page4() {
+function Comprehension() {
     const l = useLocation()
     console.log(l);
     const navigate = useNavigate()
@@ -167,9 +167,9 @@ function Page4() {
             {/* //scrollbar
         //bottom button "done" - import whith props */}
 
-            <SubmitBtn startFunction={() => { nextPage() }} name={"Done"} />
+            <Button startFunction={() => { nextPage() }} title={"Done"} />
         </div>
     </>
 }
 
-export default Page4
+export default Comprehension

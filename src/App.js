@@ -1,18 +1,10 @@
-// import TestStartFooter from "./TestStartFooter";
-// import TestExercise from "./TestExercise";
-import { BrowserRouter } from "react-router-dom";
 import "./App.css";
-import { DataProvider } from "./context/manageContext";
-import Test from "./Test";
+import Layout from './Layout'
 
 function App() {
   return (
     <>
-      <DataProvider>
-        <BrowserRouter>
-          <Test />
-        </BrowserRouter>
-      </DataProvider>
+      <Layout />
     </>
   );
 }
