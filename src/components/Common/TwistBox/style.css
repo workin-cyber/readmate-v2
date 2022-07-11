@@ -1,0 +1,30 @@
+
+.box {
+  align-items: center;
+  position: relative;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  width: 183.5px;
+  height: 100px;
+  text-align: center;
+  display: block;
+  border: 1.5px solid #252525;
+  border-radius: 20px;
+  background-color: white;
+}
+.placebox {
+  position: relative;
+  width: fit-content;
+  padding: 1%;
+}
+.boxbehind {
+  position: absolute;
+  z-index: 0;
+  background: #7d56a5;
+  border: 1.5px solid #252525;
+  border-radius: 20px;
+  border: 1.5px solid #252525;
+  border-radius: 20px;
+  transform: rotate(4deg);
+}

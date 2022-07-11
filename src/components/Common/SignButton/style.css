@@ -1,0 +1,29 @@
+.btn-box {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.9rem;
+  margin-top: 0.9rem;
+  width: 98%;
+}
+
+.sign-button {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  width: 95%;
+  height: 3rem;
+  background-color: var(--primary-color);
+  color: var(--back-box-color);
+  border: 2px solid var(--main-title-color);
+  box-shadow: 2px 2px 0px #d35400;
+  border-radius: 80px;
+  /* flex: none; 
+  order: 0; 
+  flex-grow: 0; */
+}
