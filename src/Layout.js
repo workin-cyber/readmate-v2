@@ -1,8 +1,7 @@
 import { useContext } from 'react'
 import Header from './components/Common/Header'
-import mainContext  from './context/mainContext'
+import  mainContext  from './context/mainContext'
 import Main from './Main';
-import Test from './Test';
 
 export default function Layout() {
     const { header,nav,popup } = useContext(mainContext);
@@ -11,7 +10,6 @@ export default function Layout() {
         {header.isShowHeader && <Header pageName={header.pageName}/>}
 
         <Main/>
-        <Test/>
 
         {popup.popup && '<Popup setPopup={setPopup}/>'}
 

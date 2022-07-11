@@ -1,6 +1,6 @@
 // import styles from './style.module.css'
 import "./style.css";
-import FooterStart from "../../../../components/Common/StartFooter";
+import FooterStart from "../../../components/Common/StartFooter";
 import Frame from "./Frame.jpg";
 import student from "../../../../assets/images/illustrations/assessmen-table.png";
 import { Link } from "react-router-dom";
