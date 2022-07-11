@@ -1,0 +1,14 @@
+.page6 {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
+.img {
+  position: absolute;
+  width: 299.82px;
+  height: 316px;
+  left: 57px;
+  top: 161px;
+}
+.ratingAndScore {
+}

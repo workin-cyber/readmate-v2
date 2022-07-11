@@ -1,23 +1,23 @@
 import "./style.css";
 
 // Creator : Team H - batya
-export default function RoundedButton(props) {
+export default function RoundButton(props) {
   return (
     <>
-      {props.isplay ? (
+      {props.isPlay ? (
         <button
           className="RoundedButton"
           onClick={() => {
-            props.setIsPlay(!props.isplay);
+            props.setIsPlay(!props.isPlay);
           }}
         >
-          ||
+          ▐▐
         </button>
       ) : (
         <button
           className="RoundedButtonPlay"
           onClick={() => {
-            props.setIsPlay(!props.isplay);
+            props.setIsPlay(!props.isPlay);
           }}
         >
           ▶

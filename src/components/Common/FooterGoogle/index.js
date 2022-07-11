@@ -16,7 +16,7 @@ function FooterGoogle(props) {
       </div>
       {CreateAccount && (
         <div className="FramePencil">
-          <img src={FramePencil} alt="" />
+          <img src={FramePencil} alt="img" />
         </div>
       )}
     </div>

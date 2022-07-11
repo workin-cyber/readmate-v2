@@ -1,4 +1,7 @@
-// the button can get: backgroundColor, fontColor, title, onClick, width && height
+// this button can get: backgroundColor, fontColor, onClick, title, width and height
+// in this format:
+// <Button bgColor = "pink" fontColor = "green" startFunction = {onPlay} title = "Next" width = "350px" height = "50px"> </Button>
+
 
 import "./style.css";
 export default function Button(props) {
@@ -10,7 +13,7 @@ export default function Button(props) {
 
   return (
     <div className="wrapButton">
-    <button className="submit" type={props.type} onClick={props.startFunction} style = {myStyle}>
+    <button className="submit" onClick={props.startFunction} style = {myStyle}>
       <div className="word" style={{color: props.fontColor}} >{props.title}</div>
     </button></div>
   )

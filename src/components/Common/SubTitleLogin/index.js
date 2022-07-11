@@ -16,7 +16,7 @@ function SubTitleLogin(props) {
       </div>
       <div className="sub-title">
         <span> {props.content}</span>
-        <Link to={props.link}> Sign Up </Link>
+        {/* <Link to={props.link}> Sign Up </Link> */}
       </div>
     </div>
   );
