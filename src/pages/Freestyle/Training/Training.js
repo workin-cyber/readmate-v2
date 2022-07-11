@@ -1,8 +1,8 @@
-import Clock from "../../../../components/Common/Clock";
-import SoundFooter from "../../../../components/Common/SoundFooter"
+import Clock from "../../../components/Common/Clock";
+import SoundFooter from "../../../components/Common/SoundFooter"
 import React, { useContext } from "react";
 import {useEffect, useState, useRef} from "react"
-import Button from "../../../../components/Common/Button";
+import Button from "../../../components/Common/Button";
 // import { dataContext } from "../../../context/context";
 // Creator : Team H - Nurit & Milka & Batia
 function Training() {
