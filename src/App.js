@@ -1,10 +1,11 @@
 
 import './App.css';
 import Test from './Test';
+import Training from './pages/Assessments/Freestyle/Training/Training';
 
 function App() {
   return (
-    <><Test></Test></>
+    <><Training></Training></>
   );
 }
 

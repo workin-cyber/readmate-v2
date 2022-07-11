@@ -1,0 +1,11 @@
+.bigSiundFooter{
+    display: flex;
+justify-content: center;
+}
+.soundFooter{
+position: absolute;
+bottom: 6%;
+width: 92%;
+padding: 4%;
+
+}
