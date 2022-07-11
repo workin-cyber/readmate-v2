@@ -12,25 +12,6 @@
   border-radius: 40px 40px 0px 0px;
 }
 .google-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 239.45px;
-  height: 50px;
-  margin-top: 23px;
-  color: white;
-  box-sizing: border-box;
-  height: 96px;
-  background: #7d56a5;
-  border: 1.5px solid #000000;
-  border-radius: 40px 40px 0px 0px;
-  position: fixed;
-  bottom: 0;
-  width: 95%;
-  text-align: center;
-  display: flex;
-}
-.google-button {
   box-sizing: border-box;
   margin: auto;
   display: flex;
