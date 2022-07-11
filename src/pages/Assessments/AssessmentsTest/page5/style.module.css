@@ -1,0 +1,14 @@
+.questions{
+    display: flex;
+    /* justify-content: center; */
+    gap: 30px;
+     flex-direction: column;
+     height: 75vh;
+     overflow-y: scroll;
+      margin-inline: 16px;
+}
+.item-question
+{
+    position: 'relative';
+     gap: '50px'
+}
