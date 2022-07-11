@@ -1,0 +1,25 @@
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+
+  }
+  .buttons button {
+    margin: 10px;
+    text-align: center;
+    width: 140px;
+    height: 48px;
+    background: #ffffff;
+    border: 2px solid #252525;
+    box-shadow: 2px 2px 0px #d35400;
+    border-radius: 80px;
+    font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  }
+  .buttons button:hover {
+      background-color: #F39C12;
+      color: white;
+  }

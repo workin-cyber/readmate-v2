@@ -1,17 +1,17 @@
-fieldset {
+  fieldset {
     border: 1.5px solid #7D839D;
     border-radius: 0.8rem;
-    width: 25%;
+    height: 85px;
+    width: 90%;
     margin-top: 15px;
-    display: flex;
+
     margin-right: auto;
-    margin-left: auto;
-    
+margin-left: auto;
   }
-.invalid{
- border: 1.5px solid red;
+  .invalid{
+    border: 1.5px solid red;
   }
-.invalidlabel{
+  .invalidlabel{
     color:red;
     
 }
@@ -19,13 +19,16 @@ fieldset {
   color: red;
 }
   
-.allInputs {
+  .allInputs {
     box-sizing: border-box;
-  padding-left: 5%;
-  padding-bottom: 4%;
+  
+    width: 85%;
+    height: 40px;
+  padding-left: 15px;
+  padding-bottom: 18px;
     font-weight: 600;
     font-size: 100%;
-    line-height: 2;
+    line-height: 2rem;
     background: #ffff;
     border: none;
     outline: 0;
@@ -34,7 +37,8 @@ fieldset {
   
   legend {
     padding: 0.2em 0.5em;
-    color: #55575A;
+    color: var(--main-title-color);
+    font-size: 90%;
     position: relative;
     margin-left: 1rem;
 width:auto

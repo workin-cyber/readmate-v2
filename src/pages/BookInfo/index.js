@@ -1,10 +1,13 @@
-import { useState, useRef } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./style.module.css";
 import Button from "../../components/Common/Button"
 import InputText from "../../components/Common/InputText";
+import mainContext from "../../context/mainContext";
 
 function BookInfo(props) {
+    const { header } = useContext(mainContext)
+
     const navigate = useNavigate();
     const [bookName, setBookName] = useState("");
     const [genre, setGenre] = useState("");
@@ -12,9 +15,12 @@ function BookInfo(props) {
     const [bookValid, setBookValid] = useState(true)
     const [ganerValid, setGenreValid] = useState(true)
 
+    useEffect(() => {
+        header.setPageName(`Book Info`);
+    }, [])
+
 
     function insertBook() {
-        console.log("enter");
         console.log(bookName);
         if (bookName.trim().length == 0) {
             setBookValid(false)
@@ -29,22 +35,20 @@ function BookInfo(props) {
                 genre: genre,
                 roundCounter: 1,
             };
-            navigate("/train-reading/instructions", { state: { nevigateObject } });
+            navigate("/tr/instructions", { state: { nevigateObject } });
 
         }
-        // return data;
     };
-    // };
 
     return (
         <>
 
             <div className={styles.bookInfo}>
-                <InputText label="what book are you going to read?" type="text" placeholder="Type book name" value={bookName} valid={bookValid} onInput={(e) => { setBookValid(true); setBookName(e.target.value) }} />
-                <InputText label="genre" type="text" placeholder="Type book genre" value={genre} valid={ganerValid} onInput={(e) => { setGenreValid(true); setGenre(e.target.value) }} />
+                <InputText title="what book are you going to read?" type="text" placeholder="Type book name" value={bookName} required={bookValid} onChange={(e) => { setBookValid(true); setBookName(e.target.value) }} />
+                <InputText title="genre" type="text" placeholder="Type book genre" value={genre} required={ganerValid} onChange={(e) => { setGenreValid(true); setGenre(e.target.value) }} />
 
             </div>
-            <Button type="button" name="next" click={insertBook} />
+            <Button title="next" height="50px" startFunction={insertBook} fontColor={"white"} width={"85%"} />
 
         </>
     );

@@ -1,12 +1,15 @@
 import { Route, Routes } from 'react-router-dom'
 import Instructions from './pages/Freestyle/Instructions'
+import BookInfo from './pages/BookInfo'
+import PushUpInstructions from './pages/PushUpInstructions'
+import Questions from './pages/Questions'
 export default function Main() {
 
     return <>
 
         <Routes>
 
-                        
+
             <Route path='signup' />
             <Route path='login' />
             <Route path='teacher' />
@@ -15,20 +18,25 @@ export default function Main() {
             <Route path='/' />
             <Route path='settings' />
 
-            <Route path='tr'>
-                
+            <Route path='/tr'>
+                <Route path="book-info" element={<BookInfo />} />
+                <Route path="instructions" element={<PushUpInstructions />} />
+                <Route path="Questions" element={<Questions />} />
+
             </Route>
 
-            <Route path='tf'>
-                
+            <Route path='/tf'>
+
+
+
             </Route>
 
-            <Route path='freestyle' element={<Instructions/>}>
+            <Route path='freestyle' element={<Instructions />}>
 
             </Route>
 
             <Route path='ass'>
-                
+
             </Route>
         </Routes>
 
