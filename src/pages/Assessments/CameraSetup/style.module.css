@@ -1,0 +1,8 @@
+.camera{
+    background-color: blue;
+    height: 420px;
+    width: 260px;
+    border-radius: 40px;
+    margin :auto;
+    margin-top: 10px;
+}
