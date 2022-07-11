@@ -3,6 +3,7 @@ import Instructions from './pages/Freestyle/Instructions'
 import BookInfo from './pages/BookInfo'
 import PushUpInstructions from './pages/PushUpInstructions'
 import Questions from './pages/Questions'
+import TestAviad from './TestAviad'
 export default function Main() {
 
     return <>
@@ -15,7 +16,7 @@ export default function Main() {
             <Route path='teacher' />
             <Route path='forgot' />
 
-            <Route path='/' />
+            <Route path='/' element={<TestAviad />} />
             <Route path='settings' />
 
             <Route path='/tr'>
