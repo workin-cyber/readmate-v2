@@ -56,46 +56,48 @@ export const SignUp = () => {
     data ? setValid(false) : setValid(true);
   };
   return (
-    <div className="sign-up">
-      <FormTitle content="Create an Acount" />
-      <SubTitleLogin content="Already have an account?" sign="In" />
-      <SubmitForm onSubmit={onSubmit}>
-        <Input
-          legend="First Name"
-          content="First Name"
-          type="text"
-          name="firstName"
-          valid={valid}
-        />
-        <Input
-          content="Last Name"
-          type="text"
-          name="lastName"
-          legend="Last Name"
-          valid={valid}
-        />
-        <Input
-          legend="Email"
-          content="Email"
-          type="email"
-          name="email"
-          valid={valid}
-        />
-        <PasswordInput
-          legend="Password"
-          content="Password"
-          name="password"
-          w2eecdfdedcbdc
-          valid={valid}
-        />
-        <PasswordInput
-          legend="Confirm Password"
-          content="Confirm Password"
-          name="confirm-password"
-          valid={valid}
-        />
-        <SignButton content="Sign Up" type="submit" />
-      </SubmitForm>
+    <div className="wrap">
+      <div className="sign-up">
+        <FormTitle content="Create an Acount" />
+        <SubTitleLogin content="Already have an account?" sign="In" />
+        <SubmitForm onSubmit={onSubmit}>
+          <Input
+            legend="First Name"
+            content="First Name"
+            type="text"
+            name="firstName"
+            valid={valid}
+          />
+          <Input
+            content="Last Name"
+            type="text"
+            name="lastName"
+            legend="Last Name"
+            valid={valid}
+          />
+          <Input
+            legend="Email"
+            content="Email"
+            type="email"
+            name="email"
+            valid={valid}
+          />
+          <PasswordInput
+            legend="Password"
+            content="Password"
+            name="password"
+            w2eecdfdedcbdc
+            valid={valid}
+          />
+          <PasswordInput
+            legend="Confirm Password"
+            content="Confirm Password"
+            name="confirm-password"
+            valid={valid}
+          />
+          <SignButton content="Sign Up" type="submit" />
+        </SubmitForm>
+      </div>
       <FooterGoogle />
     </div>
   );

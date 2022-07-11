@@ -1,0 +1,9 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
