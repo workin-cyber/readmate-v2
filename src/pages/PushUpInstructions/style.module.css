@@ -1,0 +1,48 @@
+/* .headphones{
+    background-image: url('../../../assets/img/head-phones.jpg');
+width: 273.76px;
+height: 272px;
+left: 70px;
+top: 135px;
+
+} */
+
+.frameA{
+    box-sizing: border-box;
+
+position: absolute;
+width: 413px;
+height: 269px;
+left: 1px;
+top: 531px;
+
+background: #7D56A5;
+border: 1.5px solid #252525;
+border-radius: 40px 40px 0px 0px;
+}
+
+.frameB{
+    /* Frame 8 */
+
+
+box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 29px 26px;
+gap: 8px;
+
+position: absolute;
+width: 339px;
+height: 149px;
+left: 38px;
+top: 621px;
+
+background: #FFFFFF;
+border: 1.5px solid #000000;
+border-radius: 40px;
+}
