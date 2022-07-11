@@ -93,8 +93,7 @@ text-align: center;
 .squareButton {
   box-sizing: border-box;
 display: flex;
-  /* Auto layout */
-  /* display: relative; */
+
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -102,17 +101,10 @@ display: flex;
 text-align: center;
   width: 60px;
   height: 60px;
-  /* height: 20%; */
-
   background: #feefec;
   border: 2px solid #252525;
-  /* 1 */
-
   box-shadow: 2px 2px 0px #d35400;
   border-radius: 20%;
-
-  /* Inside auto layout */
-
   flex: none;
   order: 0;
   flex-grow: 0;

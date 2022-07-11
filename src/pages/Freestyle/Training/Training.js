@@ -1,19 +1,20 @@
 import Clock from "../../../components/Common/Clock";
 import SoundFooter from "../../../components/Common/SoundFooter"
 import React, { useContext } from "react";
-import {useEffect, useState, useRef} from "react"
+import {useEffect, useState} from "react"
 import Button from "../../../components/Common/Button";
-// import { dataContext } from "../../../context/context";
-// Creator : Team H - Nurit & Milka & Batia
+import {useNavigate} from 'react-router-dom'
+import  dataContext  from "../../../context/dataContext";
+
+// Creator : Team H - Nurit & Milka & Batya
 function Training() {
-  // const localDataContext = useContext(dataContext)
-  // const tr = localDataContext.userDetails.TR
-  const tr = 14
+  
+  const localDataContext = useContext(dataContext)
+  const tr = localDataContext.userDetails.TR
 
   console.log('userLpm',tr[tr.length-1]);
   
-  // const [lpm,setLpm] = useState(tr[tr.length-1].Value)
-  const [lpm,setLpm] = useState(tr) 
+  const [lpm,setLpm] = useState(tr[tr.length-1].Value)
  
   let fileName = pickFile(lpm); 
   const file = require(`../../../assets/sounds/wush_mp3/wush_${fileName}_1min.mp3`);
@@ -71,13 +72,18 @@ const freeStyleFuncs = {
   onComplete: onComplete
 }
 
+  
+// navigate to dashboard
+const navigata = useNavigate()
+const onclick = ()=>{
+navigata('/')}
+
 
   return (
     <>
     <Clock freeStyle={true} time={180} funcs={freeStyleFuncs}  initRapidValue={lpm} ></Clock>
     {playing ?
-          // <SoundFooter song = {file}></SoundFooter> : <Button type={"link"} name={"Done"} path = {"/teamH/graphDashboard"}></Button>}
-      <SoundFooter song = {file}></SoundFooter> : <Button title ="Done"></Button>}
+      <SoundFooter song = {file}></SoundFooter> : <Button title ="Done" startFunction = {onclick} ></Button>}
     {/* The soundFooter at this moment is not activated by itself!, require play press  */}
     </>
   );
