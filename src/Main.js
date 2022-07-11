@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import Instructions from './pages/Freestyle/Instructions'
+import TestAviad from './TestAviad'
 export default function Main() {
 
     return <>
@@ -12,7 +13,7 @@ export default function Main() {
             <Route path='teacher' />
             <Route path='forgot' />
 
-            <Route path='/' />
+            <Route path='/' element={<TestAviad/>}/>
             <Route path='settings' />
 
             <Route path='tr'>
@@ -23,7 +24,7 @@ export default function Main() {
                 
             </Route>
 
-            <Route path='freestyle' element={<Instructions/>}>
+            <Route path='/freestyle/*' element={<Instructions/>}>
 
             </Route>
 
