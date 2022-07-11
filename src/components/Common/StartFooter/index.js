@@ -12,8 +12,16 @@ import "./style.css";
 //props.explanation
 //props.img  ------> צריך להוריד את התמונה ולהכניס לתקיית התמונות, ואז לייבא אותה בדף אליו מרנדרים את הקומפוננטה הזו
 // _____________________
-
-function FooterStart(props) {
+/**
+ *
+ * @param {{startFunction:string,
+ * title: string,
+ * subtitle:string,
+ * explanation:string,
+ * img:string}} props
+ * @returns
+ */
+function StartFooter(props) {
   return (
     <div className="pageStartFooter">
       <div className="myAreaBtnStart">
@@ -41,4 +49,4 @@ function FooterStart(props) {
   );
 }
 
-export default FooterStart;
+export default StartFooter;
