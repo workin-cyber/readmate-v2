@@ -3,11 +3,7 @@
     padding: 30px;
      box-sizing: border-box;
   position: absolute;
-  /* width: 382px; */
   height: 173px;
-  /* left: 16.36px; */
-  /* top: 179px; */
-  
   background: white;
   border: 2px solid black; 
   border-radius: 20px;
@@ -73,46 +69,31 @@
   
     }
     .title{
-      /* width: 173px; */
   height: 25px;
-  
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
   line-height: 25px;
-  /* identical to box height, or 125% */
-  
   text-align: center;
-  
   color: #252525;
   
   
-  /* Inside auto layout */
   
   flex: none;
   order: 0;
   flex-grow: 0;
     }
   .txt{
-    /* width: 212px; */
   height: 20px;
   padding: 10px;
-  
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  /* identical to box height, or 143% */
-  
   text-align: center;
-  
-  color: #252525;
-  
-  
-  /* Inside auto layout */
-  
+  color: #252525;  
   flex: none;
   order: 1;
   flex-grow: 0;
@@ -120,7 +101,6 @@
   .btnPopup{
     
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     padding: 16px 33px;

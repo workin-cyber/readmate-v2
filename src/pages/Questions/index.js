@@ -1,10 +1,19 @@
-import { useState } from "react";
+import { useState, useContext, useEffect } from "react";
 import InputText from "../../components/Common/InputText";
 import Button from "../../components/Common/Button";
 import styles from './style.module.css'
 import { useNavigate, useLocation } from "react-router-dom";
+import mainContext from "../../context/mainContext";
+
+
 export default function FourQues() {
+    const { header } = useContext(mainContext)
+
     const location = useLocation();
+
+    useEffect(() => {
+        header.setPageName(`Questions`);
+    }, [])
     // const nevigateObject = location.state.nevigateObject;  --from Timer
     const nevigateObject = {
         bookName: "bookName",

@@ -4,7 +4,9 @@ import BookInfo from './pages/BookInfo'
 import PushUpInstructions from './pages/PushUpInstructions'
 import Questions from './pages/Questions'
 import TestAviad from './TestAviad'
+import Popup from './components/Common/Popup'
 export default function Main() {
+
 
     return <>
 
@@ -20,6 +22,7 @@ export default function Main() {
             <Route path='settings' />
 
             <Route path='/tr'>
+                <Route path="" element={<Popup />} />
                 <Route path="book-info" element={<BookInfo />} />
                 <Route path="instructions" element={<PushUpInstructions />} />
                 <Route path="Questions" element={<Questions />} />
@@ -40,6 +43,7 @@ export default function Main() {
 
             </Route>
         </Routes>
+
 
     </>
 
