@@ -11,21 +11,21 @@ function PushUpInstructions(props) {
 const {header} = useContext(mainContext)
   const navigate = useNavigate();
   const location = useLocation();
-  const nevigateObject = location.state.nevigateObject;
+  const navigateObject = location.state.navigateObject;
   const earphonesImg = require("../../assets/images/icons/FrameHeadPhone.png")
 
 
   let instructionsText, book;
-  book = nevigateObject.bookName;
+  book = navigateObject.bookName;
   useEffect(()=>{
-   header.setPageName(`Pushup ${nevigateObject.roundCounter}/4`);
+   header.setPageName(`Pushup ${navigateObject.roundCounter}/4`);
   },[])
-  nevigateObject.roundCounter === 4
+  navigateObject.roundCounter === 4
   ? (instructionsText = `Continue reading ${book} book at the pace of the sound, for the next 3 minutes - you can use the stop button if you can't keep up with the music rate.`)
   : (instructionsText = `Continue reading ${book} book at the pace of the sound, for the next 3 minutes - we will notify you when time is up.`);
 
   const startRound = () => {
-    navigate("/tr/timer", { state: { nevigateObject } });
+    navigate("/tr/timer", { state: { navigateObject } });
   };
 
   return (
@@ -50,7 +50,7 @@ const {header} = useContext(mainContext)
 
 export default PushUpInstructions;
 
-// const nevigateObject = {
+// const navigateObject = {
 //   bookName: "bookName",
 //   genre: "genre",
 //   roundCounter: 1,
@@ -64,21 +64,21 @@ export default PushUpInstructions;
 //   const extractContext = useContext(pageNameContext);
 //   const navigate = useNavigate();
 //   const location = useLocation();
-//   const nevigateObject = null, book = '';
+//   const navigateObject = null, book = '';
   
 //   const startRound = () => {
-//       navigate("/train-reading/timer", { state: { nevigateObject } });
+//       navigate("/train-reading/timer", { state: { navigateObject } });
 //     };
 //     let instructionsText = "";
     
-//     // nevigateObject.roundCounter === 4
+//     // navigateObject.roundCounter === 4
 //     // ? (instructionsText = `Continue reading ${book} book at the pace of the sound, for the next 3 minutes - you can use the stop button if you can't keep up with the music rate.`)
 //     // : (instructionsText = `Continue reading ${book} book at the pace of the sound, for the next 3 minutes - we will notify you when time is up.`);
 //     useEffect(()=>{
-//        nevigateObject = location.state.nevigateObject
-//        book = nevigateObject.bookName;
-//        extractContext.setPageName(`Pushup ${nevigateObject.roundCounter}/4`);
-//        nevigateObject.roundCounter === 4
+//        navigateObject = location.state.navigateObject
+//        book = navigateObject.bookName;
+//        extractContext.setPageName(`Pushup ${navigateObject.roundCounter}/4`);
+//        navigateObject.roundCounter === 4
 //     ? (instructionsText = `Continue reading ${book} book at the pace of the sound, for the next 3 minutes - you can use the stop button if you can't keep up with the music rate.`)
 //     : (instructionsText = `Continue reading ${book} book at the pace of the sound, for the next 3 minutes - we will notify you when time is up.`);
 //    },[])

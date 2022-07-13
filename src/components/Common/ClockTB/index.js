@@ -6,26 +6,26 @@ import { useNavigate } from "react-router-dom";
 
 function ClockTB(props) {
     const navigate = useNavigate();
-    let { nevigateObject } = props;
-    console.log("clockTB :", nevigateObject);
+    let { navigateObject } = props;
+    console.log("clockTB :", navigateObject);
     let timeInSeconds = props.time;
     const [isFinish, setIsFinish] = useState(true);
     const { setPlay } = props.setPlay;
     //console.log("play: ", props.play);
-    //  nevigateObject.roundCounter++
+    //  navigateObject.roundCounter++
     // const showContinue = () => {
     //   //setShowContinueBtn(true);
 
-    //   console.log("round-count",nevigateObject.roundCounter);
-    //   nevigateObject.roundCounter++;
+    //   console.log("round-count",navigateObject.roundCounter);
+    //   navigateObject.roundCounter++;
     // };
 
     function complete() {
         setIsFinish(true);
         props.setPlay(false);
         //showContinue()
-        //nevigateObject.roundCounter++;
-        navigate("/train-reading/instructions", { state: { nevigateObject } });
+        //navigateObject.roundCounter++;
+        navigate("/train-reading/instructions", { state: { navigateObject } });
     }
 
     const renderTime = ({ remainingTime }) => {

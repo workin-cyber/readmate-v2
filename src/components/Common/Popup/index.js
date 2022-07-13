@@ -14,7 +14,7 @@ export default function Popup() {
 
     const navigate = useNavigate();
 
-    const nevigateObject = {
+    const navigateObject = {
         bookName: userDetails.currentBook.name,
         genre: userDetails.currentBook.genre,
         roundCounter: 1,
@@ -31,11 +31,11 @@ export default function Popup() {
 
     const yes = () => {
         popup.setPopup(false);
-        navigate("/tr/instructions", { state: { nevigateObject } });
+        navigate("/tr/instructions", { state: { navigateObject } });
     };
     const no = () => {
         popup.setPopup(false);
-        navigate("/tr/book-info", { state: { nevigateObject } });
+        navigate("/tr/book-info", { state: { navigateObject } });
     };
 
     return (

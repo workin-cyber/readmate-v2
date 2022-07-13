@@ -12,11 +12,11 @@ export default function PushUpTimer2() {
     const { header } = useContext(mainContext)
 
     const location = useLocation();
-    const nevigateObject = location.state.nevigateObject;
+    const navigateObject = location.state.navigateObject;
     const navigate = useNavigate();
     let audioRef = useRef(null);
 
-    // console.log(nevigateObject);
+    // console.log(navigateObject);
     // const [count, setCount] = useState(0);
     const [play, setPlay] = useState(false);
     const [showStopBtn, setShowStopBtn] = useState(false);
@@ -27,7 +27,7 @@ export default function PushUpTimer2() {
 
 
     useEffect(() => {
-        nevigateObject.roundCounter === 4
+        navigateObject.roundCounter === 4
             ? setShowStopBtn(true)
             : setShowStopBtn(false);
         const audio = require(`../../assets/sounds/wush_mp3/wush_${fileName}_1min.mp3`);
@@ -42,22 +42,22 @@ export default function PushUpTimer2() {
 
     //  console.log("fatherPlay:", play);
     const continueBtnClick = () => {
-        // nevigateObject.roundCounter++;
-        navigate("/tr/questions", { state: { nevigateObject } });
+        // navigateObject.roundCounter++;
+        navigate("/tr/questions", { state: { navigateObject } });
     };
 
 
     const stopBtnClick = () => {
         // save lpm
-        nevigateObject.rateData.LPM = Number(newRate * lpmFile);
-        navigate("/tr/questions", { state: { nevigateObject } });
+        navigateObject.rateData.LPM = Number(newRate * lpmFile);
+        navigate("/tr/questions", { state: { navigateObject } });
     };
 
     /****** Clock Functions ********/
     const totalTimeInMinutes = 3;
     //const totalTimeInSeconds = totalTimeInMinutes * 60;
     const totalTimeInSeconds = 10;
-    const lpm = nevigateObject.lpm;  // user's lpm saved in db
+    const lpm = navigateObject.lpm;  // user's lpm saved in db
     let fileName = pickFile(lpm);
     let lpmFile = pickFile(lpm);
 
@@ -71,7 +71,7 @@ export default function PushUpTimer2() {
     let newRate = initialRate;
 
     useEffect(() => {
-        header.setPageName(`Pushup ${nevigateObject.roundCounter}/4`);
+        header.setPageName(`Pushup ${navigateObject.roundCounter}/4`);
     }, [])
 
     // function for Clock.onUpdate event
@@ -128,7 +128,7 @@ export default function PushUpTimer2() {
         setShowClockBtn(false);
         setShowContinueBtn(true);
         setPlay(false);
-        //  nevigateObject.roundCounter++;
+        //  navigateObject.roundCounter++;
         stopAudio();
     };
 
@@ -153,7 +153,7 @@ export default function PushUpTimer2() {
                 setPlay={setPlay}
                 freeStyle={false}
                 time={totalTimeInSeconds}
-                nevigateObject={nevigateObject}
+                navigateObject={navigateObject}
                 clockFunctions={clockFunctions}
             />
 

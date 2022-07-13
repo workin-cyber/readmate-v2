@@ -10,7 +10,7 @@ function BookInfo(props) {
 
     const navigate = useNavigate();
     const location = useLocation();
-    const nevigateObject = location.state.nevigateObject;
+    const navigateObject = location.state.navigateObject;
     const [bookName, setBookName] = useState("");
     const [genre, setGenre] = useState("");
 
@@ -31,10 +31,10 @@ function BookInfo(props) {
             setGenreValid(false)
         } else {
             console.log("save in DB");
-            nevigateObject.bookName = bookName
-            nevigateObject.genre = genre
+            navigateObject.bookName = bookName
+            navigateObject.genre = genre
 
-            navigate("/tr/instructions", { state: { nevigateObject } });
+            navigate("/tr/instructions", { state: { navigateObject } });
 
         }
     };

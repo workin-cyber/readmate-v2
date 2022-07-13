@@ -14,7 +14,7 @@ export default function FourQues() {
     useEffect(() => {
         header.setPageName(`Questions`);
     }, [])
-    const nevigateObject = location.state.nevigateObject;
+    const navigateObject = location.state.navigateObject;
 
     //איך לשלוח את התשובות?
 
@@ -39,11 +39,11 @@ export default function FourQues() {
         else if (q3.trim().length == 0) { setVq3(false) }
         else if (q4.trim().length == 0) { setVq4(false) }
         else {
-            nevigateObject.roundCounter++;
-            if (nevigateObject.roundCounter <= 4) { navigate("/tr/instructions", { state: { nevigateObject } }) }
+            navigateObject.roundCounter++;
+            if (navigateObject.roundCounter <= 4) { navigate("/tr/instructions", { state: { navigateObject } }) }
             else {
-                console.log(nevigateObject);
-                navigate("/tr/level/exercise", { state: { nevigateObject } })
+                console.log(navigateObject);
+                navigate("/tr/exercise", { state: { navigateObject } })
             }
         }
     }
