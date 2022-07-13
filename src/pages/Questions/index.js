@@ -14,13 +14,8 @@ export default function FourQues() {
     useEffect(() => {
         header.setPageName(`Questions`);
     }, [])
-    // const nevigateObject = location.state.nevigateObject;  --from Timer
-    const nevigateObject = {
-        bookName: "bookName",
-        genre: "genre",
-        roundCounter: 1,
-        lpm: 20,
-    };
+    const nevigateObject = location.state.nevigateObject;
+
     //איך לשלוח את התשובות?
 
 
@@ -44,7 +39,8 @@ export default function FourQues() {
         else if (q3.trim().length == 0) { setVq3(false) }
         else if (q4.trim().length == 0) { setVq4(false) }
         else {
-            if (nevigateObject.roundCounter <= 7) { navigate("/tr/instructions", { state: { nevigateObject } }) }
+            nevigateObject.roundCounter++;
+            if (nevigateObject.roundCounter <= 4) { navigate("/tr/instructions", { state: { nevigateObject } }) }
             else {
                 console.log(nevigateObject);
                 navigate("/tr/level/exercise", { state: { nevigateObject } })

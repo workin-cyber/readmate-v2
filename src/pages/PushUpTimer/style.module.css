@@ -4,3 +4,54 @@ btnhide{
 .btnshow{
     display: block;
 }
+
+.RoundedButton {
+    /* Ellipse 34 */
+  
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 0px;
+    top: 0px;
+  
+    background: #feefec;
+    border: 1.5px solid #252525;
+    /* 1 */
+  
+    box-shadow: 2px 2px 0px #d35400;
+    border-radius: 50%;
+    position: absolute;
+    top: 284px;
+      left: 46%;
+  }
+  
+  .RoundedButtonPlay {
+    /* Ellipse 34 */
+    
+  
+  
+    box-sizing: border-box;
+  
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 0px;
+    top: 0px;
+  
+    background: #f39c12;
+    border: 1.5px solid #252525;
+    /* 1 */
+  
+    box-shadow: 2px 2px 0px #d35400;
+    border-radius: 50%;
+    font-size: large;
+    position: absolute;
+    top: 284px;
+      left: 46%;
+  }

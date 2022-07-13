@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import styles from "./style.module.css";
 import Button from "../../components/Common/Button"
 import InputText from "../../components/Common/InputText";
@@ -9,6 +9,8 @@ function BookInfo(props) {
     const { header } = useContext(mainContext)
 
     const navigate = useNavigate();
+    const location = useLocation();
+    const nevigateObject = location.state.nevigateObject;
     const [bookName, setBookName] = useState("");
     const [genre, setGenre] = useState("");
 
@@ -29,12 +31,9 @@ function BookInfo(props) {
             setGenreValid(false)
         } else {
             console.log("save in DB");
+            nevigateObject.bookName = bookName
+            nevigateObject.genre = genre
 
-            const nevigateObject = {
-                bookName: bookName,
-                genre: genre,
-                roundCounter: 1,
-            };
             navigate("/tr/instructions", { state: { nevigateObject } });
 
         }
