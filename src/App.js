@@ -3,15 +3,15 @@
 import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 import { DataProvider } from "./context/manageContext";
+import Layout from "./Layout";
 import Test from "./Test";
 
 function App() {
   return (
     <>
       <DataProvider>
-        <BrowserRouter>
-          <Test />
-        </BrowserRouter>
+        <Layout />
+        <Test />
       </DataProvider>
     </>
   );

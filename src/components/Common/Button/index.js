@@ -3,16 +3,6 @@
 // <Button bgColor = "pink" fontColor = "green" startFunction = {onPlay} title = "Next" width = "350px" height = "50px"> </Button>
 import "./style.css";
 
-/**
- *
- * @param {{bgColor: string,
- *        fontColor: string,
- *        startFuntion: ()=>{},
- *        title: string,
- *        width = string,
- *        height = string}} props
- * @returns
- */
 export default function Button(props) {
   const myStyle = {
     backgroundColor: props.bgColor,

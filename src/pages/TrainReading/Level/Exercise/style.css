@@ -1,0 +1,13 @@
+.level_exercise {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 69px;
+}
+
+.HeaderHolder {
+  height: 122px;
+  width: 100%;
+  border: 2px solid black;
+}

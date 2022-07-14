@@ -1,6 +1,6 @@
-.wrapButton{
-display: flex;
-justify-content: center;
+.wrapButton {
+  display: flex;
+  justify-content: center;
 }
 
 .submit {
@@ -15,8 +15,8 @@ justify-content: center;
   position: absolute;
 }
 /* .word { */
-  /* display: contents; */
-  /* width: 52px;
+/* display: contents; */
+/* width: 52px;
   height: 16px;
 font-family: "Poppins";
 font-style: normal;

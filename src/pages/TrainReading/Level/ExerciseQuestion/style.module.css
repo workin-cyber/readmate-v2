@@ -1,0 +1,45 @@
+.fourQues {
+  margin-top: 9%;
+}
+.newText {
+  width: 90%;
+  height: 55px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 26px;
+  color: #55575a;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin-left: 4.5%;
+  /* 100px???  */
+  margin-bottom: 100px;
+}
+.nUnderLine {
+  margin-left: 4.5%;
+  margin-bottom: 2%;
+}
+.nTitle {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  margin-left: 4.5%;
+  margin-top: 5%;
+  color: #252525;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.EQButton {
+  margin-top: 30px;
+}
+
+button.button {
+  position: fixed;
+  justify-content: center;
+  z-index: 5;
+}
