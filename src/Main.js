@@ -5,7 +5,7 @@ import PushUpInstructions from './pages/PushUpInstructions'
 import Questions from './pages/Questions'
 import TestAviad from './TestAviad'
 import Popup from './components/Common/Popup'
-import PushUpTimer2 from './pages/PushUpTimer'
+import PushUpTimer2 from './pages/PushUpTimer2'
 export default function Main() {
 
 
