@@ -1,43 +1,47 @@
 import styles from "./style.module.css";
 import { useContext, useEffect } from "react";
-//import Text from "../../../components/Common/Text";
 import { useNavigate, useLocation } from "react-router-dom";
-import { pageNameContext } from "../../../components/layout/Layout";
-//import SubmitBtn from "../../../components/Common/SubmitBtn";
-import FooterStart from "../../components/Common/FooterStart"
+import FooterStart from "../../components/Common/StartFooter"
+import mainContext from "../../context/mainContext";
 
 
 function PushUpInstructions(props) {
 
-  const {pageName, setPageName} = useContext(pageNameContext);
+//   const {pageName, setPageName} = useContext(pageNameContext);
+const {header} = useContext(mainContext)
   const navigate = useNavigate();
   const location = useLocation();
-  const nevigateObject = location.state.nevigateObject;
+  const navigateObject = location.state.navigateObject;
+  const earphonesImg = require("../../assets/images/icons/FrameHeadPhone.png")
+
 
   let instructionsText, book;
+  book = navigateObject.bookName;
   useEffect(()=>{
-    setPageName(`Pushup ${nevigateObject.roundCounter}/4`);
+   header.setPageName(`Pushup ${navigateObject.roundCounter}/4`);
   },[])
-  nevigateObject.roundCounter === 4
+  navigateObject.roundCounter === 4
   ? (instructionsText = `Continue reading ${book} book at the pace of the sound, for the next 3 minutes - you can use the stop button if you can't keep up with the music rate.`)
   : (instructionsText = `Continue reading ${book} book at the pace of the sound, for the next 3 minutes - we will notify you when time is up.`);
-     book = nevigateObject.bookName;
 
   const startRound = () => {
-    navigate("/train-reading/timer", { state: { nevigateObject } });
+    navigate("/tr/timer", { state: { navigateObject } });
   };
 
   return (
     <>
-      {/* <Header /> */}
-      <div style={{marginRight:"auto",marginLeft:"auto", width:"fit-content"}}>
-        <img id="headphones" alt="" className={styles.headphones} />
+     
+         <div className={styles.centerImg}>
+        <div id="headphones" alt="" className={styles.headphones} />
       </div>
       <div id="playDiv">
         <FooterStart
           startFunction={()=>startRound()}
-          title="With your headphones on,"
+        title="Start Now"
+          subtitle = "With your headphones on,"
           explanation={instructionsText}
+          img = {earphonesImg}
+
         />
       </div>
     </>
@@ -46,7 +50,7 @@ function PushUpInstructions(props) {
 
 export default PushUpInstructions;
 
-// const nevigateObject = {
+// const navigateObject = {
 //   bookName: "bookName",
 //   genre: "genre",
 //   roundCounter: 1,
@@ -60,21 +64,21 @@ export default PushUpInstructions;
 //   const extractContext = useContext(pageNameContext);
 //   const navigate = useNavigate();
 //   const location = useLocation();
-//   const nevigateObject = null, book = '';
+//   const navigateObject = null, book = '';
   
 //   const startRound = () => {
-//       navigate("/train-reading/timer", { state: { nevigateObject } });
+//       navigate("/train-reading/timer", { state: { navigateObject } });
 //     };
 //     let instructionsText = "";
     
-//     // nevigateObject.roundCounter === 4
+//     // navigateObject.roundCounter === 4
 //     // ? (instructionsText = `Continue reading ${book} book at the pace of the sound, for the next 3 minutes - you can use the stop button if you can't keep up with the music rate.`)
 //     // : (instructionsText = `Continue reading ${book} book at the pace of the sound, for the next 3 minutes - we will notify you when time is up.`);
 //     useEffect(()=>{
-//        nevigateObject = location.state.nevigateObject
-//        book = nevigateObject.bookName;
-//        extractContext.setPageName(`Pushup ${nevigateObject.roundCounter}/4`);
-//        nevigateObject.roundCounter === 4
+//        navigateObject = location.state.navigateObject
+//        book = navigateObject.bookName;
+//        extractContext.setPageName(`Pushup ${navigateObject.roundCounter}/4`);
+//        navigateObject.roundCounter === 4
 //     ? (instructionsText = `Continue reading ${book} book at the pace of the sound, for the next 3 minutes - you can use the stop button if you can't keep up with the music rate.`)
 //     : (instructionsText = `Continue reading ${book} book at the pace of the sound, for the next 3 minutes - we will notify you when time is up.`);
 //    },[])
