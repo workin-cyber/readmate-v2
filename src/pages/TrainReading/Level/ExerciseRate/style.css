@@ -1,0 +1,50 @@
+/* .rate_buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} */
+.wrapButton {
+  width: 100%;
+  height: 100%;
+}
+
+.TwistBoxRate {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 47px;
+}
+.TwistBoxRate span {
+  font-weight: 500;
+}
+.RateButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.justRight {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 170px;
+}
+
+.tooFast {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 100px;
+}
+
+.tooSlow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 30px;
+}

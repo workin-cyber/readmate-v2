@@ -7,6 +7,14 @@ import TestAviad from './TestAviad'
 import Training from './pages/Freestyle/Training/Training'
 import Popup from './components/Common/Popup'
 import PushUpTimer2 from './pages/PushUpTimer'
+import { Route, Routes } from "react-router-dom";
+import Exercise from "./pages/TrainReading/Level/Exercise";
+import ExerciseClock from "./pages/TrainReading/Level/ExerciseClock";
+import ExerciseRate from "./pages/TrainReading/Level/ExerciseRate";
+import ExerciseQuestion from "./pages/TrainReading/Level/ExerciseQuestion";
+import ExerciseResult from "./pages/TrainReading/Level/ExerciseResult";
+
+
 export default function Main() {
 
 
@@ -32,6 +40,14 @@ export default function Main() {
 
             </Route>
 
+            <Route path="/tr2">
+                <Route path="exercise" element={<Exercise />} />
+                <Route path="exercise_clock" element={<ExerciseClock />} />
+                <Route path="rate" element={<ExerciseRate />} />
+                <Route path="question" element={<ExerciseQuestion />} />
+                <Route path="result" element={<ExerciseResult />} />
+            </Route>
+
             <Route path='/tf'>
 
 
@@ -42,14 +58,12 @@ export default function Main() {
 
             </Route>
 
-            <Route path='/freestyle-instructions' element={<Instructions/>}></Route>
-            <Route path='/freestyle-training' element={<Training/>}></Route>
+            <Route path='/freestyle-instructions' element={<Instructions />}></Route>
+            <Route path='/freestyle-training' element={<Training />}></Route>
             <Route path='ass'>
 
             </Route>
         </Routes>
 
-
     </>
-
 }
