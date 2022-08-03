@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import Header from './components/Common/Header'
-import mainContext  from './context/mainContext'
+import  mainContext  from './context/mainContext'
 import Main from './Main';
 
 export default function Layout() {

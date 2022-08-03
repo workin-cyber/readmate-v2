@@ -1,14 +1,15 @@
 
 import React from 'react'
 import styles from "./style.module.css";
-import QuestionBoard from '../../../components/common/QuestionBoard'
-import SubmitBtn from '../../../components/common/SubmitBtn'
+import QuestionBoard from '../../../components/Common/QuestionBoard'
+
 import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import Button from '../../../components/Common/Button';
 
 
 // import Calc from '../Calc';
-export default function Page5() {
+export default function ComprehensionTest() {
 
     let location = useLocation();
     const data = location.state;
@@ -105,7 +106,7 @@ export default function Page5() {
                 })}
             </div>
             <div>
-                <SubmitBtn startFunction={() => { checkResults() }} name={'next'} />
+                <Button startFunction={() => { checkResults() }} title={'next'} />
             </div>
             {
                 console.log("student choice"+arr1)
