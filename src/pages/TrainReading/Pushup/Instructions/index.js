@@ -1,8 +1,8 @@
 import styles from "./style.module.css";
 import { useContext, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import FooterStart from "../../components/Common/StartFooter"
-import mainContext from "../../context/mainContext";
+import FooterStart from "../../../../components/Common/StartFooter"
+import mainContext from "../../../../context/mainContext";
 
 
 function PushUpInstructions(props) {
@@ -12,7 +12,7 @@ const {header} = useContext(mainContext)
   const navigate = useNavigate();
   const location = useLocation();
   const navigateObject = location.state.navigateObject;
-  const earphonesImg = require("../../assets/images/icons/FrameHeadPhone.png")
+  const earphonesImg = require("../../../../assets/images/icons/FrameHeadPhone.png")
 
 
   let instructionsText, book;

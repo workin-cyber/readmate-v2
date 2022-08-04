@@ -2,11 +2,11 @@ import { useEffect, useState, useContext, useRef } from "react";
 // import RoundedButtonTB from "../../../components/common/RoundedButtonTB";
 // import AudioChangeRate from "../../../components/common/AudioChangeRate";
 import { useLocation, useNavigate } from "react-router-dom";
-import ClockTB from "../../components/Common/ClockTB";
-import Button from "../../components/Common/Button";
+import ClockTB from "../../../../components/Common/ClockTB";
+import Button from "../../../../components/Common/Button";
 import styles from "./style.module.css";
-import mainContext from "../../context/mainContext";
-import Clock from "../../components/Common/Clock";
+import mainContext from "../../../../context/mainContext";
+import Clock from "../../../../components/Common/Clock";
 
 export default function PushUpTimer2() {
     const { header } = useContext(mainContext)
@@ -30,7 +30,7 @@ export default function PushUpTimer2() {
         navigateObject.roundCounter === 4
             ? setShowStopBtn(true)
             : setShowStopBtn(false);
-        const audio = require(`../../assets/sounds/wush_mp3/wush_${fileName}_1min.mp3`);
+        const audio = require(`../../../../assets/sounds/wush_mp3/wush_${fileName}_1min.mp3`);
         audioRef.current.src = audio;
     }, []);
 
