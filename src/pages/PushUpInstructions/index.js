@@ -3,16 +3,41 @@ import { useContext, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import FooterStart from "../../components/Common/StartFooter"
 import mainContext from "../../context/mainContext";
+import dataContext from "../../context/dataContext";
 
 
-function PushUpInstructions(props) {
-
-//   const {pageName, setPageName} = useContext(pageNameContext);
-const {header} = useContext(mainContext)
+function PushUpInstructions() {
+  
+  const {header} = useContext(mainContext)
+  const { userDetails } = useContext(dataContext);
   const navigate = useNavigate();
   const location = useLocation();
-  const navigateObject = location.state.navigateObject;
+
+
   const earphonesImg = require("../../assets/images/icons/FrameHeadPhone.png")
+  let navigateObject
+  if (!location.state.navigateObject){
+
+    navigateObject = {
+         bookName:location.state.bookName,
+         genre:location.state.genre,
+         roundCounter: 1,
+         lpm: userDetails.TR[userDetails.TR.length - 1].Value,
+         rateData: {
+           LPM: 0,
+             newLPM: 0,
+             round: 0,
+             justRight: false
+         },
+         questions: []
+       };
+  }
+  
+  else{
+
+    navigateObject = location.state.navigateObject;
+  }
+      
 
 
   let instructionsText, book;
@@ -20,7 +45,7 @@ const {header} = useContext(mainContext)
   useEffect(()=>{
    header.setPageName(`Pushup ${navigateObject.roundCounter}/4`);
   },[])
-  navigateObject.roundCounter === 4
+  navigateObject?.roundCounter === 4
   ? (instructionsText = `Continue reading ${book} book at the pace of the sound, for the next 3 minutes - you can use the stop button if you can't keep up with the music rate.`)
   : (instructionsText = `Continue reading ${book} book at the pace of the sound, for the next 3 minutes - we will notify you when time is up.`);
 

@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from "react";
+import { useState, useContext, useEffect, useRef } from "react";
 import InputText from "../../components/Common/InputText";
 import Button from "../../components/Common/Button";
 import styles from './style.module.css'
@@ -16,31 +16,39 @@ export default function FourQues() {
     }, [])
     const navigateObject = location.state.navigateObject;
 
-    //איך לשלוח את התשובות?
+    const inputRef1 = useRef("");
+    const inputRef2 = useRef("");
+    const inputRef3 = useRef("");
+    const inputRef4 = useRef("");
+
+    const q1 = inputRef1.current
+    const q2 = inputRef2.current
+    const q3 = inputRef3.current
+    const q4 = inputRef4.current
 
 
     const navigate = useNavigate();
     const [vq1, setVq1] = useState(true);
-    const [q1, setQ1] = useState("");
-
     const [vq2, setVq2] = useState(true);
-    const [q2, setQ2] = useState("");
-
     const [vq3, setVq3] = useState(true);
-    const [q3, setQ3] = useState("");
-
     const [vq4, setVq4] = useState(true);
-    const [q4, setQ4] = useState("");
 
     const underline = require('../../assets/images/icons/UnderLine.png')
     function QuesForm() {
-        if (q1.trim().length == 0) { setVq1(false) }
-        else if (q2.trim().length == 0) { setVq2(false) }
-        else if (q3.trim().length == 0) { setVq3(false) }
-        else if (q4.trim().length == 0) { setVq4(false) }
+        console.log(q1.value, q2.value, q3.value, q4.value,);
+        if (q1.value.trim().length == 0) { setVq1(false) }
+        else if (q2.value.trim().length == 0) { setVq2(false) }
+        else if (q3.value.trim().length == 0) { setVq3(false) }
+        else if (q4.value.trim().length == 0) { setVq4(false) }
         else {
             navigateObject.roundCounter++;
-            if (navigateObject.roundCounter <= 4) { navigate("/tr/instructions", { state: { navigateObject } }) }
+            let question = {
+                type: "pushUp",
+                answer: [{ 1: q1.value }, { 2: q2.value }, { 3: q3.value }, { 4: q4.value }]
+            }
+
+            navigateObject.questions.push(question)
+            if (navigateObject.roundCounter <= 4) { console.log(navigateObject); navigate("/tr/instructions", { state: { navigateObject } }) }
             else {
                 console.log(navigateObject);
                 navigate("/tr/exercise", { state: { navigateObject } })
@@ -56,10 +64,10 @@ export default function FourQues() {
             <img src={underline} className={styles.nUnderLine} alt="" />
             <div className={styles.newText}>Consectetur fames feugiat interdum morbi placerat in. Leo commodo maecenas donec cursus aenean scelerisque eu. Ridiculus amet habitant gravida lobortis suscipit enim, consectetur quisque.</div>
             <div className={styles.fourQues}>
-                <InputText title={"Who is the main character?"} type="text" placeholder="Describe Here" required={vq1} onChange={(e) => { setVq1(true); setQ1(e.target.value) }} />
-                <InputText title={"What can you say about the theme of the story?"} type="text" placeholder="Describe Here" required={vq2} onChange={(e) => { setVq2(true); setQ2(e.target.value) }} />
-                <InputText title={"Why do you think the author wrote this book?"} type="text" placeholder="Describe Here" required={vq3} onChange={(e) => { setVq3(true); setQ3(e.target.value) }} />
-                <InputText title={"What do you think is going to happen?"} type="text" placeholder="Describe Here" required={vq4} onChange={(e) => { setVq4(true); setQ4(e.target.value) }} />
+                <InputText ref={inputRef1} title={"Who is the main character?"} type="text" placeholder="Describe Here" required={vq1} onChange={() => { setVq1(true) }} />
+                <InputText ref={inputRef2} title={"What can you say about the theme of the story?"} type="text" placeholder="Describe Here" required={vq2} onChange={() => { setVq2(true) }} />
+                <InputText ref={inputRef3} title={"Why do you think the author wrote this book?"} type="text" placeholder="Describe Here" required={vq3} onChange={() => { setVq3(true) }} />
+                <InputText ref={inputRef4} title={"What do you think is going to happen?"} type="text" placeholder="Describe Here" required={vq4} onChange={() => { setVq4(true) }} />
             </div>
             <Button title="Done" fontColor="white" height="50px" startFunction={QuesForm} />
         </>

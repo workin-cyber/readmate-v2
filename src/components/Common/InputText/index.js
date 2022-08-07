@@ -1,7 +1,8 @@
 import React from 'react'
 import "./style.css"
+import { useRef } from "react";
 
-export default function InputText(props) {
+const InputText = React.forwardRef((props, ref) => {
 
 
     const border = props.required ? "" : "invalid"
@@ -12,9 +13,12 @@ export default function InputText(props) {
             <fieldset className={border}>
                 <legend className={label}>{props.title}</legend>
 
-                <input onChange={props.onChange} className={`allInputs ${placeholder}`} type="text" placeholder={props.placeholder} />
+                <input ref={ref} onChange={props.onChange} className={`allInputs ${placeholder}`} type="text" placeholder={props.placeholder} />
+
             </fieldset>
         </>
     );
 
 }
+)
+export default InputText;

@@ -23,7 +23,7 @@ export default function Main() {
             <Route path='settings' />
 
             <Route path='/tr'>
-                <Route path="" element={<Popup />} />
+                <Route index element={<Popup />} />
                 <Route path="book-info" element={<BookInfo />} />
                 <Route path="instructions" element={<PushUpInstructions />} />
                 <Route path="timer" element={<PushUpTimer2 />} />
