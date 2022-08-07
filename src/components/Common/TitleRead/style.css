@@ -1,0 +1,17 @@
+.title-read
+{
+    position: relative;
+    width: 92%;
+    height: 54px;
+    left: 4%;
+    top: 10%;
+    margin-top: 4%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 98%;
+line-height: 27px;
+/* display: flex; */
+align-items: center;
+margin: 2%;
+color: #3D2072;}

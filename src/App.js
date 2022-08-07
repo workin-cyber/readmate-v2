@@ -10,8 +10,8 @@ function App() {
   return (
     <>
       <DataProvider>
-          <Layout />
-          <Test />
+        <Layout />
+        <Test />
       </DataProvider>
     </>
   );
