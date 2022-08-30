@@ -9,7 +9,7 @@ export const DataProvider = ({ children }) => {
     const [pageName, setPageName] = useState("Dashboard");
     const [isShowHeader, setIsShowHeader] = useState(true);
     const [isShowNav, setIsShowNav] = useState(false);
-    const [popup, setPopup] = useState(false);
+    const [popup, setPopup] = useState(); // content of popup
 
     return (
         <mainContext.Provider value={{

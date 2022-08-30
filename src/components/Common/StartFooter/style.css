@@ -1,4 +1,4 @@
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) { */
   .pageStartFooter {
     display: flex;
     flex-direction: column;
@@ -126,6 +126,8 @@
     margin-left: 332px;
     z-index: 10;
     object-fit: cover;
+    display: flex;
+    justify-content: center;
   }
   .leftEmoji {
     width: 50px;
@@ -147,4 +149,4 @@
     width: 111px;
     height: 111px;
   } */
-}
+/* } */

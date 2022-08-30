@@ -64,7 +64,10 @@ export default function Main() {
 
             <Route path='/freestyle-instructions' element={<Instructions />}></Route>
             <Route path='/freestyle-training' element={<Training />}></Route>
-            
+            <Route path='ass'>
+
+            </Route>
+
             <Route path="ass">
                 {/* <Route path="page1" element={<Page1 />} />
                 <Route path="page3" element={<Page3 />} />

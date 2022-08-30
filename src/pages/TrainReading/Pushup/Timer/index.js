@@ -8,7 +8,7 @@ import styles from "./style.module.css";
 import mainContext from "../../../../context/mainContext";
 import Clock from "../../../../components/Common/Clock";
 
-export default function PushUpTimer2() {
+export default function PushUpTimer() {
     const { header } = useContext(mainContext)
 
     const location = useLocation();
