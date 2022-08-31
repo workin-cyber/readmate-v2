@@ -1,9 +1,9 @@
 import styles from "./style.module.css";
 import { useContext, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import FooterStart from "../../components/Common/StartFooter"
-import mainContext from "../../context/mainContext";
-import dataContext from "../../context/dataContext";
+import StartFooter from "../../../../components/Common/StartFooter"
+import mainContext from "../../../../context/mainContext";
+import dataContext from "../../../../context/dataContext";
 
 
 function PushUpInstructions() {
@@ -14,7 +14,7 @@ function PushUpInstructions() {
   const location = useLocation();
 
 
-  const earphonesImg = require("../../assets/images/icons/FrameHeadPhone.png")
+  const earphonesImg = require("../../../../assets/images/icons/FrameHeadPhone.png")
   let navigateObject
   if (!location.state.navigateObject){
 
@@ -60,7 +60,7 @@ function PushUpInstructions() {
         <div id="headphones" alt="" className={styles.headphones} />
       </div>
       <div id="playDiv">
-        <FooterStart
+        <StartFooter
           startFunction={()=>startRound()}
         title="Start Now"
           subtitle = "With your headphones on,"
@@ -114,7 +114,7 @@ export default PushUpInstructions;
 //         <img id="headphones" alt="" className={styles.headphones} />
 //       </div>
 //       <div id="playDiv">
-//         <FooterStart
+//         <StartFooter
 //           startFunction={startRound}
 //           title="With your headphones on,"
 //           explanation={instructionsText}
