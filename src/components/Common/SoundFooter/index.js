@@ -1,6 +1,6 @@
 import './style.css'
 import React from 'react';
-import { SpectrumVisualizer, SpectrumVisualizerTheme } from 'react-audio-visualizers';
+// import { SpectrumVisualizer, SpectrumVisualizerTheme } from 'react-audio-visualizers';
 // import { AudioVisualizer, AudioVisualizerCommonProps, AudioVisualizerEvents } from 'react-audio-visualizers-core';
 
 // Creator : Team H - batya
@@ -16,9 +16,9 @@ import { SpectrumVisualizer, SpectrumVisualizerTheme } from 'react-audio-visuali
 
 export default function SoundFooter(props) {
   return (
-    <div className= {"bigSiundFooter"}>
-       <div className= {"soundFooter"}>
-          <SpectrumVisualizer
+    <div className={"bigSiundFooter"}>
+      <div className={"soundFooter"}>
+        {/* <SpectrumVisualizer
               audio={props.song}
               theme={SpectrumVisualizerTheme.roundBars}
               colors={['orange', 'white']}
@@ -30,9 +30,9 @@ export default function SoundFooter(props) {
               // barWidth={"20px"}
               highFrequency={8000}
               //onEvent={onEvent}
-></SpectrumVisualizer>
-              
+></SpectrumVisualizer> */}
+
       </div>
-      </div>
+    </div>
   );
 }
