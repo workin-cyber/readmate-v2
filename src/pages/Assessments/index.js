@@ -1,0 +1,6 @@
+export { default as AssessmentStart } from "./AssessmentStart"
+export { default as AssessmentsTest } from "./AssessmentsTest"
+export { default as CameraFace } from "./CameraFace"
+export { default as CameraSetup } from "./CameraSetup"
+export { default as Comprehension } from "./Comprehension"
+export { default as ComprehensionTest } from "./ComprehensionTest"
