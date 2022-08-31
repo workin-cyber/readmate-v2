@@ -1,6 +1,8 @@
 .container {
     display: flex;
     justify-content: center;
+    position: relative;
+    padding-bottom: 70px;
 }
 
 .container img {

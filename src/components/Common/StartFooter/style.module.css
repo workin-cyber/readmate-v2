@@ -97,6 +97,7 @@
   bottom: 30px;
   position: absolute;
   width: 339px;
+  max-width: 90%;
   height: 149px;
   padding: 0;
   gap: 10px;
@@ -120,44 +121,27 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 259px;
+  width: 253px;
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
   line-height: 18px;
   text-align: center;
   color: #55575a;
+  position: relative;
 }
 
 .myEmojiDiv {
-  width: 100%;
-  height: 100%;
-  margin-top: 200px;
-  margin-left: 332px;
+  width: 50px;
   z-index: 10;
   object-fit: cover;
   display: flex;
   justify-content: center;
+  position: absolute;
+  right: -15px;
+  bottom: 0px;
 }
 
 .leftEmoji {
   width: 50px;
-  height: 50px;
 }
-
-/* .route-area-link {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    width: 111px;
-    height: 111px;
-  } */
-
-/* .route-area-link {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    width: 111px;
-    height: 111px;
-  } */
-/* } */

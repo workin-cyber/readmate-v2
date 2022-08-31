@@ -1,10 +1,11 @@
 .container {
-   padding-top: 20px;
+   padding-top: 30px;
 }
 
 .camera {
    background-color: blue;
    height: 426px;
+   max-height: 38vh;
    width: 263px;
    border-radius: 40px;
    margin: auto;
@@ -13,4 +14,5 @@
 
 .camera video {
    height: 100%;
+   /* width: 100%; */
 }

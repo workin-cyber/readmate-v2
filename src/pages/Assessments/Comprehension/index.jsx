@@ -34,7 +34,7 @@ function Comprehension() {
     useEffect(() => { UmooveApi.API_startReading() }, [])
 
     return <>
-        <div >
+        <div className={styles.container} >
             {/* //Header - import whith props - "comprehensions" */}
             <div>
                 <TitleRead />

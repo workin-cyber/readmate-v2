@@ -110,7 +110,7 @@ export default function ComprehensionTest() {
     const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
     return (
-        <>
+        <div className={styles.container}>
             <div className={styles.questions}>
                 {arr.map((v, i) =>
                     <QuestionBoard
@@ -122,9 +122,9 @@ export default function ComprehensionTest() {
                         arr={arr1} />
                 )}
             </div>
-            <div>
-                <Button startFunction={checkResults} title='next' />
+            <div className={styles.submitDiv}>
+                <Button disabled={result.length !== 10} startFunction={checkResults} title='next' />
             </div>
-        </>
+        </div>
     )
 }

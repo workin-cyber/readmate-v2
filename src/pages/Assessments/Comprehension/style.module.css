@@ -1,9 +1,12 @@
-.img {
+.container {
+    position: relative;
+    padding-bottom: 90px;
+}
 
+.img {
     height: 600px;
     width: 95%;
     margin-top: 4%;
     text-align: center;
     overflow-y: scroll;
-
 }

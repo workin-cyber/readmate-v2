@@ -39,9 +39,9 @@ function StartFooter(props) {
               <p><b className={styles["explanationPB"]}>{props.subtitle}</b> </p>}
 
             <p className={styles["explanationP"]}>{props.explanation}</p>
-          </div>
-          <div className={styles["myEmojiDiv"]}>
-            <img src={props.img} className={styles["leftEmoji"]} alt="" />
+            <div className={styles["myEmojiDiv"]}>
+              <img src={props.img} className={styles["leftEmoji"]} alt="" />
+            </div>
           </div>
         </div>
       </div>

@@ -14,5 +14,25 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif; 
+  font-family: 'Poppins', sans-serif;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.two-colored-div {
+  position: relative;
+}
+
+.two-colored-div::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary-color);
+  z-index: -1;
+  border-radius: 20px;
+  border: solid 1.5px #000;
+  transform: rotate(-3deg);
 }

@@ -1,7 +1,8 @@
 import styles from './style.module.css'
 import { useNavigate } from 'react-router-dom'
 import Button from '../../../components/Common/Button'
-import videoPlaceholder from "../../../assets/images/illustrations/videoPlaceholder.svg"
+import videoPlaceholder from "./placeHolder.jpg"
+import underLine from "./underline.svg"
 import { useContext, useEffect } from 'react'
 import mainContext from '../../../context/mainContext'
 
@@ -23,6 +24,7 @@ function Instructions({ navigateTo, textList = textFake, title = titleFake, vidS
         <div className={styles.container}>
             <img src={videoPlaceholder} alt="video place holder" />
             <h2 >{title}</h2>
+            <img className={styles.underline} src={underLine} alt="underline" />
             {textFake?.map((text, i) => <p key={`k${i}`}>{text}</p>)}
             <Button title={"Next"} startFunction={onclick}></Button>
         </div>

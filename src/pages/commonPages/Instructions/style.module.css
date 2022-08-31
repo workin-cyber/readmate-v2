@@ -5,17 +5,22 @@
    align-items: center;
    gap: 10px;
    flex-direction: column;
-
+   position: relative;
+   padding-bottom: 70px;
 }
 
 .container>img {
-   max-width: 230px;
+   max-width: 330px;
    width: 100%;
 
 }
 
+.underline {
+   margin-top: -15px;
+}
+
 .container>p {
-   font-size: 12px;
+   font-size: 14px;
 }
 
 .container>h2 {
