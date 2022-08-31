@@ -35,16 +35,8 @@ function Comprehension() {
 
     return <>
         <div className={styles.container} >
-            {/* //Header - import whith props - "comprehensions" */}
-            <div>
-                <TitleRead />
-            </div>
-
-            <div>
-                <img className={styles.img} src={examImg} alt="text" />
-            </div>
-            {/* //scrollbar - bottom button "done" - import whith props */}
-
+            <div>    <TitleRead /> </div>
+            <div> <img className={styles.img} src={examImg} alt="text" /> </div>
             <Button startFunction={() => { nextPage() }} title={"Done"} />
         </div>
     </>
