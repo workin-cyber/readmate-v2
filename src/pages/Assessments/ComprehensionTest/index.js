@@ -9,6 +9,7 @@ import Button from '../../../components/Common/Button';
 
 
 // import Calc from '../Calc';
+
 export default function ComprehensionTest() {
 
     let location = useLocation();
@@ -60,7 +61,7 @@ export default function ComprehensionTest() {
     // }]
     // let navigate = useNavigate()
     const checkResults = () => {
-        
+
         // let count = 0;
         // ans.map((v, i) => {
         //     if (v.ans == arr1[(i + 1)].answer) {
@@ -89,33 +90,30 @@ export default function ComprehensionTest() {
         console.log(arrOfAnswers)
         let a = Calc()
         n('/teama/page6', { state: { count: count, WPM: a[0], STD: a[1], AVG: a[2] } })
-        console.log('answers'+count);
-        console.log("student choice"+arr1)
-       
+        console.log('answers' + count);
+        console.log("student choice" + arr1)
+
     }
 
     // const arr = data.exam[0].questions
     const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
     return (
         <>
             <div className={styles.questions}>
-                {arr.map((v, i) => {
-                    return (
-                        <QuestionBoard title={data.exam[0].questions[i].title} key={i} result={result} setResult={setResult} i={i} arr={arr1} />
-                    )
-                })}
+                {arr.map((v, i) =>
+                    <QuestionBoard
+                        title={data.exam[0].questions[i].title}
+                        key={i}
+                        result={result}
+                        setResult={setResult}
+                        i={i}
+                        arr={arr1} />
+                )}
             </div>
             <div>
                 <Button startFunction={() => { checkResults() }} title={'next'} />
             </div>
-            {
-                console.log("student choice"+arr1)
-               
-            }
-            {
-                //  console.log("resulte"+arrOfAnswers)
-            }
-
         </>
     )
 }

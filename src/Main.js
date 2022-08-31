@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import TestAviad from './TestAviad'
 import Popup from './components/Common/Popup'
 
-import Instructions from './pages/Freestyle/Instructions'
+// import Instructions from './pages/Freestyle/Instructions'
 import BookInfo from './pages/BookInfo'
 import PushUpInstructions from './pages/TrainReading/Pushup/Instructions'
 import Questions from './pages/Questions'
@@ -14,6 +14,10 @@ import ExerciseClock from "./pages/TrainReading/Level/ExerciseClock";
 import ExerciseRate from "./pages/TrainReading/Level/ExerciseRate";
 import ExerciseQuestion from "./pages/TrainReading/Level/ExerciseQuestion";
 import ExerciseResult from "./pages/TrainReading/Level/ExerciseResult";
+
+import { AssessmentStart, CameraFace, Comprehension, ComprehensionTest } from './pages/Assessments'
+import { Instructions } from './pages/commonPages'
+
 // import Page1 from './pages/Assessments-ta/Page1'
 // import Page3 from './pages/Assessments-ta/Page3'
 // import Page4 from './pages/Assessments-ta/Page4'
@@ -68,13 +72,19 @@ export default function Main() {
 
             </Route>
 
+            {/* assesment roll - yosef */}
             <Route path="assessments">
+                <Route index element={<AssessmentStart />} />
+                <Route path='instructions' element={<Instructions navigateTo="/assessments/camera-face" />} />
+                <Route path='camera-face' element={< CameraFace />} />
+                <Route path='comprehension' element={< Comprehension />} />
+                <Route path='comprehension-Test' element={< ComprehensionTest />} />
+            </Route>
 
-                {/* <Route path="page1" element={<Page1 />} />
+            {/* <Route path="page1" element={<Page1 />} />
                 <Route path="page3" element={<Page3 />} />
                 <Route path="page4" element={<Page4 />} />
                 <Route path="page5" element={<Page5 />} /> */}
-            </Route>
         </Routes>
 
 

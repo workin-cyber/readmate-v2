@@ -1,0 +1,25 @@
+.container {
+   padding: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+   flex-direction: column;
+
+}
+
+.container>img {
+   max-width: 230px;
+   width: 100%;
+
+}
+
+.container>p {
+   font-size: 12px;
+}
+
+.container>h2 {
+   font-size: 18px;
+   font-weight: 600;
+   margin: 20px 0;
+}

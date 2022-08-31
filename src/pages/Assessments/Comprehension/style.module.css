@@ -1,4 +1,4 @@
-.img{
+.img {
 
     height: 600px;
     width: 95%;
@@ -7,16 +7,3 @@
     overflow-y: scroll;
 
 }
-
-/* .wrapper{
-    width: 500px; 
-    overflow-x:scroll;     
-    white-space: nowrap;
-}
-
-.slide{
-    background: #ccc;
-    height: 200px;
-    display: inline-block;
-    width: 100px;
-} */

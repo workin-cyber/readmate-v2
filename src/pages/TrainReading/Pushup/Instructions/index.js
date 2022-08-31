@@ -15,7 +15,7 @@ function PushUpInstructions() {
 
 
   const earphonesImg = require("../../../../assets/images/icons/FrameHeadPhone.png")
-  let navigateObject
+  let navigateObject;
   if (!location.state.navigateObject){
 
     navigateObject = {

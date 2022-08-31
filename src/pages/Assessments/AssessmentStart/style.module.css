@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.container img {
+    width: 80%;
+    max-width: 336px;
+    margin: auto;
+}

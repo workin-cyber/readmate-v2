@@ -1,0 +1,16 @@
+.container {
+   padding-top: 20px;
+}
+
+.camera {
+   background-color: blue;
+   height: 426px;
+   width: 263px;
+   border-radius: 40px;
+   margin: auto;
+   overflow: hidden;
+}
+
+.camera video {
+   height: 100%;
+}

@@ -1,6 +1,5 @@
-import "./style.css";
-// import { Link } from "react-router-dom";
-// import img from "../../../assets/img/Frame.png"
+import styles from "./style.module.css";
+import { BsFillPlayFill } from "react-icons/bs"
 // Shira from Team G - Shmuel
 
 // _____________________
@@ -14,7 +13,7 @@ import "./style.css";
 // _____________________
 /**
  *
- * @param {{startFunction:string,
+ * @param {{startFunction:Function,
  * title: string,
  * subtitle:string,
  * explanation:string,
@@ -23,25 +22,26 @@ import "./style.css";
  */
 function StartFooter(props) {
   return (
-    <div className="pageStartFooter">
-      <div className="myAreaBtnStart">
-        <div className="outBtn">
-          <button className="startOrengeBtn" onClick={props.startFunction}>
-            <div className="playTriangle"></div>
+    <div className={styles["pageStartFooter"]}>
+      <div className={styles["myAreaBtnStart"]}>
+
+        <div className={styles["outBtn"]}>
+          <button className={styles["startOrengeBtn"]} onClick={props.startFunction}>
+            <BsFillPlayFill />
           </button>
         </div>
-        <div className="footer-start-box">
-          <div className="startTitle">{props.title}</div>
-          <div className="explanation">
-            {props.subtitle && (
-              <p>
-                <b className="explanationPB">{props.subtitle}</b>
-              </p>
-            )}
-            <p className="explanationP">{props.explanation}</p>
+
+        <div className={styles["footer-start-box"]}>
+          <div className={styles["startTitle"]}>{props.title}</div>
+          <div className={styles["explanation"]}>
+
+            {props.subtitle &&
+              <p><b className={styles["explanationPB"]}>{props.subtitle}</b> </p>}
+
+            <p className={styles["explanationP"]}>{props.explanation}</p>
           </div>
-          <div className="myEmojiDiv">
-            <img src={props.img} className="leftEmoji" alt="" />
+          <div className={styles["myEmojiDiv"]}>
+            <img src={props.img} className={styles["leftEmoji"]} alt="" />
           </div>
         </div>
       </div>
