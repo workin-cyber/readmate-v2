@@ -23,7 +23,7 @@ function Page3() {
    useEffect(() => {
       UmooveApi.API_loadUmooveLibrary()
          .then((st) => (videoRef.current.srcObject = st))
-         .catch((e) => alert(e));
+         .catch((e) => console.log(e));
    }, []);
 
    const nextPage = () => {

@@ -1,0 +1,46 @@
+.front {
+  width: 80%;
+  box-sizing: border-box;
+  height: 181px;
+  background: #feefec;
+  border: 1.5px solid #252525;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.bText {
+  width: 84px;
+  height: 40px;
+  padding-top: 8px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #3d2072;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.sText {
+  width: 116px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #252525;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.left {
+  margin-top: 24px;
+}

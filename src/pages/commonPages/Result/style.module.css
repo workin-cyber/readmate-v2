@@ -1,0 +1,12 @@
+.result {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding-top: 60px;
+}
+
+.img {
+   width: 299.82px;
+   height: 316px;
+   margin-bottom: 85px;
+}

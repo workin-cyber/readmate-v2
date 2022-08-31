@@ -16,7 +16,7 @@ import ExerciseQuestion from "./pages/TrainReading/Level/ExerciseQuestion";
 import ExerciseResult from "./pages/TrainReading/Level/ExerciseResult";
 
 import { AssessmentStart, CameraFace, Comprehension, ComprehensionTest } from './pages/Assessments'
-import { Instructions } from './pages/commonPages'
+import { Instructions, Result } from './pages/commonPages'
 
 // import Page1 from './pages/Assessments-ta/Page1'
 // import Page3 from './pages/Assessments-ta/Page3'
@@ -79,6 +79,7 @@ export default function Main() {
                 <Route path='camera-face' element={< CameraFace />} />
                 <Route path='comprehension' element={< Comprehension />} />
                 <Route path='comprehension-Test' element={< ComprehensionTest />} />
+                <Route path='result' element={< Result />} />
             </Route>
 
             {/* <Route path="page1" element={<Page1 />} />
