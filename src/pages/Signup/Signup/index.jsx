@@ -12,6 +12,7 @@ import "./style.css";
 import { useContext } from "react";
 import dataContext from "../../../context/dataContext";
 import { fakeData } from "../../../context/fakeData";
+import { validate } from "./validate";
 
 
 // import { useNavigate } from "react-router-dom";
@@ -23,32 +24,25 @@ const SignUp = () => {
 
   const { setUserDetails } = useContext(dataContext)
 
-  const validate = (obj) =>
-    Object.keys(obj).reduce((acc, curr) =>
-      obj[curr].length > 0 ?
-        acc :
-        [...acc, curr],
-      [])
-
   const getDatafromForm = (formData) => ({
     firstName: formData.get("firstName"),
     lastName: formData.get("lastName"),
     email: formData.get("email"),
     password: formData.get("password"),
-    "confirm-password": formData.get("password"),
+    "confirm-password": formData.get("confirm-password"),
   })
-
-
 
   const onSubmit = async (e) => {
     e.preventDefault();
 
     const body = getDatafromForm(new FormData(e.currentTarget))
-    console.log(body);
 
     const checkResult = validate(body)
 
     setValid(checkResult)
+
+    if (body["password"] !== body["confirm-password"])
+      checkResult.push("password", "confirm-password")
 
     if (checkResult.length) return;
 

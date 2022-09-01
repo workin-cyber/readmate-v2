@@ -15,6 +15,7 @@ export default function Layout() {
     const { header, nav, popup } = useContext(mainContext);
     const { userDetails } = useContext(dataContext);
 
+
     return (
         !userDetails ?
             <Routes>

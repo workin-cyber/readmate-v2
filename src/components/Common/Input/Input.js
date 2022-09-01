@@ -20,7 +20,7 @@ export default function Input(props) {
           name={props.name}
           onInput={props.onInput}
           onChange={props.onChange}
-          valid={props.valid}
+          valid={props.valid ? "true" : ""}
         />
         <div>{props.span}</div>
       </fieldset>

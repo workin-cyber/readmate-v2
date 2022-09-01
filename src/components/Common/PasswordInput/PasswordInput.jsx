@@ -11,9 +11,8 @@ const PasswordInput = (props) => {
   const text = props.valid ? "" : "unvalidLabel";
   const placeholder = props.valid ? "" : "unvalidPlaceholder";
 
-  const changeIcon = () => {
-    setIcon(!icon);
-  };
+  const changeIcon = () => setIcon(!icon);
+
   return (
     <>
       <fieldset className={border}>
@@ -24,7 +23,7 @@ const PasswordInput = (props) => {
           className={`password-input ${placeholder} ${text}`}
           type={icon ? "password" : "text"}
           placeholder={props.placeholder}
-          valid={props.valid}
+          valid={props.valid ? "true" : ""}
           onInput={props.onInput}
           onChange={props.onChange}
         />

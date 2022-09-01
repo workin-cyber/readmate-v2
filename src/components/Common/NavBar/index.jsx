@@ -13,12 +13,18 @@ import NavBackButt from "../navBackButt";
 import img1 from "./image 1.svg"
 import img2 from "./image 2.svg"
 import { Link } from "react-router-dom";
+import dataContext from "../../../context/dataContext";
 
 // creator: shmuel asherov team-f
 export const NavBar = () => {
   const { nav: { setIsShowNav } } = useContext(mainContext)
 
   const handleOpenNav = () => setIsShowNav(old => !old)
+
+  const { setUserDetails } = useContext(dataContext)
+
+  const signOut = () => setUserDetails()
+
 
   return (
     <div className={`${styles.opacity}`}>
@@ -44,7 +50,7 @@ export const NavBar = () => {
               onClick={handleOpenNav}
               icon={<FiSettings className={`${styles.icon}`} size="30px" />}
               text="Settings"
-              link="Settings"
+              link="setting"
             />
           </li>
           <li>
@@ -54,15 +60,15 @@ export const NavBar = () => {
                 <FaRegAddressBook className={`${styles.icon}`} size="30px" />
               }
               text="Contact Us"
-              link="Contact Us"
+              link="contact-us"
             />
           </li>
           <li>
             <NavButton
-              onClick={handleOpenNav}
+              onClick={signOut}
               icon={<MdLogout className={`${styles.icon}`} size="30px" />}
               text="Sign Out"
-              link="Sign Out"
+              link="/"
             />
           </li>
         </ul>
