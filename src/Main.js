@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 
-import TestAviad from './TestAviad'
+// import TestAviad from './TestAviad'
 import Popup from './components/Common/Popup'
 
 // import Instructions from './pages/Freestyle/Instructions'
@@ -37,7 +37,7 @@ export default function Main() {
             <Route path='teacher' />
             <Route path='forgot' />
 
-            <Route path='/' element={<TestAviad />} />
+            {/* <Route path='/' element={<TestAviad />} /> */}
             <Route path='settings' />
 
             <Route path='/tr'>

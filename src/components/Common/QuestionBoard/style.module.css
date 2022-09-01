@@ -38,9 +38,8 @@
   line-height: 16px;
 }
 
-.active {
-  background-color: #F39C12;
-  /* background-color: #F39C12 !important; */
+.buttons .active {
+  background-color: #F39C12 !important;
   color: white;
 }
 

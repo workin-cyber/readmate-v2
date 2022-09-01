@@ -1,13 +1,10 @@
 import SubmitBtn from "../../../components/common/SubmitBtn";
 import styles from "./style.module.css";
 import Result from "./Result.svg";
-import RatingAndScore from "../../../components/common/ReatingAndScore";
-import { useContext } from "react";
-import pageNameContext from "../../../components/layout/Layout";
+import RatingAndScore from "../../src/components/common/ReatingAndScore";
 import { useLocation } from "react-router-dom";
 // Creator : Team A - Efart
 function Page6() {
-  console.log("222");
   // const [pageName, setPageName] = useContext(pageNameContext);
   // setPageName("Result Summary");
   const l = useLocation()
@@ -23,7 +20,7 @@ function Page6() {
       <SubmitBtn
         path={"/dashboard"}
         name={"Go to Dashboard"}
-        onclick={() => {}}
+        onclick={() => { }}
       />
     </div>
   );

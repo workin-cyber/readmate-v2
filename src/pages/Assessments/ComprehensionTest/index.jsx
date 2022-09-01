@@ -20,8 +20,6 @@ export default function ComprehensionTest() {
     const { header: { setPageName } } = useContext(mainContext)
     useEffect(() => { setPageName("Comprehension Test") }, [])
 
-    // console.log(data)
-    // console.log(data.exam[0].questions)
 
     function Calc() {
         // server
@@ -51,75 +49,38 @@ export default function ComprehensionTest() {
         return [wpm, std, avg]
     }
 
-    // const [arrOfAnswers,setarrOfAnswers]=useState([{orderNum:'',answer:''}])
 
-    const arrOfAnswers = []
-    let arr1 = [];
-    arr1.length = 10;
-
-    result.map((v, i) => {
-        arr1[v.orderNum] = v;
-        console.log(arr1)
-    })
-
-
-    // },
-    // {
-    //     num: 4,
-    //     ans: false
-
-    // }]
 
     const checkResults = () => {
+        const score = data.exam[0].questions.reduce((acc, currQuest) =>
+            result.find(a => a.orderNum === currQuest.orderNum).answer === currQuest.answer ?
+                ++acc :
+                acc
+            , 0)
 
-        // let count = 0;
-        // ans.map((v, i) => {
-        //     if (v.ans == arr1[(i + 1)].answer) {
-        //         //    setarrOfAnswers({orderNum:v.orderNum,answer:true})
-        //         arrOfAnswers.push({ orderNum: arr1.orderNum, answer: true })
-        //         count++;
-        //     }
-        //     else {
-        //         // setarrOfAnswers({orderNum:v.orderNum,answer:false})
-        //         arrOfAnswers.push({ orderNum: arr1.orderNum, answer: false })
+        const a = Calc()
 
-        let count = 0;
-        (data.exam[0].questions).map((v, i) => {
-            if (data.exam[0].questions[0].answer == arr1[(i + 1)].answer) {
-                //    setarrOfAnswers({orderNum:v.orderNum,answer:true})
-                arrOfAnswers.push({ orderNum: arr1.orderNum, answer: true })
-                count++;
-            }
-            else {
-                // setarrOfAnswers({orderNum:v.orderNum,answer:false})
-                arrOfAnswers.push({ orderNum: arr1.orderNum, answer: false })
-            }
-        })
-        // console.log(arr1)
-        // console.log(count);
-        // console.log(arrOfAnswers)
-        let a = Calc()
-
-        navigate('/assessments/result', { state: { count: count, WPM: a[0], STD: a[1], AVG: a[2] } })
-        // console.log('answers' + count);
-        // console.log("student choice" + arr1)
-
+        navigate('/assessments/result', { state: { count: score, WPM: a[0], STD: a[1], AVG: a[2] } })
     }
 
-    // const arr = data.exam[0].questions
-    const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+    const saveAnswer = (orderNum, answerBool) => {
+        const temp = JSON.parse(JSON.stringify(result));
+        const found = temp.find(a => a.orderNum === orderNum)
+        found ? found.answer = answerBool : temp.push({ orderNum, answer: answerBool })
+        setResult(temp)
+    }
 
     return (
         <div className={styles.container}>
             <div className={styles.questions}>
-                {arr.map((v, i) =>
+                {data.exam[0].questions.map((question, i) =>
                     <QuestionBoard
-                        title={data.exam[0].questions[i].title}
+                        saveAnswer={saveAnswer}
+                        question={question}
                         key={i}
                         result={result}
-                        setResult={setResult}
-                        i={i}
-                        arr={arr1} />
+                    />
                 )}
             </div>
             <div className={styles.submitDiv}>
