@@ -36,7 +36,7 @@ export default function ComprehensionTest() {
             sum += timePerLine[i];
         }
 
-        console.log(wpm);
+        console.log("wpm", wpm);
         let avg = sum / timePerLine.length;
         let std = 0;
 
@@ -53,7 +53,7 @@ export default function ComprehensionTest() {
 
     const checkResults = () => {
         const score = data.exam[0].questions.reduce((acc, currQuest) =>
-            result.find(a => a.orderNum === currQuest.orderNum).answer === currQuest.answer ?
+            result.find(a => a.orderNum === currQuest.orderNum)?.answer === currQuest.answer ?
                 ++acc :
                 acc
             , 0)

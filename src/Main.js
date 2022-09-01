@@ -1,19 +1,19 @@
 import { Route, Routes } from 'react-router-dom'
 
 // import TestAviad from './TestAviad'
-import Popup from './components/Common/Popup'
+// import Popup from './components/Common/Popup'
 
 // import Instructions from './pages/Freestyle/Instructions'
-import BookInfo from './pages/BookInfo'
-import PushUpInstructions from './pages/TrainReading/Pushup/Instructions'
-import Questions from './pages/Questions'
-import Training from './pages/Freestyle/Training/Training'
-import PushUpTimer2 from './pages/TrainReading/Pushup/Timer'
-import Exercise from "./pages/TrainReading/Level/Exercise";
-import ExerciseClock from "./pages/TrainReading/Level/ExerciseClock";
-import ExerciseRate from "./pages/TrainReading/Level/ExerciseRate";
-import ExerciseQuestion from "./pages/TrainReading/Level/ExerciseQuestion";
-import ExerciseResult from "./pages/TrainReading/Level/ExerciseResult";
+// import BookInfo from './pages/BookInfo'
+// import PushUpInstructions from './pages/TrainReading/Pushup/Instructions'
+// import Questions from './pages/Questions'
+// import Training from './pages/Freestyle/Training/Training'
+// import PushUpTimer2 from './pages/TrainReading/Pushup/Timer'
+// import Exercise from "./pages/TrainReading/Level/Exercise";
+// import ExerciseClock from "./pages/TrainReading/Level/ExerciseClock";
+// import ExerciseRate from "./pages/TrainReading/Level/ExerciseRate";
+// import ExerciseQuestion from "./pages/TrainReading/Level/ExerciseQuestion";
+// import ExerciseResult from "./pages/TrainReading/Level/ExerciseResult";
 
 import { AssessmentStart, CameraFace, Comprehension, ComprehensionTest } from './pages/Assessments'
 import { Instructions, Result } from './pages/commonPages'
@@ -32,12 +32,10 @@ export default function Main() {
         <Routes>
 
 
-            <Route path='signup' />
+            {/* <Route path='signup' />
             <Route path='login' />
             <Route path='teacher' />
             <Route path='forgot' />
-
-            {/* <Route path='/' element={<TestAviad />} /> */}
             <Route path='settings' />
 
             <Route path='/tr'>
@@ -70,7 +68,7 @@ export default function Main() {
             <Route path='/freestyle-training' element={<Training />}></Route>
             <Route path='ass'>
 
-            </Route>
+            </Route> */}
 
             {/* assesment roll - yosef */}
             <Route path="assessments">
