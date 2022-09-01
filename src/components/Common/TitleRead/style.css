@@ -1,5 +1,4 @@
-.title-read
-{
+.title-read {
     position: relative;
     width: 92%;
     height: 54px;
@@ -10,8 +9,9 @@
     font-style: normal;
     font-weight: 600;
     font-size: 98%;
-line-height: 27px;
-/* display: flex; */
-align-items: center;
-margin: 2%;
-color: #3D2072;}
+    line-height: 27px;
+    /* display: flex; */
+    align-items: center;
+    margin: 2%;
+    color: #3D2072;
+}

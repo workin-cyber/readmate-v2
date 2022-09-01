@@ -12,11 +12,13 @@
   border-radius: 20px;
   background-color: white;
 }
+
 .placebox {
   position: relative;
   width: fit-content;
   padding: 1%;
 }
+
 .boxbehind {
   position: absolute;
   z-index: 0;

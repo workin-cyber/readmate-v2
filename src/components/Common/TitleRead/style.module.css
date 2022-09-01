@@ -1,12 +1,11 @@
-
-.titelRead{
+.titelRead {
 
     position: absolute;
     width: 382px;
     height: 54px;
     left: 16px;
     top: 15px;
-    
+
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
@@ -14,6 +13,6 @@
     line-height: 27px;
     /* display: flex; */
     align-items: center;
-    
+
     color: #3D2072;
 }

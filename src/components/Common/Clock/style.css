@@ -1,4 +1,4 @@
-.wrapping{
+.wrapping {
   flex-direction: column;
   display: flex;
   justify-content: center;
@@ -7,13 +7,13 @@
   padding-top: 55px;
 }
 
-.wrapClock{
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 10%;
-gap: 5%;
-padding-top: 40%;
+.wrapClock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+  gap: 5%;
+  padding-top: 40%;
 
 
 }
@@ -56,12 +56,6 @@ padding-top: 40%;
   color: #252525;
 }
 
-.info {
-  /* max-width: 360px;
-  margin: 40px auto 0;
-  text-align: center;
-  font-size: 16px; */
-}
 
 .plusMinus {
   box-sizing: border-box;
@@ -72,17 +66,17 @@ padding-top: 40%;
   width: 30px;
   height: 30px;
   /* height: 40%; */
-justify-content: center;
+  justify-content: center;
   background: #feefec;
   /* border: 2px solid #252525; */
-text-align: center;
+  text-align: center;
   box-shadow: 2px 2px 0px #d35400;
   font-size: large;
   font-weight: bold;
   color: #000000;
 }
 
-.rapid{
+.rapid {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
@@ -92,13 +86,13 @@ text-align: center;
 
 .squareButton {
   box-sizing: border-box;
-display: flex;
+  display: flex;
 
   flex-direction: column;
   justify-content: center;
   align-items: center;
   /* padding: 20px 7px; */
-text-align: center;
+  text-align: center;
   width: 60px;
   height: 60px;
   background: #feefec;

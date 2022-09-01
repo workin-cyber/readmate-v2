@@ -39,8 +39,8 @@
 }
 
 .active {
-  /* background-color: #F39C12 ; */
-  background-color: #F39C12 !important;
+  background-color: #F39C12;
+  /* background-color: #F39C12 !important; */
   color: white;
 }
 

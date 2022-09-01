@@ -6,26 +6,29 @@
     margin-top: 15px;
 
     margin-right: auto;
-margin-left: auto;
+    margin-left: auto;
   }
-  .invalid{
+
+  .invalid {
     border: 1.5px solid red;
   }
-  .invalidlabel{
-    color:red;
-    
-}
-.invalidtext::placeholder{
-  color: red;
-}
-  
+
+  .invalidlabel {
+    color: red;
+
+  }
+
+  .invalidtext::placeholder {
+    color: red;
+  }
+
   .allInputs {
     box-sizing: border-box;
-  
+
     width: 85%;
     height: 40px;
-  padding-left: 15px;
-  padding-bottom: 18px;
+    padding-left: 15px;
+    padding-bottom: 18px;
     font-weight: 600;
     font-size: 100%;
     line-height: 2rem;
@@ -33,15 +36,13 @@ margin-left: auto;
     border: none;
     outline: 0;
   }
-  
-  
+
+
   legend {
     padding: 0.2em 0.5em;
     color: var(--main-title-color);
     font-size: 90%;
     position: relative;
     margin-left: 1rem;
-width:auto
-
-    
+    width: auto
   }
