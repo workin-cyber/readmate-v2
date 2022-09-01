@@ -25,12 +25,11 @@ import { Instructions, Result } from './pages/commonPages'
 
 
 export default function Main() {
-    const navigae = useNavigate()
-
 
     return <>
 
         <Routes>
+
 
 
             {/* <Route path='signup' />
@@ -73,6 +72,7 @@ export default function Main() {
 
             {/* assesment roll - yosef */}
             <Route index element={<Link to={"/assessments"}>assessments</Link>} />
+
             <Route path="assessments">
                 <Route index element={<AssessmentStart />} />
                 <Route path='instructions' element={<Instructions navigateTo="/assessments/camera-face" />} />

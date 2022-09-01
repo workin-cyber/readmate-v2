@@ -1,5 +1,6 @@
 import "./style.css";
 import { Link, Router } from "react-router-dom";
+
 // Creator : Team A - Shahar
 
 /**
@@ -9,6 +10,7 @@ import { Link, Router } from "react-router-dom";
  */
 
 function SubTitleLogin(props) {
+
   return (
     <div className="sub-title-box">
       <div>
@@ -16,7 +18,7 @@ function SubTitleLogin(props) {
       </div>
       <div className="sub-title">
         <span> {props.content}</span>
-        {/* <Link to={props.link}> Sign Up </Link> */}
+        <Link to={props.link}> Sign Up </Link>
       </div>
     </div>
   );

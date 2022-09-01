@@ -1,7 +1,6 @@
 .footer-google {
   display: flex;
-  flex-wrap: nowrap;
-  text-align: center;
+  align-items: center;
   justify-content: center;
   bottom: 0;
   position: fixed;
@@ -11,22 +10,22 @@
   border: 1.5px solid #000000;
   border-radius: 40px 40px 0px 0px;
 }
+
 .google-button {
-  box-sizing: border-box;
-  margin: auto;
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
-  padding: 16px 25px;
+
   width: 239.45px;
   height: 50px;
+
   background: #ea4235;
   border: 2px solid #252525;
   box-shadow: 2px 2px 0px #f1c40f;
   border-radius: 80px;
   bottom: 14px;
 }
+
 .google-button p {
   font-style: normal;
   font-weight: 600;
@@ -37,18 +36,20 @@
   flex-grow: 0;
   color: white;
 }
+
 .google-icon {
   color: white;
   font-weight: bold;
   font-size: 25px;
   margin-right: 12px;
 }
+
+
 .FramePencil {
   position: fixed;
-  margin-left: 300px;
-  margin-top: 16px;
   height: 50px;
   width: 50px;
   z-index: 5;
-  margin-right: 5px;
+  bottom: 53px;
+  right: 22px;
 }

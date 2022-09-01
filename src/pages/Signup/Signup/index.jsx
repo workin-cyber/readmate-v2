@@ -1,26 +1,26 @@
-import "./style.css";
+import React, { useEffect, useState } from "react";
+
 import FormTitle from "../../../components/Common/FormTitle";
 import FooterGoogle from "../../../components/Common/FooterGoogle";
 import SignButton from "../../../components/Common/SignButton/SignButton";
-import React, { useEffect } from "react";
 import Input from "../../../components/Common/Input/Input";
 import SubTitleLogin from "../../../components/Common/SubTitleLogin";
-import SubmitForm from "../forms/SubmitForm/SubmitForm";
+import SubmitForm from "../../../components/Common/forms/SubmitForm/SubmitForm";
 import PasswordInput from "../../../components/Common/PasswordInput/PasswordInput";
-import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
-import axios from "axios";
 
-export const SignUp = () => {
-  const [formData, setFormData] = useState(null);
+import "./style.css";
+
+// import { useNavigate } from "react-router-dom";
+// import axios from "axios";
+
+const SignUp = () => {
   const [valid, setValid] = useState(true);
   // let navigate = useNavigate();
 
-  useEffect(() => {
-    console.log(formData);
-  }, [formData]);
   const validate = (obj) => Object.values(obj).every((f) => f.length > 0);
+
   const onSubmit = async (e) => {
+    setValid(true)
     e.preventDefault();
     const data = new FormData(e.currentTarget);
     const body = {
@@ -29,17 +29,14 @@ export const SignUp = () => {
       email: data.get("email"),
       password: data.get("password"),
     };
-    console.log(data);
-    const f = validate(body);
-    if (f) {
-      setFormData(body);
-      try {
-        const { data } = await axios.post(
-          "http://localhost:3001/api/users/register",
-          formData
-        );
 
+    console.log(body);
+
+    if (validate(body)) {
+      try {
+        // const { data } = await axios.post( "http://localhost:3001/api/users/register", formData);
         // navigate("../classroom", { replace: true, state: body });
+
         console.log(data);
       } catch (err) {
         checkIfValid(err);
@@ -48,18 +45,16 @@ export const SignUp = () => {
     } else {
       setValid(false);
     }
-
-    console.log(formData);
   };
 
-  const checkIfValid = (data) => {
-    data ? setValid(false) : setValid(true);
-  };
+  const checkIfValid = (data) => data ? setValid(false) : setValid(true);
+
+
   return (
     <div className="wrap">
       <div className="sign-up">
         <FormTitle content="Create an Acount" />
-        <SubTitleLogin content="Already have an account?" sign="In" />
+        <SubTitleLogin content="Already have an account?" link="login" sign="In" />
         <SubmitForm onSubmit={onSubmit}>
           <Input
             legend="First Name"
@@ -86,7 +81,6 @@ export const SignUp = () => {
             legend="Password"
             content="Password"
             name="password"
-            w2eecdfdedcbdc
             valid={valid}
           />
           <PasswordInput

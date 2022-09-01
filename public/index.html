@@ -1,69 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>ReadMate</title>
-  </head>
 
-  <body>
-    <!-- UMOOVE LIBRARY CODE -->
-    <div
-      class="wasm_load_div"
-      id="wasm_load_div"
-      style="visibility: hidden; position: absolute; left: 0px; top: 0px"
-    ></div>
-    <!-- Necessary wasm preloading -->
-    <script type="text/Javascript" src="../umoove_wasm/wasm_load.js"></script>
-    <!-- Umoove Library -->
-    <script
-      async
-      type="text/Javascript"
-      src="../umoove_wasm/umoove_eye.js"
-    ></script>
-    <!-- Umoove Video management and interface -->
-    <script
-      type="text/JavaScript"
-      src="../umoove_wasm/umoove_load_eye.js"
-    ></script>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <title>ReadMate</title>
+</head>
 
-    <div class="cameraWindow">
-      <video
-        id="video"
-        class="video"
-        width="640"
-        height="480"
-        style="display: none"
-      ></video>
-    </div>
+<body>
+  <!-- UMOOVE LIBRARY CODE -->
+  <div class="wasm_load_div" id="wasm_load_div" style="visibility: hidden; position: absolute; left: 0px; top: 0px">
+  </div>
+  <!-- Necessary wasm preloading -->
+  <script type="text/Javascript" src="../umoove_wasm/wasm_load.js"></script>
+  <!-- Umoove Library -->
+  <script async type="text/Javascript" src="../umoove_wasm/umoove_eye.js"></script>
+  <!-- Umoove Video management and interface -->
+  <script type="text/JavaScript" src="../umoove_wasm/umoove_load_eye.js"></script>
 
-    <script>
-      var currentUmooveResults = [];
-      var readingData = [];
-      var newData = false;
-      var collectData = false;
-      var newUmooveData = (umoooveResults) => {
-        newData = true;
-        currentUmooveResults = umoooveResults;
-        if (collectData) {
-          readingData.push({ time: Date.now(), eye_data: umoooveResults });
-        }
-      };
-    </script>
-    <!-- END UMOOVE LIBRARY CODE -->
-    <div id="root"></div>
-  </body>
+  <div class="cameraWindow">
+    <video id="video" class="video" width="640" height="480" style="display: none"></video>
+  </div>
+
+  <script>
+    var currentUmooveResults = [];
+    var readingData = [];
+    var newData = false;
+    var collectData = false;
+    var newUmooveData = (umoooveResults) => {
+      newData = true;
+      currentUmooveResults = umoooveResults;
+      if (collectData) {
+        readingData.push({ time: Date.now(), eye_data: umoooveResults });
+      }
+    };
+  </script>
+  <!-- END UMOOVE LIBRARY CODE -->
+  <div id="root"></div>
+</body>
+
 </html>
