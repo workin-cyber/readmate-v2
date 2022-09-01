@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom'
+import { Link, Route, Routes, useNavigate } from 'react-router-dom'
 
 // import TestAviad from './TestAviad'
 // import Popup from './components/Common/Popup'
@@ -25,6 +25,7 @@ import { Instructions, Result } from './pages/commonPages'
 
 
 export default function Main() {
+    const navigae = useNavigate()
 
 
     return <>
@@ -71,6 +72,7 @@ export default function Main() {
             </Route> */}
 
             {/* assesment roll - yosef */}
+            <Route index element={<Link to={"/assessments"}>assessments</Link>} />
             <Route path="assessments">
                 <Route index element={<AssessmentStart />} />
                 <Route path='instructions' element={<Instructions navigateTo="/assessments/camera-face" />} />
