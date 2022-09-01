@@ -9,4 +9,15 @@
 
 .signin form {
   padding: 10px;
+
+}
+
+.forgot {
+  font-size: 12px;
+  margin: auto;
+  margin-right: 6px;
+}
+
+.forgot a {
+  color: #55575A;
 }

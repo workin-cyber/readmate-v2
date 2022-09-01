@@ -1,6 +1,6 @@
 
 import { useContext, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import FooterGoogle from '../../../components/Common/FooterGoogle'
 import FormTitle from '../../../components/Common/FormTitle'
 import Input from '../../../components/Common/Input/Input'
@@ -16,7 +16,7 @@ import styles from './style.module.css'
 
 export default function SignIn() {
   const [valid, setValid] = useState([]);
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   const { setUserDetails } = useContext(dataContext)
 
@@ -66,6 +66,7 @@ export default function SignIn() {
           name="password"
           valid={!valid.includes("password")}
         />
+        <p style={{ textAlign: "right" }} className={styles.forgot}><Link to="forgot-password"> forgot password?</Link></p>
         <SignButton content="sign in" type="submit" />
 
       </form>

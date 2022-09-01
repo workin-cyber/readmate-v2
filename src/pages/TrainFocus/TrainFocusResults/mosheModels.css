@@ -1,0 +1,51 @@
+@media screen and (max-width: 600px) {
+  .train-focus-result-image {
+    width: 70%;
+    height: 50%;
+    margin-left: 20%;
+    margin-top: 35%;
+  }
+
+  .train-focus-text {
+    width: 75%;
+    height: 10%;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 55px;
+    text-align: center;
+    color: #252525;
+  }
+
+  .train-focus-rectangle1 {
+    box-sizing: border-box;
+    margin-top: 20%;
+    width: 99%;
+    height: 15%;
+    background: #eed4ec;
+    border: 1.5px solid #252525;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12%;
+    justify-content: center;
+    align-items: center;
+    /* transform: rotate(2.46deg); */
+  }
+
+  .train-focus-avg {
+    color: purple;
+  }
+
+  .train-focus-image2 {
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+    margin-left: 2%;
+    margin-top: 2%;
+    /* position: absolute;
+    top: 10%;
+    left: 35%; */
+  }
+}

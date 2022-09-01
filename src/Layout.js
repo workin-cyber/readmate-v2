@@ -9,7 +9,7 @@ import dataContext from './context/dataContext';
 
 import Main from './Main';
 
-import { Signup, Signin } from './pages/Signup';
+import { Signup, Signin, ForgotPassword } from './pages/Signup';
 
 export default function Layout() {
     const { header, nav, popup } = useContext(mainContext);
@@ -20,6 +20,7 @@ export default function Layout() {
         !userDetails ?
             <Routes>
                 <Route path='/login' element={< Signin />} />
+                <Route path='/forgot-password' element={< ForgotPassword />} />
                 <Route path='*' element={<Signup />} />
             </Routes>
             :

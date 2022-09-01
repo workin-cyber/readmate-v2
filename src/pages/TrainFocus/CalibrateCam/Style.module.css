@@ -1,0 +1,88 @@
+/* @media screen and (max-width:600px){ */
+
+
+/* Creator : Team G - Orit */
+.calibrateCam {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    overflow-x: hidden;
+}
+
+.dragImg {
+    padding-top: 10px;
+    /* display: block;
+        margin: auto; */
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+
+.continueBtn {
+    width: 90%;
+    height: 48px;
+    position: fixed;
+    bottom: 50px;
+    /* border: 10px solid black; */
+
+}
+
+.place {
+    position: fixed;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    height: 200px;
+    /* border: 1px solid black; */
+}
+
+
+.arrowMove {
+    padding: 10px;
+    display: flex;
+    margin-top: 56%;
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.instructions {
+    position: fixed;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.btnContinue {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 33px;
+    gap: 8px;
+    position: absolute;
+    width: 90%;
+    height: 48px;
+    background: #F39C12;
+    border: 2px solid #252525;
+    box-shadow: 2px 2px 0px #D35400;
+    border-radius: 80px;
+    bottom: 20px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: "poppins";
+}
+
+/* } */

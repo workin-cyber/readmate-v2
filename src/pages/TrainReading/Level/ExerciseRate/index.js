@@ -11,28 +11,30 @@ import TwistBox from "../../../../components/Common/TwistBox";
 const ExerciseRate = () => {
   // const user = useContext(dataContext);
   const { header } = useContext(mainContext);
-  header.setPageName("Reading Rate");
 
-  const from_TRL_Clock = useLocation();
-  const LPM_fromClock = from_TRL_Clock.state.LPM;
-  console.log("exerciseRate", from_TRL_Clock.state);
+  useEffect(() => { header.setPageName("Reading Rate") }, [])
+
+
+  const location = useLocation();
+  const LPM_fromClock = location.state.LPM;
+  console.log("exerciseRate", location.state);
 
   const [newLPM, setNewLPM] = useState(LPM_fromClock);
   const [isJustRight, setIsJustRight] = useState(false);
   const [round, setRound] = useState(0);
   const [clickedButton, setClickedButton] = useState(
-    from_TRL_Clock.state.ClickedButton
+    location.state.ClickedButton
   );
 
   const objProp = {
-    LPM_Pushup: from_TRL_Clock.state.LPM_Pushup,
+    LPM_Pushup: location.state.LPM_Pushup,
     New_LPM: newLPM,
     JustRight: isJustRight,
     Round: round,
     ClickedButton: clickedButton,
-    BookName: from_TRL_Clock.state.BookName,
+    BookName: location.state.BookName,
     fromPath: "tr/rate",
-    formInfo: from_TRL_Clock.state.formInfo,
+    formInfo: location.state.formInfo,
   };
 
   useEffect(() => {
@@ -42,63 +44,63 @@ const ExerciseRate = () => {
   function choice(button) {
     if (button === "JR") {
       setIsJustRight(true);
-      setRound(round + 1 + from_TRL_Clock.state.Round);
+      setRound(round + 1 + location.state.Round);
       setClickedButton((clickedButton) => [...clickedButton, "JR"]);
     }
 
-    if (from_TRL_Clock.state.ClickedButton.length === 0) {
+    if (location.state.ClickedButton.length === 0) {
       if (button === "TF") {
         setNewLPM(LPM_fromClock - 2);
-        setRound(round + 1 + from_TRL_Clock.state.Round);
+        setRound(round + 1 + location.state.Round);
         setClickedButton((clickedButton) => [...clickedButton, "TF"]);
       }
       if (button === "TS") {
         setNewLPM(LPM_fromClock + 2);
-        setRound(round + 1 + from_TRL_Clock.state.Round);
+        setRound(round + 1 + location.state.Round);
         setClickedButton((clickedButton) => [...clickedButton, "TS"]);
       }
     }
-    if (from_TRL_Clock.state.ClickedButton.length > 0) {
+    if (location.state.ClickedButton.length > 0) {
       if (
         button === "TF" &&
-        from_TRL_Clock.state.ClickedButton[
-          from_TRL_Clock.state.ClickedButton.length - 1
+        location.state.ClickedButton[
+        location.state.ClickedButton.length - 1
         ] === "TF"
       ) {
         setNewLPM(newLPM - 2);
-        setRound(round + 1 + from_TRL_Clock.state.Round);
+        setRound(round + 1 + location.state.Round);
         setClickedButton((clickedButton) => [...clickedButton, "TF"]);
       }
       if (
         button === "TS" &&
-        from_TRL_Clock.state.ClickedButton[
-          from_TRL_Clock.state.ClickedButton.length - 1
+        location.state.ClickedButton[
+        location.state.ClickedButton.length - 1
         ] === "TS"
       ) {
         setNewLPM(newLPM + 2);
-        setRound(round + 1 + from_TRL_Clock.state.Round);
+        setRound(round + 1 + location.state.Round);
         setClickedButton((clickedButton) => [...clickedButton, "TS"]);
       }
 
       if (
         button === "TS" &&
-        from_TRL_Clock.state.ClickedButton[
-          from_TRL_Clock.state.ClickedButton.length - 1
+        location.state.ClickedButton[
+        location.state.ClickedButton.length - 1
         ] === "TF"
       ) {
         setNewLPM(newLPM + 1);
-        setRound(round + 1 + from_TRL_Clock.state.Round);
+        setRound(round + 1 + location.state.Round);
         setClickedButton((clickedButton) => [...clickedButton, "TS"]);
       }
 
       if (
         button === "TF" &&
-        from_TRL_Clock.state.ClickedButton[
-          from_TRL_Clock.state.ClickedButton.length - 1
+        location.state.ClickedButton[
+        location.state.ClickedButton.length - 1
         ] === "TS"
       ) {
         setNewLPM(newLPM - 1);
-        setRound(round + 1 + from_TRL_Clock.state.Round);
+        setRound(round + 1 + location.state.Round);
         setClickedButton((clickedButton) => [...clickedButton, "TF"]);
       }
     }

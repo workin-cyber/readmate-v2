@@ -17,6 +17,7 @@ import { Link, Route, Routes, useNavigate } from 'react-router-dom'
 
 import { AssessmentStart, CameraFace, Comprehension, ComprehensionTest } from './pages/Assessments'
 import { Instructions, Result } from './pages/commonPages'
+import { CalibrateCam } from './pages/TrainFocus'
 
 // import Page1 from './pages/Assessments-ta/Page1'
 // import Page3 from './pages/Assessments-ta/Page3'
@@ -70,9 +71,14 @@ export default function Main() {
 
             </Route> */}
 
-            {/* assesment roll - yosef */}
-            <Route index element={<Link to={"/assessments"}>assessments</Link>} />
+            <Route index element={
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                    <Link to={"/assessments"}>assessments</Link>
+                    <Link to={"/train-focus"}>train focus</Link>
+                </div>
+            } />
 
+            {/* assesment roll - yosef */}
             <Route path="assessments">
                 <Route index element={<AssessmentStart />} />
                 <Route path='instructions' element={<Instructions navigateTo="/assessments/camera-face" />} />
@@ -80,6 +86,11 @@ export default function Main() {
                 <Route path='comprehension' element={< Comprehension />} />
                 <Route path='comprehension-Test' element={< ComprehensionTest />} />
                 <Route path='result' element={< Result />} />
+            </Route>
+
+            <Route path="train-focus">
+                <Route index element={< CalibrateCam />} />
+
             </Route>
 
             {/* <Route path="page1" element={<Page1 />} />

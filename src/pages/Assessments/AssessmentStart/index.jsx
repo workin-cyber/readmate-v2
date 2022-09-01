@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 // import data from './data'
 
 // Creator : Team A - Daniel
-export default function Page1() {
+export default function AssessmentStart() {
     const navigate = useNavigate()
     const startFunction = () => navigate('/assessments/instructions'/* , { state: { data: data } } */)
 
