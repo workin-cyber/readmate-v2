@@ -3,13 +3,16 @@
 }
 
 .camera {
-   background-color: blue;
-   height: 426px;
-   max-height: 38vh;
+   border: 1px solid #262626;
    width: 263px;
+   height: 263px;
    border-radius: 40px;
    margin: auto;
    overflow: hidden;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
 }
 
 .camera video {

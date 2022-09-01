@@ -5,13 +5,13 @@ import FooterStart from "../../../components/Common/StartFooter";
 // import { pageNameContext } from '../../../components/common/';
 // import FooterStart from '../../../components/common/FooterStart';
 import group from "./group.jpg";
-import { useNavigate, Link, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import UmooveApi from "../../../components/api/UmooveApi";
+
 // Creator : Team A -efrat & Yehoantan
 function Page3() {
   const l = useLocation();
-  console.log(l);
   const navigate = useNavigate();
   let videoRef = useRef();
   const [count, setCount] = useState(0);
@@ -39,23 +39,21 @@ function Page3() {
       setCount(count + 1);
     }, 1000);
   };
-  // const [pageName, setPageName] = useContext(pageNameContext) //adduming contect is in use
+
   return (
     <div>
-      <div>
-        <div className={styles.camera}>
-          <video ref={videoRef} autoPlay className="focus-video" />
-        </div>
-        <FooterStart
-          route=""
-          startFunction={() => {
-            nextPage();
-          }}
-          title="Start now"
-          explanation="hdnvdjnjrtnvjsdsdjkdfnjsnjknsdfjknsdfjsdkf"
-          img={group}
-        />
+      <div className={styles.camera}>
+        <video ref={videoRef} autoPlay className="focus-video" />
       </div>
+      <FooterStart
+        route=""
+        startFunction={() => {
+          nextPage();
+        }}
+        title="Start now"
+        explanation="hdnvdjnjrtnvjsdsdjkdfnjsnjknsdfjknsdfjsdkf"
+        img={group}
+      />
     </div>
   );
 }

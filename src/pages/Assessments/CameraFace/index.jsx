@@ -1,9 +1,5 @@
 import styles from "./style.module.css";
 import StartFooter from "../../../components/Common/StartFooter";
-// import './style.css';
-// import  useContext from 'react';
-// import { pageNameContext } from '../../../components/common/';
-// import StartFooter from '../../../components/common/StartFooter';
 import group from "./Vector.svg";
 import { useNavigate } from "react-router-dom";
 import { useContext, useEffect, useRef, useState } from "react";
@@ -49,7 +45,7 @@ function Page3() {
    return (
       <div className={styles.container}>
          <div>
-            <div className={styles.camera}>
+            <div className={`${styles.camera} `}>
                <video ref={videoRef} autoPlay className="focus-video" />
             </div>
             <StartFooter
