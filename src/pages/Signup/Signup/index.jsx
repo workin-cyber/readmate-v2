@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import FormTitle from "../../../components/Common/FormTitle";
 import FooterGoogle from "../../../components/Common/FooterGoogle";
@@ -23,38 +23,44 @@ const SignUp = () => {
 
   const { setUserDetails } = useContext(dataContext)
 
-  const validate = (obj) => Object.keys(obj).reduce((acc, curr) => obj[curr].length > 0 ? acc : [...acc, curr], [])
+  const validate = (obj) =>
+    Object.keys(obj).reduce((acc, curr) =>
+      obj[curr].length > 0 ?
+        acc :
+        [...acc, curr],
+      [])
+
+  const getDatafromForm = (formData) => ({
+    firstName: formData.get("firstName"),
+    lastName: formData.get("lastName"),
+    email: formData.get("email"),
+    password: formData.get("password"),
+    "confirm-password": formData.get("password"),
+  })
+
+
 
   const onSubmit = async (e) => {
-    setValid([])
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
-    const body = {
-      firstName: data.get("firstName"),
-      lastName: data.get("lastName"),
-      email: data.get("email"),
-      password: data.get("password"),
-      "confirm-password": data.get("password"),
-    };
 
+    const body = getDatafromForm(new FormData(e.currentTarget))
     console.log(body);
+
     const checkResult = validate(body)
-    if (!checkResult.length) {
-      try {
-        // const { data } = await axios.post( "http://localhost:3001/api/users/register", formData);
-        // navigate("../classroom", { replace: true, state: body });
-        setUserDetails(fakeData.userDetails)
-        console.log(data);
-      } catch (err) {
-        checkIfValid(err);
-        console.log(err);
-      }
-    } else {
-      setValid(checkResult);
+
+    setValid(checkResult)
+
+    if (checkResult.length) return;
+
+    try {
+      // const { data } = await axios.post( "http://localhost:3001/api/users/register", formData);
+      // navigate("../classroom", { replace: true, state: body });
+      setUserDetails(fakeData.userDetails)
+      console.log(body);
+    } catch (err) {
+      console.log(err);
     }
   };
-
-  const checkIfValid = (data) => data ? setValid(false) : setValid(true);
 
 
   return (
@@ -99,7 +105,7 @@ const SignUp = () => {
           <SignButton content="Sign Up" type="submit" />
         </SubmitForm>
       </div>
-      <FooterGoogle />
+      <FooterGoogle CreateAccount />
     </div>
   );
 };

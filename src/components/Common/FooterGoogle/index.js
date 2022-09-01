@@ -3,8 +3,7 @@ import { AiOutlineGoogle } from "react-icons/ai";
 import FramePencil from "../../../assets/images/icons/FramePencil.png";
 
 // Creator : Team D - Dov
-function FooterGoogle(props) {
-  const CreateAccount = true;
+function FooterGoogle({ CreateAccount }) {
 
   return (
     <div>

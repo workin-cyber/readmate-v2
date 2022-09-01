@@ -1,13 +1,15 @@
 import { useContext } from 'react'
+import { Route, Routes } from 'react-router-dom';
+
 import Header from './components/Common/Header'
 import mainContext from './context/mainContext'
-import Main from './Main';
 import Popup from './components/Common/Popup';
 import { NavBar } from './components/Common/NavBar';
-import { Route, Routes } from 'react-router-dom';
 import dataContext from './context/dataContext';
 
-import { Signup } from './pages/Signup';
+import Main from './Main';
+
+import { Signup, Signin } from './pages/Signup';
 
 export default function Layout() {
     const { header, nav, popup } = useContext(mainContext);
@@ -16,7 +18,7 @@ export default function Layout() {
     return (
         !userDetails ?
             <Routes>
-                <Route path='/login' element={< >login</>} />
+                <Route path='/login' element={< Signin />} />
                 <Route path='*' element={<Signup />} />
             </Routes>
             :
