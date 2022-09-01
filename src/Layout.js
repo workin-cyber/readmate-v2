@@ -16,8 +16,8 @@ export default function Layout() {
     return (
         !userDetails ?
             <Routes>
-                <Route index element={<Signup />} />
                 <Route path='/login' element={< >login</>} />
+                <Route path='*' element={<Signup />} />
             </Routes>
             :
             <>

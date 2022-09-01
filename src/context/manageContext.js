@@ -5,7 +5,7 @@ import { fakeData } from "./fakeData";
 
 export const DataProvider = ({ children }) => {
 
-    const [userDetails, setUserDetails] = useState(fakeData.userDetails);
+    const [userDetails, setUserDetails] = useState();
     const [pageName, setPageName] = useState("Dashboard");
     const [isShowHeader, setIsShowHeader] = useState(true);
     const [isShowNav, setIsShowNav] = useState(false);
