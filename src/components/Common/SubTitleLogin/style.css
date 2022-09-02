@@ -7,13 +7,23 @@
   /* align-items: baseline; */
 }
 
-.sub-title span {
-  width: 90vw;
-  height: 18px;
+.sub-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin: 10px auto;
+}
+
+.sub-title p {
+  max-width: 294px;
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 400;
   line-height: 18px;
   color: #55575a;
-  margin: 10px;
+}
+
+.sub-title a {
+  color: #3D2072;
+  font-weight: 700;
 }

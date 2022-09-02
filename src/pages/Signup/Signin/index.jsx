@@ -58,7 +58,6 @@ export default function SignIn() {
           type="email"
           name="email"
           valid={!valid.includes("email")}
-
         />
         <PasswordInput
           legend="Password"
@@ -66,8 +65,10 @@ export default function SignIn() {
           name="password"
           valid={!valid.includes("password")}
         />
-        <p style={{ textAlign: "right" }} className={styles.forgot}><Link to="forgot-password"> forgot password?</Link></p>
-        <SignButton content="sign in" type="submit" />
+        <p style={{ textAlign: "right" }} className={styles.forgot}><Link to="/forgot-password"> forgot password?</Link></p>
+        <div className={styles.btnHolder}>
+          <SignButton content="sign in" type="submit" />
+        </div>
 
       </form>
       <FooterGoogle />

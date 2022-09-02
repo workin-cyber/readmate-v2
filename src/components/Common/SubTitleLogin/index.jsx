@@ -9,16 +9,16 @@ import { Link, Router } from "react-router-dom";
  * @returns
  */
 
-function SubTitleLogin(props) {
+function SubTitleLogin({ content, link, title }) {
 
   return (
     <div className="sub-title-box">
       <div>
-        <h4> {props.title}</h4>
+        <h4> {title}</h4>
       </div>
       <div className="sub-title">
-        <span> {props.content}</span>
-        <Link to={props.link}> Sign Up </Link>
+        <p> {content}</p>
+        {link && <Link to={link}> Sign Up </Link>}
       </div>
     </div>
   );

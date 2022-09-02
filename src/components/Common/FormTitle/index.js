@@ -1,13 +1,16 @@
-import "./style.css";
+import styles from "./style.module.css";
 
 import React from "react";
+
 // Creator : Team D - Dov
-export const FormTitle = (props) => {
+
+export const FormTitle = ({ optionalName, content }) => {
+
   return (
-    <div className="FormTitle">
-      <div className="title">
-        {props.content}
-        {props.optionalName}
+    <div className={styles["FormTitle"]}>
+      <div className={styles["title"]}>
+        {content}
+        {optionalName}
       </div>
     </div>
   );

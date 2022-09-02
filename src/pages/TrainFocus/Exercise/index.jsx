@@ -6,6 +6,9 @@ import { useNavigate } from 'react-router-dom'
 import Button from "../../../components/Common/Button";
 import mainContext from "../../../context/mainContext";
 
+//TODO - check if the result are ok
+//TODO - turn off the camera
+
 
 function Exercise() {
 
@@ -13,7 +16,7 @@ function Exercise() {
   // }).catch((error) => { console.error(error) })
   // UmooveApi.API_startUmoove()
 
-  const [side, setSide] = useState(0)
+  const [side, setSide] = useState(0) //TODO - this number dont change ever
   const [DailyStoppingDistance, setDailyStoppingDistance] = useState(0)
   const [StoppingDistance, setStoppingDistance] = useState(0);
   const navigate = useNavigate()
@@ -58,6 +61,7 @@ function Exercise() {
   }, [])
 
   //TODO -  ה200 הוא פייק. לקבל משתנה מאורית
+
   localStorage.setItem("posX", 200);
 
   switch (side) {

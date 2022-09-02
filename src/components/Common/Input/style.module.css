@@ -1,0 +1,50 @@
+.fieldset {
+  border: 1px solid #7D839D;
+  border-radius: 0.8rem;
+  height: 80px;
+  margin: 0.3rem auto;
+  margin-top: 1rem;
+  width: calc(100vw - 32px);
+  display: flex;
+  align-items: center;
+
+}
+
+.focus {
+  border: 2px solid #7D56A5;
+}
+
+.allInputs {
+  box-sizing: border-box;
+  padding: 1rem;
+  font-weight: 500;
+  font-family: "poppins";
+  font-size: 14px;
+  width: 100%;
+  line-height: 2rem;
+  background: transparent;
+  border: none;
+  outline: 0;
+  margin-top: -11px;
+}
+
+.legend {
+  padding: 0.2em 0.5em;
+  color: #7D839D;
+  font-size: 90%;
+  position: relative;
+  margin-left: 1rem;
+  width: fit-content;
+}
+
+.unvalid {
+  border: 2px solid #dc3545;
+}
+
+.unvalidLabel {
+  color: #dc3545;
+}
+
+/* .unvalidPlaceholder::placeholder {
+  color: #dc3545;
+} */

@@ -3,4 +3,11 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  padding-bottom: 122px;
+}
+
+.btnHolder {
+  position: fixed;
+  bottom: 100px;
+  width: 100%;
 }

@@ -1,0 +1,55 @@
+.fieldset {
+  border: 1px solid #7D839D;
+  border-radius: 0.8rem;
+  height: 80px;
+  margin: 0.3rem auto;
+  margin-top: 1rem;
+  width: calc(100vw - 32px);
+  display: flex;
+  align-items: center;
+}
+
+.focus {
+  border: 2px solid #7D56A5;
+}
+
+.legend {
+  padding: 0.2em 0.5em;
+  color: #7D839D;
+  font-size: 90%;
+  position: relative;
+  margin-left: 1rem;
+  width: fit-content;
+}
+
+.password-input {
+  box-sizing: border-box;
+  width: 90%;
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 100%;
+  line-height: 2rem;
+  background: transparent;
+  border: none;
+  outline: 0;
+  margin-top: -11px;
+
+}
+
+.hide-icon {
+  margin-top: -11px;
+  color: #55575A;
+  font-size: 16px;
+}
+
+.unvalid {
+  border: 2px solid #dc3545;
+}
+
+.unvalidLabel {
+  color: #dc3545;
+}
+
+/* .unvalidPlaceholder::placeholder {
+  color: #dc3545;
+} */

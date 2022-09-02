@@ -72,7 +72,7 @@ export default function Main() {
             </Route> */}
 
             <Route index element={
-                <div style={{ display: "flex", flexDirection: "column" }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
                     <Link to={"/assessments"}>assessments</Link>
                     <Link to={"/train-focus"}>train focus</Link>
                 </div>

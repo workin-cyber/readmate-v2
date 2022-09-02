@@ -21,3 +21,9 @@
 .forgot a {
   color: #55575A;
 }
+
+.btnHolder {
+  width: 100%;
+  position: fixed;
+  bottom: 100px;
+}

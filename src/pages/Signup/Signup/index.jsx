@@ -8,12 +8,12 @@ import SubTitleLogin from "../../../components/Common/SubTitleLogin";
 import SubmitForm from "../../../components/Common/forms/SubmitForm/SubmitForm";
 import PasswordInput from "../../../components/Common/PasswordInput/PasswordInput";
 
-import "./style.css";
 import { useContext } from "react";
 import dataContext from "../../../context/dataContext";
 import { fakeData } from "../../../context/fakeData";
 import { validate } from "./validate";
 
+import styles from "./style.module.css";
 
 // import { useNavigate } from "react-router-dom";
 // import axios from "axios";
@@ -58,8 +58,8 @@ const SignUp = () => {
 
 
   return (
-    <div className="wrap">
-      <div className="sign-up">
+    <div >
+      <div className={styles["sign-up"]}>
         <FormTitle content="Create an Acount" />
         <SubTitleLogin content="Already have an account?" link="login" sign="In" />
         <SubmitForm onSubmit={onSubmit}>
@@ -96,7 +96,9 @@ const SignUp = () => {
             name="confirm-password"
             valid={!valid.includes("confirm-password")}
           />
-          <SignButton content="Sign Up" type="submit" />
+          <div className={styles.btnHolder}>
+            <SignButton content="Sign Up" type="submit" />
+          </div>
         </SubmitForm>
       </div>
       <FooterGoogle CreateAccount />
