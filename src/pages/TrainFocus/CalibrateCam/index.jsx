@@ -51,7 +51,7 @@ function CalibrateCam() {
   const onClickBtn = () => {
     localStorage.setItem('posX', posX);
     console.log("send posX to DB. current posX=" + posX)
-    navigate('/train-focus/StartFocus');
+    navigate('/train-focus/start-focus');
   }
 
   return (

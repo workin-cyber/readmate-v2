@@ -15,9 +15,10 @@ export default function Layout() {
     const { header, nav, popup } = useContext(mainContext);
     const { userDetails } = useContext(dataContext);
 
+    //TODO the condition - !userDetails
 
     return (
-        !userDetails ?
+        userDetails ?
             <Routes>
                 <Route path='/login' element={< Signin />} />
                 <Route path='/forgot-password' element={< ForgotPassword />} />

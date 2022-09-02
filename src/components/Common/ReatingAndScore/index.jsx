@@ -6,8 +6,9 @@ import VectorOrange from "./image/VectorOrange.svg";
 
 // Creator : Team A - Keren and Efrat
 function RatingAndScore({ wpm, std, compScore }) {
+
   return (
-    <div className={`${styles.front} back-purple left `}>
+    <div className={`${styles.front} two-colored-div-back `}>
       <div className={styles.left}>
         <img src={Time} alt="" className={styles.time} />
         <div className={styles.sText}>Reading Rate</div>
@@ -17,7 +18,7 @@ function RatingAndScore({ wpm, std, compScore }) {
         </div>
         <div className={styles.bText}></div>
       </div>
-      <div>
+      <div className={styles.image} >
         <img src={Vector} alt="" className={styles.vector} />
         <img src={VectorOrange} alt="" className={styles.VectorOrange} />
       </div>

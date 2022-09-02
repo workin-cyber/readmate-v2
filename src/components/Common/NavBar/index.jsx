@@ -32,7 +32,7 @@ export const NavBar = () => {
       <div className={`${styles.box}`} >
         <ul>
           <li className={`${styles.logo}`}>
-            <Link to={"/"}>
+            <Link to={"/"} onClick={handleOpenNav}>
               <img src={img1} alt="logo" />
               <img src={img2} alt="logo" />
             </Link>

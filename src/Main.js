@@ -1,4 +1,4 @@
-import { Link, Route, Routes, useNavigate } from 'react-router-dom'
+import { Link, Route, Routes } from 'react-router-dom'
 
 // import TestAviad from './TestAviad'
 // import Popup from './components/Common/Popup'
@@ -17,7 +17,7 @@ import { Link, Route, Routes, useNavigate } from 'react-router-dom'
 
 import { AssessmentStart, CameraFace, Comprehension, ComprehensionTest } from './pages/Assessments'
 import { Instructions, Result } from './pages/commonPages'
-import { CalibrateCam } from './pages/TrainFocus'
+import { CalibrateCam, Exercise, StartFocus } from './pages/TrainFocus'
 
 // import Page1 from './pages/Assessments-ta/Page1'
 // import Page3 from './pages/Assessments-ta/Page3'
@@ -90,7 +90,9 @@ export default function Main() {
 
             <Route path="train-focus">
                 <Route index element={< CalibrateCam />} />
-
+                <Route path='start-focus' element={< StartFocus />} />
+                <Route path='exercise' element={< Exercise />} />
+                <Route path='result' element={< Result />} />
             </Route>
 
             {/* <Route path="page1" element={<Page1 />} />

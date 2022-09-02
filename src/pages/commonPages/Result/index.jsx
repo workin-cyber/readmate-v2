@@ -17,6 +17,7 @@ function Result({ children, submit: { path, name, onClick = () => { } } = {} }) 
 
 
    // TODO - print result from the state
+   // there few options to that page
    console.log("state", state);
 
 
