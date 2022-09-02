@@ -60,7 +60,7 @@ const SignUp = () => {
   return (
     <div >
       <div className={styles["sign-up"]}>
-        <FormTitle content="Create an Acount" />
+        <FormTitle content="Create an Account" />
         <SubTitleLogin content="Already have an account?" link="login" sign="In" />
         <SubmitForm onSubmit={onSubmit}>
           <Input
