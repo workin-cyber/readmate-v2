@@ -35,22 +35,20 @@ export default function ForgotPassword() {
    };
 
    return (
-      <div className={styles.forgot}>
+      <form className={styles.forgot} onSubmit={handleSubmit}>
          <FormTitle content="Forgot your password?" />
          <SubTitleLogin content="Enter your email id and we will share a link to create a new password" />
-         <form onSubmit={handleSubmit}>
-            <Input
-               legend="Email"
-               content="Email"
-               type="email"
-               name="email"
-               valid={!valid.includes("email")}
-            />
+         <Input
+            legend="Email"
+            content="Email"
+            type="email"
+            name="email"
+            valid={!valid.includes("email")}
+         />
 
-            <span className={styles.btnHolder}>
-               <SignButton content="sign in" type="submit" />
-            </span>
-         </form>
-      </div>
+         <span className={styles.btnHolder}>
+            <SignButton content="sign in" type="submit" />
+         </span>
+      </form>
    )
 }

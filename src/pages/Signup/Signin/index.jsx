@@ -47,32 +47,30 @@ export default function SignIn() {
   };
 
   return (
-    <div className={styles.signin}>
+    <form className={styles.signin} onSubmit={handleSubmit}>
       <FormTitle content="Welcome back!" />
       <SubTitleLogin content="Don’t have an account?" link="/" sign="up" />
 
-      <form onSubmit={handleSubmit}>
-        <Input
-          legend="Email"
-          content="Email"
-          type="email"
-          name="email"
-          valid={!valid.includes("email")}
-        />
-        <PasswordInput
-          legend="Password"
-          content="Password"
-          name="password"
-          valid={!valid.includes("password")}
-        />
-        <p style={{ textAlign: "right" }} className={styles.forgot}><Link to="/forgot-password"> forgot password?</Link></p>
-        <div className={styles.btnHolder}>
-          <SignButton content="sign in" type="submit" />
-        </div>
+      <Input
+        legend="Email"
+        content="Email"
+        type="email"
+        name="email"
+        valid={!valid.includes("email")}
+      />
+      <PasswordInput
+        legend="Password"
+        content="Password"
+        name="password"
+        valid={!valid.includes("password")}
+      />
+      <p style={{ textAlign: "right" }} className={styles.forgot}><Link to="/forgot-password"> forgot password?</Link></p>
+      <div className={styles.btnHolder}>
+        <SignButton content="sign in" type="submit" />
+      </div>
 
-      </form>
       <FooterGoogle />
-    </div>
+    </form>
   )
 }
 

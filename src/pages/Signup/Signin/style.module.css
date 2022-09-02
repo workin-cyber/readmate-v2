@@ -8,8 +8,8 @@
 
 .forgot {
   font-size: 12px;
-  margin: auto;
-  margin-right: 6px;
+  margin: 0 auto;
+  margin-right: 16px;
 }
 
 .forgot a {
@@ -19,12 +19,9 @@
 .signin form {
   display: flex;
   flex-direction: column;
-
+  height: 100%;
 }
 
 .btnHolder {
-  width: 100%;
-  flex: 1;
-  /* bottom: 96px;
-  position: absolute; */
+  margin-top: auto;
 }

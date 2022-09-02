@@ -3,11 +3,10 @@
   border-radius: 0.8rem;
   height: 80px;
   margin: 0.3rem auto;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   width: calc(100vw - 32px);
   display: flex;
   align-items: center;
-
 }
 
 .focus {

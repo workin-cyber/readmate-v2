@@ -58,49 +58,47 @@ const SignUp = () => {
 
 
   return (
-    <div className={styles.page}>
+    <form className={styles["sign-up"]} onSubmit={onSubmit}>
       <FormTitle content="Create an Account" />
       <SubTitleLogin content="Already have an account?" link="login" sign="In" />
-      <form className={styles["sign-up"]} onSubmit={onSubmit}>
-        <Input
-          legend="First Name"
-          content="First Name"
-          type="text"
-          name="firstName"
-          valid={!valid.includes("firstName")}
-        />
-        <Input
-          content="Last Name"
-          type="text"
-          name="lastName"
-          legend="Last Name"
-          valid={!valid.includes("lastName")}
-        />
-        <Input
-          legend="Email"
-          content="Email"
-          type="email"
-          name="email"
-          valid={!valid.includes("email")}
-        />
-        <PasswordInput
-          legend="Password"
-          content="Password"
-          name="password"
-          valid={!valid.includes("password")}
-        />
-        <PasswordInput
-          legend="Confirm Password"
-          content="Confirm Password"
-          name="confirm-password"
-          valid={!valid.includes("confirm-password")}
-        />
-        <div className={styles.btnHolder}>
-          <SignButton content="Sign Up" type="submit" />
-        </div>
-      </form>
+      <Input
+        legend="First Name"
+        content="First Name"
+        type="text"
+        name="firstName"
+        valid={!valid.includes("firstName")}
+      />
+      <Input
+        content="Last Name"
+        type="text"
+        name="lastName"
+        legend="Last Name"
+        valid={!valid.includes("lastName")}
+      />
+      <Input
+        legend="Email"
+        content="Email"
+        type="email"
+        name="email"
+        valid={!valid.includes("email")}
+      />
+      <PasswordInput
+        legend="Password"
+        content="Password"
+        name="password"
+        valid={!valid.includes("password")}
+      />
+      <PasswordInput
+        legend="Confirm Password"
+        content="Confirm Password"
+        name="confirm-password"
+        valid={!valid.includes("confirm-password")}
+      />
+      <div className={styles.btnHolder}>
+        <SignButton content="Sign Up" type="submit" />
+      </div>
       <FooterGoogle CreateAccount />
-    </div>
+    </form>
   );
 };
 
