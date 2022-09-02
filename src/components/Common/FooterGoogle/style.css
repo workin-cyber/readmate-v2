@@ -8,6 +8,7 @@
   border: 1.5px solid #000000;
   border-radius: 40px 40px 0px 0px;
   margin-top: auto;
+  position: relative;
 }
 
 .google-button {

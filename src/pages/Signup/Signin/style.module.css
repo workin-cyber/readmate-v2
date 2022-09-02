@@ -4,7 +4,6 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
-  justify-content: space-between;
 }
 
 .forgot {
@@ -17,8 +16,15 @@
   color: #55575A;
 }
 
+.signin form {
+  display: flex;
+  flex-direction: column;
+
+}
+
 .btnHolder {
   width: 100%;
-  bottom: 96px;
-  position: absolute;
+  flex: 1;
+  /* bottom: 96px;
+  position: absolute; */
 }
