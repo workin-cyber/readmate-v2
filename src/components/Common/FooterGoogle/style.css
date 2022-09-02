@@ -2,13 +2,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  bottom: 0;
-  position: fixed;
   height: 96px;
   width: 100%;
   background: #7d56a5;
   border: 1.5px solid #000000;
   border-radius: 40px 40px 0px 0px;
+  margin-top: auto;
 }
 
 .google-button {
@@ -46,7 +45,7 @@
 
 
 .FramePencil {
-  position: fixed;
+  position: absolute;
   height: 50px;
   width: 50px;
   z-index: 5;

@@ -49,9 +49,9 @@ export default function SignIn() {
   return (
     <div className={styles.signin}>
 
-      <FormTitle content="Welcome back!" />
-      <SubTitleLogin content="Don’t have an account?" link="/" sign="up" />
       <form onSubmit={handleSubmit}>
+        <FormTitle content="Welcome back!" />
+        <SubTitleLogin content="Don’t have an account?" link="/" sign="up" />
         <Input
           legend="Email"
           content="Email"
