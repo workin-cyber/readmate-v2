@@ -1,29 +1,10 @@
 import { Link, Route, Routes } from 'react-router-dom'
+import GraphDashboard from './components/Common/GraphTabs'
 
-// import TestAviad from './TestAviad'
-// import Popup from './components/Common/Popup'
-
-// import Instructions from './pages/Freestyle/Instructions'
-// import BookInfo from './pages/BookInfo'
-// import PushUpInstructions from './pages/TrainReading/Pushup/Instructions'
-// import Questions from './pages/Questions'
-// import Training from './pages/Freestyle/Training/Training'
-// import PushUpTimer2 from './pages/TrainReading/Pushup/Timer'
-// import Exercise from "./pages/TrainReading/Level/Exercise";
-// import ExerciseClock from "./pages/TrainReading/Level/ExerciseClock";
-// import ExerciseRate from "./pages/TrainReading/Level/ExerciseRate";
-// import ExerciseQuestion from "./pages/TrainReading/Level/ExerciseQuestion";
-// import ExerciseResult from "./pages/TrainReading/Level/ExerciseResult";
 
 import { AssessmentStart, CameraFace, Comprehension, ComprehensionTest } from './pages/Assessments'
-import { Instructions, Result } from './pages/commonPages'
+import { Dashboard, Instructions, Result } from './pages/commonPages'
 import { CalibrateCam, Exercise, StartFocus } from './pages/TrainFocus'
-
-// import Page1 from './pages/Assessments-ta/Page1'
-// import Page3 from './pages/Assessments-ta/Page3'
-// import Page4 from './pages/Assessments-ta/Page4'
-// import Page5 from './pages/Assessments-ta/Page5'
-
 
 export default function Main() {
 
@@ -75,6 +56,7 @@ export default function Main() {
                 <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
                     <Link to={"/assessments"}>assessments</Link>
                     <Link to={"/train-focus"}>train focus</Link>
+                    <Dashboard />
                 </div>
             } />
 
@@ -94,6 +76,9 @@ export default function Main() {
                 <Route path='exercise' element={< Exercise />} />
                 <Route path='result' element={< Result />} />
             </Route>
+
+
+
 
             {/* <Route path="page1" element={<Page1 />} />
                 <Route path="page3" element={<Page3 />} />

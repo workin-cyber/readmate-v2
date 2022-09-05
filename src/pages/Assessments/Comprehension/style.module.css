@@ -1,6 +1,9 @@
 .container {
     position: relative;
     padding-bottom: 90px;
+    display: flex;
+    min-height: 90vh;
+    flex-direction: column;
 }
 
 .img {

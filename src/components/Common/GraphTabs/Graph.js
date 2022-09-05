@@ -132,7 +132,7 @@ export default function Graph(props) {
     };
     //debugger
     console.log('labels' + labels);
-    console.log('data' + dataArr);
+    console.log('data :' + dataArr);
     return <Line options={options} data={data} />;
 
 

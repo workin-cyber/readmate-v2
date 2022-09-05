@@ -16,7 +16,10 @@ function Instructions({ navigateTo, textList = textFake, title = titleFake, vidS
 
     const { header: { setPageName } } = useContext(mainContext)
 
-    useEffect(() => { setPageName("Instructions") }, [])
+    useEffect(() => {
+        setPageName("Instructions")
+        return () => setPageName("")
+    }, [])
 
     const onclick = () => navigate(navigateTo)
 
@@ -26,6 +29,7 @@ function Instructions({ navigateTo, textList = textFake, title = titleFake, vidS
             <h2 >{title}</h2>
             <img className={styles.underline} src={underLine} alt="underline" />
             {textFake?.map((text, i) => <p key={`k${i}`}>{text}</p>)}
+
             <Button title={"Next"} startFunction={onclick}></Button>
         </div>
     )

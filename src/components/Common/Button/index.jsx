@@ -8,14 +8,13 @@ export default function Button({ title, bgColor, width, height, startFunction, f
     backgroundColor: bgColor,
     width: width,
     height: height,
+    color: fontColor
   };
 
   return (
     <div className={styles["wrapButton"]}>
       <button disabled={disabled} className={styles["submit"]} onClick={startFunction} style={myStyle}>
-        <div className={styles["word"]} style={{ color: fontColor }}>
-          {title}
-        </div>
+        {title}
       </button>
     </div>
   );

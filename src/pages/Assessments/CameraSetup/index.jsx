@@ -1,37 +1,45 @@
-import styles from "./style.module.css";
 import FooterStart from "../../../components/Common/StartFooter";
-// import './style.css';
-// import  useContext from 'react';
-// import { pageNameContext } from '../../../components/common/';
-// import FooterStart from '../../../components/common/FooterStart';
-import group from "./group.jpg";
+
 import { useNavigate, useLocation } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
+
 import UmooveApi from "../../../components/api/UmooveApi";
+import styles from "./style.module.css";
+import group from "./group.jpg";
+import mainContext from "../../../context/mainContext";
 
 // Creator : Team A -efrat & Yehoantan
-function Page3() {
+function CameraSetup() {
   const l = useLocation();
   const navigate = useNavigate();
   let videoRef = useRef();
   const [count, setCount] = useState(0);
 
+  const { header: { setPageName } } = useContext(mainContext)
+
+  useEffect(() => {
+    setPageName("Camera Setup")
+    return () => setPageName("")
+  }, [])
+
   // let count = 0;
   let sucsses;
+
   useEffect(() => {
     UmooveApi.API_loadUmooveLibrary()
       .then((st) => (videoRef.current.srcObject = st))
       .catch((e) => alert("error"));
   }, []);
+
   const nextPage = () => {
     UmooveApi.API_startUmoove();
     const interval = setInterval(() => {
-      console.log(count);
+      // console.log(count);
       if (count < 100) {
         clearInterval(interval);
       }
       sucsses = UmooveApi.API_getUmooveTracking();
-      console.log(sucsses);
+      // console.log(sucsses);
       if (sucsses === true) {
         clearInterval(interval);
         navigate("/teama/page4", { state: { data: " l.state.data" } });
@@ -51,11 +59,11 @@ function Page3() {
           nextPage();
         }}
         title="Start now"
-        explanation="hdnvdjnjrtnvjsdsdjkdfnjsnjknsdfjknsdfjsdkf"
+        explanation="Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi optio velit beatae asperiores dolore explicabo!"
         img={group}
       />
     </div>
   );
 }
 
-export default Page3;
+export default CameraSetup;

@@ -18,7 +18,11 @@ export default function ComprehensionTest() {
     const data = location.state;
 
     const { header: { setPageName } } = useContext(mainContext)
-    useEffect(() => { setPageName("Comprehension Test") }, [])
+
+    useEffect(() => {
+        setPageName("Comprehension Test")
+        return () => setPageName("")
+    }, [])
 
 
     function Calc() {

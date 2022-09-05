@@ -1,13 +1,14 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
+
 import nav from "../../../assets/images/icons/nav-icon.png";
 import photoPic from "../../../assets/images/icons/userPhoto.png";
 import mainContext from "../../../context/mainContext";
-import "./style.css";
-// import { dataContext } from "../../../context/context";
+
+import styles from "./style.module.css";
 
 //group c- yoav & yehoshua
 
-export default function Header(props) {
+export default function Header({ pageName }) {
 
   const { nav: { setIsShowNav } } = useContext(mainContext)
 
@@ -15,13 +16,13 @@ export default function Header(props) {
 
 
   return (
-    <div className="header">
-      <div className="left" onClick={handleOpenNav}>
-        <img src={nav} alt="navbar"></img>
+    <div className={styles["header"]}>
+      <div className={styles["left"]} onClick={handleOpenNav}>
+        <img src={nav} alt={styles["navbar"]}></img>
       </div>
-      <div className="mid">{props.pageName}</div>
+      <div className={styles["mid"]}>{pageName}</div>
 
-      <div className="right">
+      <div className={styles["right"]}>
         <img src={photoPic} alt="User Name " />
       </div>
     </div>

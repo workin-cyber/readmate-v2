@@ -1,12 +1,13 @@
 .wrapButton {
   display: flex;
   justify-content: center;
+  margin-top: auto;
 }
 
 .submit {
-  margin: 8px 0px;
+  margin: 8px auto;
   width: 94%;
-  height: 6.5vh;
+  height: 48px;
   background: #f39c12;
   border: 2px solid #252525;
   box-shadow: 2px 2px 0px #d35400;
@@ -14,8 +15,10 @@
   bottom: 20px;
   position: absolute;
   color: white;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .submit:disabled {
-  background: #fcb94d;
+  background: #fdc467;
 }

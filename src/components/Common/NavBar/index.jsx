@@ -5,10 +5,10 @@ import { FiSettings } from "react-icons/fi";
 import { MdLogout } from "react-icons/md";
 import { FaRegAddressBook } from "react-icons/fa";
 import { NavButton } from "../NavButton/NavButton";
+import { BiArrowBack } from "react-icons/bi";
 
 import { useContext } from "react";
 import mainContext from "../../../context/mainContext";
-import NavBackButt from "../navBackButt";
 
 import img1 from "./image 1.svg"
 import img2 from "./image 2.svg"
@@ -42,7 +42,7 @@ export const NavBar = () => {
               onClick={handleOpenNav}
               icon={<BsColumnsGap className={`${styles.icon}`} size="30px" />}
               text="Dashboard"
-              link="Dashboard"
+              link="/"
             />
           </li>
           <li>
@@ -76,3 +76,9 @@ export const NavBar = () => {
     </div>
   );
 };
+
+
+const NavBackButt = ({ setClose }) =>
+  <div type="button" className={styles["arrow"]} onClick={setClose}>
+    <BiArrowBack />
+  </div>

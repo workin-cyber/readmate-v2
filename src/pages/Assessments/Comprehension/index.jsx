@@ -21,7 +21,10 @@ function Comprehension() {
 
     const { header: { setPageName } } = useContext(mainContext)
 
-    useEffect(() => { setPageName("comprehension") }, [])
+    useEffect(() => {
+        setPageName("comprehension")
+        return () => setPageName("")
+    }, [])
 
     const nextPage = () => {
         console.log("clicked");
