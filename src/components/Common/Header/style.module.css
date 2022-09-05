@@ -9,4 +9,6 @@
 
 .header .mid {
   text-transform: capitalize;
+  font-weight: 600;
+  font-size: 20px;
 }

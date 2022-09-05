@@ -1,0 +1,31 @@
+.settings {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar {
+  width: 84px;
+  margin: 16px;
+  position: relative;
+}
+
+.avatar svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 23px;
+}
+
+.btnHolder {
+  margin-top: auto;
+}
+
+.settings a {
+  margin: auto;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--secondary-color);
+}

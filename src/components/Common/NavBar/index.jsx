@@ -50,7 +50,7 @@ export const NavBar = () => {
               onClick={handleOpenNav}
               icon={<FiSettings className={`${styles.icon}`} size="30px" />}
               text="Settings"
-              link="setting"
+              link="settings"
             />
           </li>
           <li>

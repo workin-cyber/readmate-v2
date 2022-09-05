@@ -1,9 +1,8 @@
 import { Link, Route, Routes } from 'react-router-dom'
-import GraphDashboard from './components/Common/GraphTabs'
-
 
 import { AssessmentStart, CameraFace, Comprehension, ComprehensionTest } from './pages/Assessments'
 import { Dashboard, Instructions, Result } from './pages/commonPages'
+import { Setting } from './pages/Settings'
 import { CalibrateCam, Exercise, StartFocus } from './pages/TrainFocus'
 
 export default function Main() {
@@ -18,8 +17,7 @@ export default function Main() {
             <Route path='login' />
             <Route path='teacher' />
             <Route path='forgot' />
-            <Route path='settings' />
-
+            
             <Route path='/tr'>
                 <Route index element={<Popup />} />
                 <Route path="book-info" element={<BookInfo />} />
@@ -79,6 +77,10 @@ export default function Main() {
 
 
 
+            <Route path='settings' >
+                <Route index element={<Setting />} />
+
+            </Route>
 
             {/* <Route path="page1" element={<Page1 />} />
                 <Route path="page3" element={<Page3 />} />

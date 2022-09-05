@@ -13,7 +13,10 @@ function Result({ children, submit: { path, name, onClick = () => { } } = {} }) 
    const navigate = useNavigate()
    const { header: { setPageName } } = useContext(mainContext)
 
-   useEffect(() => { setPageName("Result Summary") }, [])
+   useEffect(() => {
+      setPageName("Result Summary");
+      return () => setPageName("")
+   }, [])
 
 
    // TODO - print result from the state
