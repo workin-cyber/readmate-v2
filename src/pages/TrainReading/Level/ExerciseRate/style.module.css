@@ -1,0 +1,33 @@
+.container {
+   padding: 16px;
+}
+
+.answer {
+   width: 100%;
+   min-height: 337px;
+   background-color: #FEEFEC;
+   border: 1.5px solid #252525;
+   border-radius: 20px;
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   justify-content: center;
+   align-items: center;
+}
+
+.answer button {
+   border: 1.5px solid #252525;
+   box-shadow: 2px 2px 0px #D35400;
+   border-radius: 80px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 48px;
+   width: 100%;
+   max-width: 347px;
+   color: #252525;
+   font-weight: 600;
+   font-size: 14px;
+   font-family: 'Poppins';
+
+}

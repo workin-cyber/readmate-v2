@@ -31,7 +31,6 @@ function Instructions({ navigateTo, textList = textFake, title = titleFake, vidS
             <h2 >{title}</h2>
             <img className={styles.underline} src={underLine} alt="underline" />
             {textFake?.map((text, i) => <p key={`k${i}`}>{text}</p>)}
-
             <Button title={"Next"} startFunction={onclick}></Button>
         </div>
     )

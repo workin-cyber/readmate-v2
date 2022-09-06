@@ -5,11 +5,6 @@ import { Dashboard, Instructions, Result } from './pages/commonPages'
 import { Setting } from './pages/Settings'
 import { CalibrateCam, Exercise, StartFocus } from './pages/TrainFocus'
 
-// import Instructions from './pages/Freestyle/Instructions'
-// import BookInfo from './pages/BookInfo'
-// import PushUpInstructions from './pages/TrainReading/Pushup/Instructions'
-// import PushUpTimer2 from './pages/TrainReading/Pushup/Timer'
-// import Exercise from "./pages/TrainReading/Level/Exercise";
 
 import { BookInfo, PushUpInstructions } from './pages/TrainReading'
 import ExerciseResult from "./pages/TrainReading/Level/ExerciseResult";
@@ -17,14 +12,19 @@ import PushUpTimer2 from './pages/PushUpTimer2'
 import Questions from './pages/Questions'
 import LevelExercise from './pages/TrainReading/Level/Exercise'
 import ExerciseClock from './pages/TrainReading/Level/ExerciseClock'
-import ExerciseRate from './pages/TrainReading/Level/ExerciseRate'
 import ExerciseQuestion from './pages/TrainReading/Level/ExerciseQuestion'
+import ExerciseRate from "./pages/TrainReading/Level/ExerciseRate";
 
 // import Training from './pages/Freestyle/Training/Training'
 // import ExerciseClock from "./pages/TrainReading/Level/ExerciseClock";
 // import ExerciseRate from "./pages/TrainReading/Level/ExerciseRate";
 // import ExerciseQuestion from "./pages/TrainReading/Level/ExerciseQuestion";
 // import FourQues from './pages/Questions'
+// import Instructions from './pages/Freestyle/Instructions'
+// import BookInfo from './pages/BookInfo'
+// import PushUpInstructions from './pages/TrainReading/Pushup/Instructions'
+// import PushUpTimer2 from './pages/TrainReading/Pushup/Timer'
+// import Exercise from "./pages/TrainReading/Level/Exercise";
 
 export default function Main() {
 
