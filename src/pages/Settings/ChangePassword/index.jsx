@@ -1,7 +1,6 @@
 import styles from "./style.module.css";
 import { useContext, useEffect, useState } from "react";
 
-import { BiCamera } from "react-icons/bi";
 import Input from "../../../components/Common/Input/Input";
 
 
@@ -10,17 +9,16 @@ import { validate } from "../../Signup/Signup/validate";
 import SignButton from "../../../components/Common/SignButton/SignButton";
 import mainContext from "../../../context/mainContext";
 
-import src from "./avatar.svg"
 import { Link, useNavigate } from "react-router-dom";
 
-export default function Settings() {
+export default function ChangePassword() {
 
   const navigate = useNavigate();
   const [valid, setValid] = useState([]);
   const { header: { setPageName } } = useContext(mainContext)
 
   useEffect(() => {
-    setPageName("settings");
+    setPageName("Change Password");
     return () => setPageName("")
   }, [])
 
@@ -58,11 +56,7 @@ export default function Settings() {
 
 
   return (
-    <form className={styles["settings"]} onSubmit={onSubmit}>
-      <span className={styles.avatar}>
-        <img src={src} alt="avatar" />
-        <BiCamera />
-      </span>
+    <form className={styles["ChangePassword"]} onSubmit={onSubmit}>
       <Input
         legend="First Name"
         content="First Name"

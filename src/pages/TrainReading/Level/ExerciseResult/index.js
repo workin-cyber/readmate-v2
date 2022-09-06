@@ -20,8 +20,8 @@ export default function ExerciseResult() {
   const userLPM = from_TRL_Question.state.New_LPM;
 
   function TRLevelDone() {
-    alert("GO TO DASHBOARD");
-    // navigate("/");
+    // alert("GO TO DASHBOARD");
+    navigate("/");
   }
 
   return (

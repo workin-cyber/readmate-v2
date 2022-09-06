@@ -28,7 +28,7 @@ function Result({ children, submit: { path, name, onClick = () => { } } = {} }) 
       <div className={styles.result}>
          <img src={ResultImg} alt="result" className={styles.img} />
          <RatingAndScore wpm={120} std={5} compScore={8} />
-         <Button title="Go to Dashboard" startFunction={() => navigate("/dashboard")} />
+         <Button title="Go to Dashboard" startFunction={() => navigate("/")} />
       </div>
    );
 }

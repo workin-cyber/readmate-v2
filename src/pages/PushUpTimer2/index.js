@@ -17,15 +17,13 @@ export default function PushUpTimer2() {
   const [play, setPlay] = useState(true);
   console.log("fatherPlay:", play);
 
-  const continueBtnClick = () => {
-    navigate("/tr/questions", { state: { navigateObject } });
-  };
+  const continueBtnClick = () => navigate("/train-reading/questions", { state: { navigateObject } });
 
   const stopBtnClick = () => {
     setPlay(false)
     console.log(dataNewLpm);
     navigateObject.rateData.LPM = dataNewLpm
-    navigate("/tr/questions", { state: { navigateObject } });
+    navigate("/train-reading/questions", { state: { navigateObject } });
   };
 
   useEffect(() => {

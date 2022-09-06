@@ -5,55 +5,35 @@ import { Dashboard, Instructions, Result } from './pages/commonPages'
 import { Setting } from './pages/Settings'
 import { CalibrateCam, Exercise, StartFocus } from './pages/TrainFocus'
 
+// import Instructions from './pages/Freestyle/Instructions'
+// import BookInfo from './pages/BookInfo'
+// import PushUpInstructions from './pages/TrainReading/Pushup/Instructions'
+// import PushUpTimer2 from './pages/TrainReading/Pushup/Timer'
+// import Exercise from "./pages/TrainReading/Level/Exercise";
+
+import { BookInfo, PushUpInstructions } from './pages/TrainReading'
+import ExerciseResult from "./pages/TrainReading/Level/ExerciseResult";
+import PushUpTimer2 from './pages/PushUpTimer2'
+import Questions from './pages/Questions'
+
+// import Training from './pages/Freestyle/Training/Training'
+// import ExerciseClock from "./pages/TrainReading/Level/ExerciseClock";
+// import ExerciseRate from "./pages/TrainReading/Level/ExerciseRate";
+// import ExerciseQuestion from "./pages/TrainReading/Level/ExerciseQuestion";
+// import FourQues from './pages/Questions'
+
 export default function Main() {
 
     return <>
 
         <Routes>
 
-
-
-            {/* <Route path='signup' />
-            <Route path='login' />
-            <Route path='teacher' />
-            <Route path='forgot' />
-            
-            <Route path='/tr'>
-                <Route index element={<Popup />} />
-                <Route path="book-info" element={<BookInfo />} />
-                <Route path="instructions" element={<PushUpInstructions />} />
-                <Route path="timer" element={<PushUpTimer2 />} />
-                <Route path="Questions" element={<Questions />} />
-            </Route>
-
-            <Route path="/tr">
-                <Route path="exercise" element={<Exercise />} />
-                <Route path="exercise_clock" element={<ExerciseClock />} />
-                <Route path="rate" element={<ExerciseRate />} />
-                <Route path="question" element={<ExerciseQuestion />} />
-                <Route path="result" element={<ExerciseResult />} />
-            </Route>
-
-            <Route path='/tf'>
-
-
-
-            </Route>
-
-            <Route path='freestyle' element={<Instructions />}>
-
-            </Route>
-
-            <Route path='/freestyle-instructions' element={<Instructions />}></Route>
-            <Route path='/freestyle-training' element={<Training />}></Route>
-            <Route path='ass'>
-
-            </Route> */}
-
+            {/* dashboard - yosef */}
             <Route index element={
                 <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
                     <Link to={"/assessments"}>assessments</Link>
                     <Link to={"/train-focus"}>train focus</Link>
+                    <Link to={"/train-reading"}>train-reading</Link>
                     <Dashboard />
                 </div>
             } />
@@ -68,6 +48,7 @@ export default function Main() {
                 <Route path='result' element={< Result />} />
             </Route>
 
+            {/* train-focus roll - yosef */}
             <Route path="train-focus">
                 <Route index element={< CalibrateCam />} />
                 <Route path='start-focus' element={< StartFocus />} />
@@ -76,16 +57,48 @@ export default function Main() {
             </Route>
 
 
+            {/* train-reading roll - yosef */}
+            <Route path='/train-reading'>
+                <Route index element={<BookInfo />} />
+                <Route path="instructions" element={<Instructions navigateTo="/train-reading/pushup" />} />
+                <Route path="pushup" element={<PushUpInstructions />} />
+                <Route path="timer" element={<PushUpTimer2 />} />
+                <Route path="Questions" element={<Questions />} />
+                <Route path="result" element={<ExerciseResult />} />
+            </Route>
 
             <Route path='settings' >
                 <Route index element={<Setting />} />
 
             </Route>
 
-            {/* <Route path="page1" element={<Page1 />} />
-                <Route path="page3" element={<Page3 />} />
-                <Route path="page4" element={<Page4 />} />
-                <Route path="page5" element={<Page5 />} /> */}
+            {/* <Route path='instructions' element={<Instructions navigateTo="/train-reading/popup" />} /> */}
+            {/* <Route path="train-reading">
+                <Route index element={< BookInfo />} />
+                <Route path='instructions' element={<PushUpInstructions />} />
+                <Route path="timer" element={<PushUpTimer2 />} />
+                <Route path='popup' element={<PopUp />} />
+                <Route path="questions" element={<FourQues />} />
+
+            </Route> */}
+            {/* <Route path="exercise" element={<Exercise />} />
+                <Route path="exercise_clock" element={<ExerciseClock />} />
+                <Route path="rate" element={<ExerciseRate />} />
+                <Route path="question" element={<ExerciseQuestion />} /> */}
+            {/* <Route index element={<PopUp />} />
+                <Route  path="book-info" element={<BookInfo />} /> */}
+
+            {/* <Route path='freestyle' element={<Instructions />}>
+
+        </Route>
+
+        <Route path='/freestyle-instructions' element={<Instructions />}></Route>
+        <Route path='/freestyle-training' element={<Training />}></Route>
+        <Route path='ass'>
+        
+        </Route>  */}
+
+
         </Routes>
 
 

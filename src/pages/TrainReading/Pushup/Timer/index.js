@@ -43,14 +43,14 @@ export default function PushUpTimer() {
     //  console.log("fatherPlay:", play);
     const continueBtnClick = () => {
         // navigateObject.roundCounter++;
-        navigate("/tr/questions", { state: { navigateObject } });
+        navigate("/train-reading/questions", { state: { navigateObject } });
     };
 
 
     const stopBtnClick = () => {
         // save lpm
         navigateObject.rateData.LPM = Number(newRate * lpmFile);
-        navigate("/tr/questions", { state: { navigateObject } });
+        navigate("/train-reading/questions", { state: { navigateObject } });
     };
 
     /****** Clock Functions ********/

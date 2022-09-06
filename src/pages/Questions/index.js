@@ -48,10 +48,11 @@ export default function FourQues() {
             }
 
             navigateObject.questions.push(question)
-            if (navigateObject.roundCounter <= 4) { console.log(navigateObject); navigate("/tr/instructions", { state: { navigateObject } }) }
+            if (navigateObject.roundCounter <= 4) { console.log(navigateObject); navigate("/train-reading/pushup", { state: { navigateObject } }) }
             else {
                 console.log(navigateObject);
-                navigate("/tr/exercise", { state: { navigateObject } })
+                // navigate("/tr/exercise", { state: { navigateObject } })
+                navigate("/train-reading/result", { state: { navigateObject } })
             }
         }
     }

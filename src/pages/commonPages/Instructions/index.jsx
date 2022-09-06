@@ -1,5 +1,5 @@
 import styles from './style.module.css'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import Button from '../../../components/Common/Button'
 import videoPlaceholder from "./placeHolder.jpg"
 import underLine from "./underline.svg"
@@ -16,12 +16,14 @@ function Instructions({ navigateTo, textList = textFake, title = titleFake, vidS
 
     const { header: { setPageName } } = useContext(mainContext)
 
+    const { state } = useLocation()
+
     useEffect(() => {
         setPageName("Instructions")
         return () => setPageName("")
     }, [])
 
-    const onclick = () => navigate(navigateTo)
+    const onclick = () => navigate(navigateTo, { state })
 
     return (
         <div className={styles.container}>
