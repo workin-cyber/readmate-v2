@@ -3,37 +3,14 @@ import { clockContex } from "../../../pages/PushUpTimer2";
 import styles from "./style.module.css";
 
 // Creator : Team b- yossef&&shachar
-export default function RoundedButtonTB(props) {
-  const { play, setPlay } = useContext(clockContex)
-  const [isplay, setIsPlay] = useState(1);
+export default function RoundedButtonTB({ setPlay, play }) {
+
   console.log("button", play);
+
   return (
     <>
       <div className={styles.RoundB}>
-        {isplay ? (
-          <button
-            className={styles.RoundedButton}
-            onClick={() => {
-              console.log("isplay");
-              setIsPlay(!isplay);
-              setPlay(!play);
-            }}
-          >
-            {" "}
-            ||{" "}
-          </button>
-        ) : (
-          <button
-            className={styles.RoundedButtonPlay}
-            onClick={() => {
-              setIsPlay(!isplay);
-              setPlay(!play);
-            }}
-          >
-            {" "}
-            <div id="play-icon">▶</div>{" "}
-          </button>
-        )}
+        <button className={`${styles.RoundedButton} ${play ? styles.RoundedButtonPlay : ""}`} onClick={() => setPlay(old => !old)}> {play ? "||" : "▶"}</button>
       </div>
     </>
   );

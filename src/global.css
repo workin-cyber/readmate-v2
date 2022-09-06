@@ -26,6 +26,7 @@ html {
 
 .two-colored-div {
   position: relative;
+  border-radius: 20px;
 }
 
 .two-colored-div::after {

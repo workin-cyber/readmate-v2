@@ -7,22 +7,20 @@ import { clockContex } from "../../../pages/PushUpTimer2";
 
 function ClockTB(props) {
     const { play, setPlay } = useContext(clockContex)
-    const navigate = useNavigate();
-    let { navigateObject } = props
-    console.log("clockTB :", navigateObject);
-    let timeInSeconds = props.time;
+    const { navigateObject } = props
+    const timeInSeconds = props.time;
     const [isFinish, setIsFinish] = useState(false);
 
-    //const { setPlay } = setPlay;
+    console.log("clockTB :", navigateObject);
     console.log("play: ", props.play);
+    // const navigate = useNavigate();
+    //const { setPlay } = setPlay;
 
     function complete() {
         setIsFinish(true);
         setPlay(false)
         props.setShowContinueBtn(true);
-
     }
-
 
 
     const renderTime = ({ remainingTime }) => {

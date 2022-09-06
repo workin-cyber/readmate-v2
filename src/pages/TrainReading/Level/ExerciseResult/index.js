@@ -37,7 +37,6 @@ export default function ExerciseResult() {
       </TwistBox>
       <div>
         <Button
-          bgColor="#FFFFFF"
           startFunction={TRLevelDone}
           title="Go To Dashboard"
         />

@@ -3,10 +3,12 @@
   flex-direction: column;
   align-items: center;
 }
+
 .level_page img {
   margin-top: 88px;
   margin-bottom: 76.5px;
 }
+
 .twistBoxChildren {
   display: flex;
   flex-direction: column;
@@ -16,6 +18,7 @@
   height: 100%;
   width: 100%;
 }
+
 .twistBoxChildren img {
   color: #55575a;
   width: 36px;
@@ -23,6 +26,7 @@
   margin: 0;
   margin-bottom: 11px;
 }
+
 .twistBoxChildren span {
   font-size: 14px;
   font-weight: 500;
@@ -30,6 +34,7 @@
   color: #252525;
   margin-bottom: 4px;
 }
+
 .twistBoxChildren span:last-child {
   font-size: 20px;
   font-weight: 700;

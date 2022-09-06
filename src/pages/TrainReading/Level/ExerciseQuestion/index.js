@@ -48,6 +48,17 @@ export default function ExerciseQuestion() {
     } else {
       round === 1
         ? (objProps.formInfo = [
+          round,
+          {
+            answer1: `${q1}`,
+            answer2: `${q2}`,
+            answer3: `${q3}`,
+            answer4: `${q4}`,
+          },
+        ])
+        : (objProps.formInfo = [
+          ...formInfo2,
+          ...[
             round,
             {
               answer1: `${q1}`,
@@ -55,19 +66,8 @@ export default function ExerciseQuestion() {
               answer3: `${q3}`,
               answer4: `${q4}`,
             },
-          ])
-        : (objProps.formInfo = [
-            ...formInfo2,
-            ...[
-              round,
-              {
-                answer1: `${q1}`,
-                answer2: `${q2}`,
-                answer3: `${q3}`,
-                answer4: `${q4}`,
-              },
-            ],
-          ]);
+          ],
+        ]);
       console.log(objProps);
       if (
         justRight ||
@@ -75,10 +75,10 @@ export default function ExerciseQuestion() {
         (round > 1 && clickedButton[round - 1] !== clickedButton[round - 2])
       ) {
         // console.log("SENDING OBJ TO RESULT");
-        navigate("/tr/result", { state: objProps });
+        navigate("/train-reading/result", { state: objProps });
       } else {
         // console.log("SENDING OBJ TO EXERCISE");
-        navigate("/tr/exercise_clock", { state: objProps });
+        navigate("/train-reading/exercise-clock", { state: objProps });
       }
     }
   }
@@ -91,7 +91,7 @@ export default function ExerciseQuestion() {
     fromPath: "tr/question",
   };
   function startFunction() {
-    navigate("/tr/exercise_clock", { state: objProps });
+    navigate("/train-reading/exercise-clock", { state: objProps });
   }
 
   return (
@@ -148,7 +148,7 @@ export default function ExerciseQuestion() {
         />
       </div>
       <div className={styles.EQButton}>
-        <Button bgColor="#FFFFFF" startFunction={validForm} title="Done" />
+        <Button fontColor="#fff" bgColor="#F39C12" startFunction={validForm} title="Done" />
       </div>
     </>
   );

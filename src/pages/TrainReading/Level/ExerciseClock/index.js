@@ -12,10 +12,10 @@ function ExerciseClock() {
   const { header } = useContext(mainContext);
   header.setPageName("Exercise Clock");
 
-  const fromTR_Pushup = useLocation();
-  console.log(fromTR_Pushup);
-  var LPM_Value = fromTR_Pushup.state.LPM_Pushup;
-  const BookName = fromTR_Pushup.state.BookName;
+  const location = useLocation();
+  console.log("location", location);
+  var LPM_Value = location.state.LPM_Pushup;
+  const BookName = location.state.BookName;
 
   const from_TRL_Question = useLocation();
   // console.log(from_TRL_Question.state);
@@ -69,11 +69,11 @@ function ExerciseClock() {
     LPM_Pushup: LPM_fromPushup, // value from pushup
     Round: round,
     ClickedButton: clickedButton,
-    fromPath: "tr/exercise_clock",
+    fromPath: "train-reading/exercise-clock",
     formInfo: from_TRL_Question.state.formInfo,
   };
 
-  const route = "/tr/rate";
+  const route = "/train-reading/rate";
   const navigate = useNavigate();
 
   function onComplete() {

@@ -15,6 +15,10 @@ import { BookInfo, PushUpInstructions } from './pages/TrainReading'
 import ExerciseResult from "./pages/TrainReading/Level/ExerciseResult";
 import PushUpTimer2 from './pages/PushUpTimer2'
 import Questions from './pages/Questions'
+import LevelExercise from './pages/TrainReading/Level/Exercise'
+import ExerciseClock from './pages/TrainReading/Level/ExerciseClock'
+import ExerciseRate from './pages/TrainReading/Level/ExerciseRate'
+import ExerciseQuestion from './pages/TrainReading/Level/ExerciseQuestion'
 
 // import Training from './pages/Freestyle/Training/Training'
 // import ExerciseClock from "./pages/TrainReading/Level/ExerciseClock";
@@ -63,7 +67,11 @@ export default function Main() {
                 <Route path="instructions" element={<Instructions navigateTo="/train-reading/pushup" />} />
                 <Route path="pushup" element={<PushUpInstructions />} />
                 <Route path="timer" element={<PushUpTimer2 />} />
-                <Route path="Questions" element={<Questions />} />
+                <Route path="questions" element={<Questions />} />
+                <Route path="level-exercise" element={<LevelExercise />} />
+                <Route path="exercise-clock" element={<ExerciseClock />} />
+                <Route path="rate" element={<ExerciseRate />} />
+                <Route path="question" element={<ExerciseQuestion />} />
                 <Route path="result" element={<ExerciseResult />} />
             </Route>
 

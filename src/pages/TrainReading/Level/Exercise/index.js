@@ -1,5 +1,5 @@
 import "./style.css";
-import React from "react";
+import React, { useEffect } from "react";
 import { useContext } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import dataContext from "../../../../context/dataContext";
@@ -10,12 +10,20 @@ import Headphone from "../../../../assets/images/illustrations/head-phones.jpg";
 import FrameIcon from "../../../../assets/images/icons/FrameHeadPhone.png";
 // Can be FrameConus // FramePencil // FrameCamera // FrameHeadPhone
 
-const Exercise = () => {
+const LevelExercise = () => {
   const user = useContext(dataContext);
   const BookName = user.userDetails.currentBook.name;
 
   const { header } = useContext(mainContext);
-  header.setPageName("Exercise");
+
+  useEffect(() => {
+    header.setPageName("Exercise");
+    return () => header.setPageName("");
+  }, [])
+
+
+  //TODO get from first page
+  const { state } = useLocation()
 
   // const pushup = useLocation();
   const navigate = useNavigate();
@@ -29,13 +37,16 @@ const Exercise = () => {
     ${BookName} 
     book at the pace of the sound, for the next 3 minutes – we will notify you when time is up.`;
 
-  const route = "/tr/exercise_clock";
+  const route = "/train-reading/exercise-clock";
   const objProps = {
     LPM_Pushup: lpmFromPushup,
     BookName: BookName,
-    fromPath: "tr/exercise",
+    fromPath: "train-reading/exercise",
     // Add all the answers from pushup questions
   };
+
+  // const startFunction = () => navigate(route, { state });
+
   function startFunction() {
     navigate(route, { state: objProps });
   }
@@ -56,4 +67,4 @@ const Exercise = () => {
   );
 };
 
-export default Exercise;
+export default LevelExercise;
