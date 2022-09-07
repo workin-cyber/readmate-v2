@@ -6,6 +6,7 @@ import Button from "../../../components/Common/Button";
 import { useNavigate } from 'react-router-dom'
 import dataContext from "../../../context/dataContext";
 import styles from "./style.module.css"
+import mainContext from "../../../context/mainContext";
 // Creator : Team H - Nurit & Milka & Batya
 function Training() {
 
@@ -17,6 +18,12 @@ function Training() {
   const [audio, setAudio] = useState(new Audio(file));
   const [playing, setPlaying] = useState(0)
   const navigate = useNavigate()
+  const { header: { setPageName } } = useContext(mainContext)
+
+  useEffect(() => {
+    setPageName("free style");
+    return () => setPageName("")
+  }, [])
 
   console.log('userLpm', tr[tr.length - 1]);
 

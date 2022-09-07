@@ -3,10 +3,8 @@ import { Route, Routes } from 'react-router-dom'
 import { AssessmentStart, CameraFace, Comprehension, ComprehensionTest } from './pages/Assessments'
 import { Dashboard, Instructions, Result } from './pages/commonPages'
 import { FSTraining } from './pages/Freestyle'
-import { Setting } from './pages/Settings'
+import { ChangePassword, ContactUs, Setting } from './pages/Settings'
 import { CalibrateCam, Exercise, StartFocus } from './pages/TrainFocus'
-
-
 import { BookInfo, PushUpInstructions, ExerciseResult, PushUpTimer2 } from './pages/TrainReading'
 import { Questions, LevelExercise, ExerciseClock, ExerciseQuestion, ExerciseRate } from './pages/TrainReading'
 
@@ -19,6 +17,7 @@ export default function Main() {
 
             {/* dashboard - yosef */}
             <Route index element={<Dashboard />} />
+            <Route path="contact-us" element={<ContactUs />} />
 
             {/* assesment roll - yosef */}
             <Route path="assessments">
@@ -56,7 +55,7 @@ export default function Main() {
             {/* settings roll - yosef */}
             <Route path='settings' >
                 <Route index element={<Setting />} />
-
+                <Route path="change-password" element={<ChangePassword />} />
             </Route>
 
             {/* freestyle roll - yosef */}
