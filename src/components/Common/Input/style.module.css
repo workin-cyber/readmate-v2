@@ -27,6 +27,11 @@
   margin-top: -11px;
 }
 
+.allInputs::placeholder {
+  color: #55575A;
+  text-transform: capitalize;
+}
+
 .legend {
   padding: 0.2em 0.5em;
   color: #7D839D;

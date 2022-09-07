@@ -86,12 +86,14 @@ const SignUp = () => {
         legend="Password"
         content="Password"
         name="password"
+        placeholder="******"
         valid={!valid.includes("password")}
       />
       <PasswordInput
         legend="Confirm Password"
         content="Confirm Password"
         name="confirm-password"
+        placeholder="******"
         valid={!valid.includes("confirm-password")}
       />
       <div className={styles.btnHolder}>

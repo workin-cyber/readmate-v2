@@ -62,6 +62,7 @@ export default function SignIn() {
         legend="Password"
         content="Password"
         name="password"
+        placeholder="******"
         valid={!valid.includes("password")}
       />
       <p style={{ textAlign: "right" }} className={styles.forgot}><Link to="/forgot-password"> forgot password?</Link></p>

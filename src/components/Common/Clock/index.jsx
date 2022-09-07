@@ -1,8 +1,7 @@
-import React from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import { useState } from "react";
-import RoundButton from "../../Common/RoundButton";
-import "./style.css";
+import RoundButton from "../RoundButton";
+import styles from "./style.module.css";
 
 
 // Creator : Team H - Milka
@@ -17,10 +16,10 @@ import "./style.css";
 //  5. "initRapidValue" with a value of the last user's LPM.
 
 function Clock(props) {
-  let freeStyle = props.freeStyle; 
+  let freeStyle = props.freeStyle;
   const [play, setPlay] = useState(false);
   const [isplay, setIsPlay] = useState(false);
-  let timeInSeconds = props.time; 
+  let timeInSeconds = props.time;
   const [rapidValue, setRapidValue] = useState(props.initRapidValue);
   const [isFinish, setIsFinish] = useState(false);
 
@@ -29,57 +28,54 @@ function Clock(props) {
     setIsFinish(true);
     props.funcs.onComplete();
   }
-  
+
   const renderTime = ({ remainingTime }) => {
     const minutes = Math.floor(remainingTime / 60);
     const seconds = remainingTime - minutes * 60;
 
     return (
-      <div className="wrapping">
-        <div className="timer">
-        {freeStyle ? (
-            <button className="squareButton">
-              <div className="rapid">{rapidValue}</div> 
+      <div className={styles["wrapping"]}>
+        <div className={styles["timer"]}>
+          {freeStyle ? (
+            <button className={styles["squareButton"]}>
+              <div className={styles["rapid"]}>{rapidValue}</div>
               <br />LPM
-              </button>
-             
-        ) : (
-          <div className="value">
-            {minutes < 10 && 0}
-            {minutes}:{seconds < 10 && 0}
-            {seconds}
-          </div>
-        )}
-        {remainingTime === 0 && complete()}
-        {!isFinish && (
-          <div
-            className="playPause"
-            onClick={() => {
-              !freeStyle && setPlay(!play);
-              !isplay && props.funcs.onPlay();
-              isplay && props.funcs.onPause();
-            }}
+            </button>
+
+          ) : (
+            <div className={styles["value"]}>
+              {minutes < 10 && 0}
+              {minutes}:{seconds < 10 && 0}
+              {seconds}
+            </div>
+          )}
+          {remainingTime === 0 && complete()}
+          {!isFinish && (
+            <div
+              className={styles["playPause"]}
+              onClick={() => {
+                !freeStyle && setPlay(!play);
+                !isplay && props.funcs.onPlay();
+                isplay && props.funcs.onPause();
+              }}
             >
-              <RoundButton setIsPlay={setIsPlay} isPlay={isplay}></RoundButton>
+              <RoundButton setIsPlay={setIsPlay} isPlay={isplay} />
             </div>
           )}
         </div>
       </div>
     );
   };
-  ////////////////////////////////////////////////////////////////////
-  //isplay && props.funcs.onPlay();
 
   return (
-    
-    <div className="wrapClock">
+
+    <div className={styles["wrapClock"]}>
       {freeStyle && (
         <button
-          className="plusMinus"
+          className={styles["plusMinus"]}
           onClick={() => {
             setRapidValue(rapidValue - 1);
             props.funcs.rapid(rapidValue);
-            
           }}
         >
           -
@@ -102,18 +98,18 @@ function Clock(props) {
       </div>
       {freeStyle && (
         <button
-          className="plusMinus"
+          className={styles["plusMinus"]}
           onClick={() => {
-            rapidValue > 0 && rapidValue<100 && setRapidValue(rapidValue + 1);
+            rapidValue > 0 && rapidValue < 100 && setRapidValue(rapidValue + 1);
             props.funcs.rapid(rapidValue);
           }}
         >
           +
         </button>
       )}
-      </div>   
+    </div>
   );
-  
+
 
   // return <CountdownCircleTimer></CountdownCircleTimer>;
   // console.log("stop");

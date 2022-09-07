@@ -36,6 +36,11 @@
 
 }
 
+.password-input::placeholder {
+  color: #55575A;
+  text-transform: capitalize
+}
+
 .hide-icon {
   margin-top: -11px;
   color: #55575A;
