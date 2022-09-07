@@ -1,6 +1,6 @@
 import "./style.css";
-import React, { useEffect } from "react";
-import { useContext } from "react";
+
+import React, { useEffect, useContext } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import dataContext from "../../../context/dataContext";
 import mainContext from "../../../context/mainContext";
@@ -15,30 +15,20 @@ import FrameIcon from "../../../assets/images/icons/FrameHeadPhone.png";
 const LevelExercise = () => {
   const user = useContext(dataContext);
   const BookName = user.userDetails.currentBook.name;
-
+  const { state: { navigateObject } } = useLocation()
+  const navigate = useNavigate();
   const { header } = useContext(mainContext);
+
 
   useEffect(() => {
     header.setPageName("Level Exercise");
     return () => header.setPageName("");
   }, [])
 
-
-  //TODO get from first page
-  const { state } = useLocation()
-
-  // const pushup = useLocation();
-  const navigate = useNavigate();
-
-  const lpmFromPushup = 20; // pushup.state.nevigateObject.lpm // i have to take the info from pushup by navigateObj
-  // const BookName = // pushup.state.nevigateObject.lpm // i have to take the info from pushup by navigateObj
-
+  const lpmFromPushup = 20;
   const title = "Start Now";
   const textTitle = "With your headphones on,";
-  const text = `Continue reading 
-    ${BookName} 
-    book at the pace of the sound, for the next 3 minutes – we will notify you when time is up.`;
-
+  const text = `Continue reading  ${BookName}  book at the pace of the sound, for the next 3 minutes – we will notify you when time is up.`;
   const route = "/train-reading/exercise-clock";
   const objProps = {
     LPM_Pushup: lpmFromPushup,
@@ -47,11 +37,13 @@ const LevelExercise = () => {
     // Add all the answers from pushup questions
   };
 
-  // const startFunction = () => navigate(route, { state });
 
-  function startFunction() {
-    navigate(route, { state: objProps });
+  // TODO need to order the names from the start
+  const formatedObj = {
+    ...objProps, ...navigateObject, LPM_Pushup: navigateObject.lpm, BookName: navigateObject.bookName
   }
+
+  const startFunction = () => navigate(route, { state: formatedObj });
 
   return (
     <>

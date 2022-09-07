@@ -1,5 +1,5 @@
 import styles from "./style.module.css";
-import React from "react";
+import React, { useEffect } from "react";
 import { useState, useContext } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 // import dataContext from "../../../../context/dataContext";
@@ -12,7 +12,11 @@ import Underline from "../../../assets/images/icons/UnderLine.png";
 export default function ExerciseQuestion() {
   // const user = useContext(dataContext);
   const { header } = useContext(mainContext);
-  header.setPageName("Level Questions");
+
+  useEffect(() => {
+    header.setPageName("Level Questions");
+  }, [])
+
   const navigate = useNavigate();
 
   const fromTR_Rate = useLocation();
@@ -90,6 +94,7 @@ export default function ExerciseQuestion() {
     BookName: fromTR_Rate.state.BookName,
     fromPath: "tr/question",
   };
+
   function startFunction() {
     navigate("/train-reading/exercise-clock", { state: objProps });
   }
