@@ -39,7 +39,7 @@ export default function PushUpTimer2() {
 
   return (
     <>
-      <div style={{ position: "relative" }}>
+      <div className="pages" style={{ position: "relative" }}>
         <clockContex.Provider value={{ play, setPlay }}>
           <ClockTB freeStyle={false} time={2} navigateObject={navigateObject} setShowContinueBtn={setShowContinueBtn} />
           <RoundedButtonTB play={play} setPlay={setPlay} />

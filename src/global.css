@@ -60,3 +60,13 @@ html {
   border: solid 1.5px #000;
   transform: rotate(3deg);
 }
+
+.btnHolder {
+  margin-top: auto;
+}
+
+.pages {
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+}

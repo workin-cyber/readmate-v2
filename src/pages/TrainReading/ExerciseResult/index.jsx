@@ -14,6 +14,7 @@ import FrameBookTime from "../../../assets/images/icons/FrameBookTime.png";
 export default function ExerciseResult() {
   // const user = useContext(dataContext);
   const { header } = useContext(mainContext);
+
   useEffect(() => {
     header.setPageName("Result Summary");
     return () => header.setPageName("")
@@ -25,27 +26,22 @@ export default function ExerciseResult() {
   const userLPM = from_TRL_Question.state.New_LPM;
 
   function TRLevelDone() {
-    // alert("GO TO DASHBOARD");
     navigate("/");
   }
 
   return (
-    <div className="level_page">
+    <div className="level_page pages">
       <img src={result} alt="Result Page Background" />
 
-      <TwistBox background="#FEEFEC" height="127px" width="382px">
+      <div className={`result--div two-colored-div`} >
         <div className="twistBoxChildren">
           <img src={FrameBookTime} alt="FrameBookTime" />
           <span>Comfortable Reading Rate</span>
           <span>{userLPM} LPM</span>
         </div>
-      </TwistBox>
-      <div>
-        <Button
-          startFunction={TRLevelDone}
-          title="Go To Dashboard"
-        />
       </div>
+
+      <Button startFunction={TRLevelDone} title="Go To Dashboard" />
     </div>
   );
 }

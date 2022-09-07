@@ -44,7 +44,7 @@ function PushUpInstructions() {
 
 
   return (
-    <>
+    <div className="pages">
       <div className={styles.centerImg}>
         <img src={src} id="headphones" alt="headphones" className={styles.headphones} />
       </div>
@@ -57,7 +57,7 @@ function PushUpInstructions() {
           img={earphonesImg}
         />
       </div>
-    </>
+    </div>
   );
 }
 

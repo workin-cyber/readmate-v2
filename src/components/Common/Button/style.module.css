@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   margin-top: auto;
+  width: 100%;
 }
 
 .submit {
@@ -12,8 +13,6 @@
   border: 2px solid #252525;
   box-shadow: 2px 2px 0px #d35400;
   border-radius: 80px;
-  bottom: 20px;
-  position: absolute;
   color: white;
   font-size: 14px;
   font-weight: 600;

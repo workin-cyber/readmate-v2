@@ -61,7 +61,10 @@ function BookInfo() {
                 name="genre"
                 valid={!valid.includes("genre")}
             />
-            <Button title="next" height="50px" fontColor={"white"} width={"85%"} />
+
+            <div className="btnHolder">
+                <Button title="next" height="50px" fontColor={"white"} width={"85%"} />
+            </div>
         </form>
     );
 }
