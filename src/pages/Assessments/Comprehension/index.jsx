@@ -16,7 +16,6 @@ import examImg from './image/exam.jpg'
 
 function Comprehension() {
     const l = useLocation()
-    console.log(l);
     const navigate = useNavigate()
 
     const { header: { setPageName } } = useContext(mainContext)

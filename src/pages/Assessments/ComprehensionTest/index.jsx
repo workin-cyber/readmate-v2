@@ -64,7 +64,7 @@ export default function ComprehensionTest() {
 
         const a = Calc()
 
-        navigate('/assessments/result', { state: { count: score, WPM: a[0], STD: a[1], AVG: a[2] } })
+        navigate('/assessments/result', { state: { count: score, WPM: a[0], STD: a[1], AVG: a[2], from: "assessments" } })
     }
 
 

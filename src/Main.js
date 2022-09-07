@@ -26,7 +26,7 @@ export default function Main() {
                 <Route path='camera-face' element={< CameraFace />} />
                 <Route path='comprehension' element={< Comprehension />} />
                 <Route path='comprehension-Test' element={< ComprehensionTest />} />
-                <Route path='result' element={< Result />} />
+                <Route path='result' element={< Result from="assessments" />} />
             </Route>
 
             {/* train-focus roll - yosef */}
@@ -34,7 +34,7 @@ export default function Main() {
                 <Route index element={< CalibrateCam />} />
                 <Route path='start-focus' element={< StartFocus />} />
                 <Route path='exercise' element={< Exercise />} />
-                <Route path='result' element={< Result />} />
+                <Route path='result' element={< Result from="train-focus" />} />
             </Route>
 
 

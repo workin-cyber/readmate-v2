@@ -1,12 +1,16 @@
-import Clock from "../../../components/Common/Clock";
-import SoundFooter from "../../../components/Common/SoundFooter"
-import React, { useContext } from "react";
-import { useEffect, useState } from "react"
-import Button from "../../../components/Common/Button";
 import { useNavigate } from 'react-router-dom'
+import { useEffect, useState, useContext } from "react"
+
+import Clock from "../../../components/Common/Clock";
+import Button from "../../../components/Common/Button";
 import dataContext from "../../../context/dataContext";
-import styles from "./style.module.css"
+// import SoundFooter from "../../../components/Common/SoundFooter"
+
 import mainContext from "../../../context/mainContext";
+
+import styles from "./style.module.css"
+import srcWave from "./soundWave.png"
+
 // Creator : Team H - Nurit & Milka & Batya
 function Training() {
 
@@ -26,8 +30,6 @@ function Training() {
   }, [])
 
   console.log('userLpm', tr[tr.length - 1]);
-
-
 
   // this function get the updated lpm and return which file is closer the most. 
   function pickFile(lpm) {
@@ -83,15 +85,15 @@ function Training() {
   const onclick = () => navigate('/')
 
   return (
-    <div className={styles.container}>
+    <div className={`pages ${styles.container}`}>
       <Clock freeStyle={true} time={180} funcs={freeStyleFuncs} initRapidValue={lpm} ></Clock>
-      {
-        playing ?
-          <SoundFooter song={file}></SoundFooter> :
-          // <div className={styles.btnContainer}>
-          <Button title="Done" startFunction={onclick} />
-        // </div>
-      }
+      <div className="btnHolder">
+        {
+          playing ?
+            <img alt="wave" src={srcWave} /> :
+            <Button title="Done" startFunction={onclick} />
+        }
+      </div>
     </div>
   );
 }

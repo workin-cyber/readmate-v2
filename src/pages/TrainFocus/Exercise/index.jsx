@@ -66,30 +66,34 @@ function Exercise() {
 
   switch (side) {
     case 0:
-      return <>
+      return <div className="pages-no-head">
         <div className="purpleDot" style={{ left: localStorage.getItem("posX") + "px" }}></div>
-        <div className="bo">
+        <div className="bo btnHolder">
           <Button title="stop" startFunction={Round} />
         </div>
-      </>
+      </div>
 
     case 1:
-      return <>
+      return <div className="pages-no-head">
         <div className="purpleDot" style={{ left: localStorage.getItem("posX") + "px" }}></div>
         <div className="back_center_Left"> <div className="text_box">Move the phone a bit to the left so the dot is in your center</div>
           <img className="flip_img_left" src={arrow} alt="img" />
         </div>
-        <Button title="stop" startFunction={Round} />
-      </>
+        <div className="btnHolder">
+          <Button title="stop" startFunction={Round} />
+        </div>
+      </div>
 
     case -1:
-      return <>
+      return <div className="pages-no-head">
         <div className="purpleDot" style={{ left: localStorage.getItem("posX") + "px" }}></div>
         <div className="back_center_Right"> <div className="text_box">Move the phone a bit to the right so the dot is in your center</div>
           <img className="flip_img_right" src={arrow} alt="img" />
         </div>
-        <Button title="stop" startFunction={Round} />
-      </>
+        <div className="btnHolder">
+          <Button title="stop" startFunction={Round} />
+        </div>
+      </div>
 
     default:
       return null
