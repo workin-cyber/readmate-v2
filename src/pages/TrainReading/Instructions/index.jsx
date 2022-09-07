@@ -1,12 +1,12 @@
 import styles from "./style.module.css";
 import { useContext, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import StartFooter from "../../../../components/Common/StartFooter"
-import mainContext from "../../../../context/mainContext";
-import dataContext from "../../../../context/dataContext";
+import StartFooter from "../../../components/Common/StartFooter"
+import mainContext from "../../../context/mainContext";
+import dataContext from "../../../context/dataContext";
 
-import earphonesImg from "../../../../assets/images/icons/FrameHeadPhone.png"
-import src from '../../../../assets/images/illustrations/head-phones.jpg'
+import earphonesImg from "../../../assets/images/icons/FrameHeadPhone.png"
+import src from '../../../assets/images/illustrations/head-phones.jpg'
 
 function PushUpInstructions() {
   const { header } = useContext(mainContext)

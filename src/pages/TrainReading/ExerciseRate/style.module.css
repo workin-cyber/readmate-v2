@@ -2,7 +2,7 @@
    padding: 16px;
 }
 
-.answer {
+.answers {
    width: 100%;
    min-height: 337px;
    background-color: #FEEFEC;
@@ -15,7 +15,7 @@
    align-items: center;
 }
 
-.answer button {
+.answers button {
    border: 1.5px solid #252525;
    box-shadow: 2px 2px 0px #D35400;
    border-radius: 80px;
@@ -30,4 +30,15 @@
    font-size: 14px;
    font-family: 'Poppins';
 
+}
+
+.answers button:active {
+   background-color: var(--primary-color);
+   color: #fff;
+}
+
+.answers p {
+   font-size: 15px;
+   margin-bottom: 10px;
+   font-weight: 500;
 }

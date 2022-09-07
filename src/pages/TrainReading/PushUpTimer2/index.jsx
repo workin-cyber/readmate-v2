@@ -1,9 +1,10 @@
-import ClockTB from "../../components/Common/ClockTB";
-import { useEffect, useState, useContext, createContext } from "react";
-import RoundedButtonTB from "../../components/Common/RoundedButtonTB";
-import AudioChangeRate from "../../components/Common/AudioChangeRate";
+import ClockTB from "../../../components/Common/ClockTB";
+import { useEffect, useState, createContext } from "react";
+import RoundedButtonTB from "../../../components/Common/RoundedButtonTB";
+import AudioChangeRate from "../../../components/Common/AudioChangeRate";
 import { useLocation, useNavigate } from 'react-router-dom'
-import Button from "../../components/Common/Button";
+import Button from "../../../components/Common/Button";
+
 export const clockContex = createContext();
 
 export default function PushUpTimer2() {

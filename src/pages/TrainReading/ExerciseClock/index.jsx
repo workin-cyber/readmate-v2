@@ -3,9 +3,9 @@ import React, { useContext, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 // import dataContext from "../../../../context/dataContext";
-import mainContext from "../../../../context/mainContext";
-import Clock from "../../../../components/Common/Clock";
-import soundWave from "../../../../assets/images/icons/soundWave.png";
+import mainContext from "../../../context/mainContext";
+import Clock from "../../../components/Common/Clock";
+import soundWave from "../../../assets/images/icons/soundWave.png";
 
 function ExerciseClock() {
   // const user = useContext(dataContext);
@@ -32,7 +32,7 @@ function ExerciseClock() {
 
   const [lpm, setLpm] = useState(LPM_Value);
   let fileName = pickFile(lpm);
-  const file = require(`../../../../assets/sounds/wush_mp3/wush_${fileName}_1min.mp3`);
+  const file = require(`../../../assets/sounds/wush_mp3/wush_${fileName}_1min.mp3`);
 
   const [audio, setAudio] = useState(new Audio(file));
   const [playing, setPlaying] = useState(0);

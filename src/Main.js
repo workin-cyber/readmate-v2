@@ -6,15 +6,16 @@ import { Setting } from './pages/Settings'
 import { CalibrateCam, Exercise, StartFocus } from './pages/TrainFocus'
 
 
-import { BookInfo, PushUpInstructions } from './pages/TrainReading'
-import ExerciseResult from "./pages/TrainReading/Level/ExerciseResult";
-import PushUpTimer2 from './pages/PushUpTimer2'
-import Questions from './pages/Questions'
-import LevelExercise from './pages/TrainReading/Level/Exercise'
-import ExerciseClock from './pages/TrainReading/Level/ExerciseClock'
-import ExerciseQuestion from './pages/TrainReading/Level/ExerciseQuestion'
-import ExerciseRate from "./pages/TrainReading/Level/ExerciseRate";
+import { BookInfo, PushUpInstructions, ExerciseResult, PushUpTimer2 } from './pages/TrainReading'
+import { Questions, LevelExercise, ExerciseClock, ExerciseQuestion, ExerciseRate } from './pages/TrainReading'
+// import Questions from './pages/Questions'
+// import LevelExercise from './pages/TrainReading/Level/Exercise'
+// import ExerciseClock from './pages/TrainReading/Level/ExerciseClock'
+// import ExerciseQuestion from './pages/TrainReading/Level/ExerciseQuestion'
+// import ExerciseRate from "./pages/TrainReading/Level/ExerciseRate";
 
+// import ExerciseResult from "./pages/TrainReading/Level/ExerciseResult";
+// import PushUpTimer2 from './pages/PushUpTimer2'
 // import Training from './pages/Freestyle/Training/Training'
 // import ExerciseClock from "./pages/TrainReading/Level/ExerciseClock";
 // import ExerciseRate from "./pages/TrainReading/Level/ExerciseRate";

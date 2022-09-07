@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { useState, useEffect, useRef } from 'react';
 import { useLocation } from "react-router-dom";
-import { clockContex } from '../../../pages/PushUpTimer2';
+import { clockContex } from '../../../pages/TrainReading/PushUpTimer2';
 
 
 
@@ -12,6 +12,7 @@ function AudioChangeRate(props) {
     const audioRef = useRef();
     const [lpm, setLpm] = useState(56);
     let lpmFile = pickFile(navigateObject.lpm);
+
     useEffect(() => {
         const audio = require(`../../../../src/assets/sounds/wush_mp3/wush_${lpmFile}_1min.mp3`);
         audioRef.current.src = audio;

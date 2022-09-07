@@ -1,19 +1,24 @@
 import React from "react";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import "./style.css";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 // import dataContext from "../../../../context/dataContext";
-import mainContext from "../../../../context/mainContext";
+import mainContext from "../../../context/mainContext";
 
-import TwistBox from "../../../../components/Common/TwistBox";
-import Button from "../../../../components/Common/Button";
-import result from "../../../../assets/images/illustrations/result.png";
-import FrameBookTime from "../../../../assets/images/icons/FrameBookTime.png";
+import TwistBox from "../../../components/Common/TwistBox";
+import Button from "../../../components/Common/Button";
+import result from "../../../assets/images/illustrations/result.png";
+import FrameBookTime from "../../../assets/images/icons/FrameBookTime.png";
 
 export default function ExerciseResult() {
   // const user = useContext(dataContext);
   const { header } = useContext(mainContext);
-  header.setPageName("Result Summary");
+  useEffect(() => {
+    header.setPageName("Result Summary");
+    return () => header.setPageName("")
+  }, [])
+
 
   const navigate = useNavigate();
   const from_TRL_Question = useLocation();

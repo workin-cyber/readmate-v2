@@ -2,12 +2,14 @@ import "./style.css";
 import React, { useEffect } from "react";
 import { useContext } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import dataContext from "../../../../context/dataContext";
-import mainContext from "../../../../context/mainContext";
+import dataContext from "../../../context/dataContext";
+import mainContext from "../../../context/mainContext";
 
-import StartFooter from "../../../../components/Common/StartFooter";
-import Headphone from "../../../../assets/images/illustrations/head-phones.jpg";
-import FrameIcon from "../../../../assets/images/icons/FrameHeadPhone.png";
+import StartFooter from "../../../components/Common/StartFooter";
+
+import Headphone from "../../../assets/images/illustrations/head-phones.jpg";
+import FrameIcon from "../../../assets/images/icons/FrameHeadPhone.png";
+
 // Can be FrameConus // FramePencil // FrameCamera // FrameHeadPhone
 
 const LevelExercise = () => {
@@ -17,7 +19,7 @@ const LevelExercise = () => {
   const { header } = useContext(mainContext);
 
   useEffect(() => {
-    header.setPageName("Exercise");
+    header.setPageName("Level Exercise");
     return () => header.setPageName("");
   }, [])
 

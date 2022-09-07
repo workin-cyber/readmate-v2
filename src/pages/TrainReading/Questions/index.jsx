@@ -1,18 +1,17 @@
 import { useState, useContext, useEffect, } from "react";
-import Button from "../../components/Common/Button";
+import Button from "../../../components/Common/Button";
 import styles from './style.module.css'
 import { useNavigate, useLocation } from "react-router-dom";
-import mainContext from "../../context/mainContext";
-import Input from "../../components/Common/Input/Input";
-import { validate } from "../Signup/Signup/validate";
-
+import mainContext from "../../../context/mainContext";
+import Input from "../../../components/Common/Input/Input";
+import { validate } from "../../Signup/Signup/validate";
+import underline from '../../../assets/images/icons/UnderLine.png'
 
 export default function FourQues() {
     const { header } = useContext(mainContext)
     const location = useLocation();
     const navigateObject = location.state.navigateObject;
     const navigate = useNavigate();
-    const underline = require('../../assets/images/icons/UnderLine.png')
     const [valid, setValid] = useState([]);
 
 

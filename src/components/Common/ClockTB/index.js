@@ -3,7 +3,7 @@ import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import { useState } from "react";
 import styles from "./style.module.css";
 import { useNavigate } from "react-router-dom"
-import { clockContex } from "../../../pages/PushUpTimer2";
+import { clockContex } from "../../../pages/TrainReading/PushUpTimer2";
 
 function ClockTB(props) {
     const { play, setPlay } = useContext(clockContex)

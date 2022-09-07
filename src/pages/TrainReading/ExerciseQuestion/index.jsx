@@ -3,11 +3,11 @@ import React from "react";
 import { useState, useContext } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 // import dataContext from "../../../../context/dataContext";
-import mainContext from "../../../../context/mainContext";
+import mainContext from "../../../context/mainContext";
 
-import Input from "../../../../components/Common/Input/Input";
-import Button from "../../../../components/Common/Button";
-import Underline from "../../../../assets/images/icons/UnderLine.png";
+import Input from "../../../components/Common/Input/Input";
+import Button from "../../../components/Common/Button";
+import Underline from "../../../assets/images/icons/UnderLine.png";
 
 export default function ExerciseQuestion() {
   // const user = useContext(dataContext);

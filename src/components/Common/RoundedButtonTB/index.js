@@ -1,5 +1,4 @@
-import { useContext, useState } from "react";
-import { clockContex } from "../../../pages/PushUpTimer2";
+
 import styles from "./style.module.css";
 
 // Creator : Team b- yossef&&shachar

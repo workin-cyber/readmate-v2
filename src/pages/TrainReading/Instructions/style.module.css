@@ -9,9 +9,8 @@
 
 .centerImg {
     display: flex;
-    margin-right: auto;
-    margin-left: auto;
-    width: fit-content;
+    justify-content: center;
+    align-items: center;
     margin-top: 12%;
 }
 
