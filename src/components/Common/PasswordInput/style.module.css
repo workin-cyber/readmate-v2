@@ -4,9 +4,10 @@
   height: 80px;
   margin: 0.3rem auto;
   /* margin-top: 1rem; */
-  width: calc(100vw - 32px);
+  max-width: calc(100vw - 32px);
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .focus {
@@ -20,7 +21,7 @@
   position: relative;
   margin-left: 1rem;
   width: fit-content;
-}
+  font-size: 12px;}
 
 .password-input {
   box-sizing: border-box;

@@ -7,23 +7,17 @@ import Popup from './components/Common/Popup';
 import { NavBar } from './components/Common/NavBar';
 import dataContext from './context/dataContext';
 
-import Main from './Main';
-
 import { Signup, Signin, ForgotPassword } from './pages/Signup';
+
+import Main from './Main';
 
 export default function Layout() {
     const { header, nav, popup } = useContext(mainContext);
     const { userDetails } = useContext(dataContext);
 
-
-    return (
-        !userDetails ?
-            <Routes>
-                <Route path='/login' element={< Signin />} />
-                <Route path='/forgot-password' element={< ForgotPassword />} />
-                <Route path='*' element={<Signup />} />
-            </Routes>
-            :
+    // if user is connected
+    if (userDetails)
+        return (
             <>
                 {header.isShowHeader && <Header pageName={header.pageName} />}
 
@@ -33,5 +27,15 @@ export default function Layout() {
 
                 {nav.isShowNav && <NavBar />}
             </>
-    )
+        )
+    // routes without auth
+    else
+        return (
+            <Routes>
+                <Route path='/login' element={< Signin />} />
+                <Route path='/forgot-password' element={< ForgotPassword />} />
+                <Route path='*' element={<Signup />} />
+            </Routes>
+        )
+
 }

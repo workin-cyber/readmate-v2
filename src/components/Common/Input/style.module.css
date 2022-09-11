@@ -4,9 +4,10 @@
   height: 80px;
   margin: 0.3rem auto;
   /* margin-top: 1rem; */
-  width: calc(100vw - 32px);
+  max-width: calc(100vw - 32px);
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .focus {
@@ -35,10 +36,11 @@
 .legend {
   padding: 0.2em 0.5em;
   color: #7D839D;
-  font-size: 12px;
+  /* font-size: 12px; */
   position: relative;
   margin-left: 1rem;
   width: fit-content;
+  font-size: 12px;
 }
 
 .unvalid {

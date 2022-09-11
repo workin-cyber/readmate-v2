@@ -1,5 +1,4 @@
 import { Route, Routes } from 'react-router-dom'
-
 import { AssessmentStart, CameraFace, Comprehension, ComprehensionTest } from './pages/Assessments'
 import { Dashboard, Instructions, Result } from './pages/commonPages'
 import { FSTraining } from './pages/Freestyle'
@@ -14,7 +13,6 @@ export default function Main() {
     return <>
 
         <Routes>
-
             {/* dashboard - yosef */}
             <Route index element={<Dashboard />} />
             <Route path="contact-us" element={<ContactUs />} />
@@ -63,9 +61,6 @@ export default function Main() {
                 <Route index element={<FSTraining />} />
             </Route>
 
-
         </Routes>
-
-
     </>
 }
