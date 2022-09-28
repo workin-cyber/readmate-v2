@@ -11,6 +11,8 @@ import mainContext from '../../../context/mainContext';
 
 // import Calc from '../Calc';
 
+// TODO - end of assesment +++
+
 export default function ComprehensionTest() {
     const [result, setResult] = useState([])
     const navigate = useNavigate();

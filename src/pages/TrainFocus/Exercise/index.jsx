@@ -9,12 +9,15 @@ import mainContext from "../../../context/mainContext";
 //TODO - check if the result are ok
 //TODO - turn off the camera
 
+// TODO - end of train focus +++
+
 
 function Exercise() {
 
   // UmooveApi.API_loadUmooveLibrary().then(() => {
   // }).catch((error) => { console.error(error) })
   // UmooveApi.API_startUmoove()
+
 
   const [side, setSide] = useState(0) //TODO - this number dont change ever
   const [DailyStoppingDistance, setDailyStoppingDistance] = useState(0)
